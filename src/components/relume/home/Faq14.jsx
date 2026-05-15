@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { useState, useRef, useEffect } from "react";
 import { motion, AnimatePresence, useScroll, useTransform } from "framer-motion";
@@ -6,28 +6,28 @@ import { gsap } from "../../../utils/gsap";
 
 const faqs = [
   {
-    q: "Welche Leistungen bietet WM Bau GmbH an?",
-    a: "Wir bieten Schlüsselfertiges Bauen, Planung, Rohbau, Renovierung & Sanierung, Tiefbau, landwirtschaftliche Hallen, Transporte, Gerüstbau sowie Ladekranarbeiten an — alles aus einer Hand.",
+    q: "Welche Leistungen bietet K.M. Trockenbau an?",
+    a: "Wir bieten Trockenbau (Wände & Zwischenwände), Dachbodenausbau, Wärme- und Schallschutz, Trockenbaudecken, Bodenbeläge sowie Badsanierung an — alles aus einer Hand, von der Erstberatung bis zur Fertigstellung.",
   },
   {
     q: "In welcher Region sind Sie tätig?",
-    a: "Unser Schwerpunkt liegt in Dorfen und der Region Erding. Wir sind jedoch für Bauvorhaben weit über die Region hinaus der richtige Ansprechpartner.",
+    a: "Unser Schwerpunkt liegt in Regensburg und der umliegenden Region. Sprechen Sie uns gerne an — wir sind auch für Projekte im weiteren Umkreis der richtige Ansprechpartner.",
   },
   {
-    q: "Wann sind Sie erreichbar?",
-    a: "Montag bis Freitag von 7:00 bis 18:00 Uhr, Samstag von 7:00 bis 12:00 Uhr. Sonntags sind wir geschlossen.",
+    q: "Wie kann ich ein Angebot anfragen?",
+    a: "Kontaktieren Sie uns telefonisch unter +49 (0) 176 38 58 39 54 oder per E-Mail an info-kalac-trockenbau@web.de. Gerne fertigen wir Ihnen ein individuelles Angebot an.",
   },
   {
-    q: "Arbeiten Sie mit eigenem Personal oder Subunternehmern?",
-    a: "Wir setzen auf eigenes, ausgebildetes Fachpersonal. Unser Team übernimmt alle Leistungen selbst — von Hochbau über Tiefbau bis zu Transporten und Gerüstbau.",
+    q: "Halten Sie die aktuellen DIN-Normen ein?",
+    a: "Ja, unbedingt. Wir beachten alle aktuellen DIN-Normen beim Trocken- und Innenausbau. Durch kontinuierliche Weiterbildung sind wir stets auf dem neuesten Stand der Technik und Vorschriften.",
   },
   {
-    q: "Können Sie auch Renovierungen und Sanierungen durchführen?",
-    a: "Ja. Renovierung und Sanierung zählen zu unseren Kernleistungen. Wir steigern den Wert Ihrer Immobilie durch optimierte Dämmung, neue Fenster, smarte Technologien und fachgerechte Ausführung.",
+    q: "Beraten Sie auch zu Brandschutz und Dämmung?",
+    a: "Ja. Da wir großen Wert auf die Sicherheit unserer Kunden legen, sind wir über aktuelle Brandschutzsysteme sehr gut informiert und stehen Ihnen beratend zur Seite. Ebenso beim Thema Wärme- und Schallschutz.",
   },
   {
-    q: "Wie nehme ich Kontakt auf?",
-    a: "Rufen Sie uns an unter 0151 58 72 01 08 oder schreiben Sie uns an info@wmbau.com. Sie finden uns in der Breitenloh 1, 84405 Dorfen — wir melden uns schnellstmöglich.",
+    q: "Kann ich auch meinen Dachboden ausbauen lassen?",
+    a: "Ja. Wenn Sie einen noch nicht genutzten Rohbau besitzen und mehr Wohnfläche schaffen möchten, sind wir der richtige Ansprechpartner. Wir verwandeln ungenutzten Dachraum in wertvolle Wohnfläche.",
   },
 ];
 

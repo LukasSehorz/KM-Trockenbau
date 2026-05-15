@@ -3,12 +3,12 @@
 import React from "react";
 
 const badges = [
-  "Meisterbetrieb",
-  "Festpreisgarantie",
-  "20+ Jahre Bayern",
-  "847 Projekte",
-  "TÜV-zertifiziert",
-  "ISO 9001",
+  "DIN-normgerecht",
+  "Persönliche Beratung",
+  "Trockenbau",
+  "Dachbodenausbau",
+  "Wärme- & Schallschutz",
+  "Badsanierung",
 ];
 
 export function Cta33() {
@@ -21,24 +21,24 @@ export function Cta33() {
               Jetzt starten
             </p>
             <h2 className="mb-5 font-heading text-5xl font-bold leading-tight tracking-tight text-text-primary md:text-7xl lg:text-8xl">
-              Bereit, Ihr Haus in Bayern zu bauen?
+              Bereit für Ihren Innenausbau in Regensburg?
             </h2>
             <p className="mb-8 font-body text-base text-text-secondary md:text-lg">
-              Festpreis. Pünktliche Lieferung. Keine Überraschungen.
-              Fordern Sie noch heute Ihre kostenlose Beratung an.
+              Zögern Sie nicht, uns zu kontaktieren.
+              Gerne fertigen wir Ihnen ein individuelles Angebot an.
             </p>
             <div className="flex flex-wrap items-center justify-center gap-4">
               <a
                 href="/kontakt"
                 className="inline-flex items-center bg-hoser-gold px-8 py-3 font-body text-sm font-semibold tracking-wide text-text-primary transition-colors duration-200 hover:bg-hoser-gold-light"
               >
-                Kostenlos beraten lassen
+                Kostenloses Angebot anfragen
               </a>
               <a
-                href="/kontakt"
+                href="tel:+4917638583954"
                 className="inline-flex items-center border border-border-primary px-8 py-3 font-body text-sm font-semibold tracking-wide text-text-primary transition-colors duration-200 hover:border-text-primary"
               >
-                Kontakt aufnehmen
+                +49 (0) 176 38 58 39 54
               </a>
             </div>
           </div>
@@ -46,7 +46,7 @@ export function Cta33() {
 
         <div className="border-t border-border-primary pt-10">
           <p className="mb-6 text-center font-body text-xs font-semibold uppercase tracking-[0.2em] text-text-secondary">
-            Unsere Zertifikate & Auszeichnungen
+            Unsere Leistungsbereiche
           </p>
           <div className="flex flex-wrap items-center justify-center gap-x-8 gap-y-4">
             {badges.map((badge) => (

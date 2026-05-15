@@ -1,22 +1,22 @@
-"use client";
+﻿"use client";
 
 import { useRef, useEffect } from "react";
 import { gsap } from "../../../utils/gsap";
 
 const features = [
   {
-    title: "Handwerk als Berufung",
-    body: "Gegründet 2020 von Lukas Winter und Philip Marsmann. WM Bau GmbH setzt auf klare Werte: Qualität, Verlässlichkeit und persönliche Betreuung auf jedem Bauprojekt.",
+    title: "Langjährige Erfahrung",
+    body: "K.M. Trockenbau steht für jahrelange Erfahrung im Innenausbau. Wir beherrschen alle Systeme im Wand-, Decken- und Bodenbereich und beachten dabei stets die aktuellen DIN-Normen.",
     image: "/images/layout-handwerk.jpg",
   },
   {
-    title: "Persönlichkeit & Beständigkeit",
-    body: "Klare Angebote, direkte Kommunikation, ein Ansprechpartner. Mit unserem Team betreuen wir jedes Projekt von der Planung bis zur Schlüsselübergabe – zuverlässig und termintreu.",
+    title: "Qualität & Verlässlichkeit",
+    body: "Von der individuellen Erstberatung bis zur Fertigstellung sorgen wir für klar konzipierte Strukturen. Wir gehen auf Ihre Wünsche ein und liefern termingerecht — ohne Kompromisse bei der Qualität.",
     image: "/images/layout-persoenlichkeit.jpg",
   },
   {
-    title: "Verwurzelt in der Region",
-    body: "Dorfen ist unsere Heimat. Seit 2020 bauen wir in der Region Erding und weit darüber hinaus. Sie finden uns in der Breitenloh 1 – zentral gelegen, direkt für Sie erreichbar.",
+    title: "Ihr Partner in Regensburg",
+    body: "Regensburg ist unsere Heimat. Sie finden uns in der Siegfriedstrasse 3, 93051 Regensburg. Wir stehen Ihnen persönlich beratend zur Seite — auch bei Brandschutzfragen und aktuellen Sicherheitsstandards.",
     image: "/images/layout-region.jpg",
   },
 ];
@@ -130,19 +130,19 @@ export function Layout237() {
         {/* Heading */}
         <div className="l237-heading-area mb-14 max-w-2xl md:mb-18">
           <p className="l237-eyebrow mb-4 font-body text-sm font-semibold uppercase tracking-[0.25em] text-[#D94520]">
-            Unsere Philosophie
+            Unsere Stärken
           </p>
           <h2
             className="font-heading font-bold leading-[1.05] tracking-tight text-[#D94520]"
             style={{ fontSize: "clamp(2.4rem, 4.5vw, 4.5rem)" }}
           >
             <span className="block" style={{ overflow: "hidden", paddingBottom: "0.08em" }}>
-              <span className="l237-heading-inner block">Wie wir denken.</span>
+              <span className="l237-heading-inner block">Wie wir arbeiten.</span>
             </span>
             <span className="block" style={{ overflow: "hidden", paddingBottom: "0.08em" }}>
               <span className="l237-heading-inner block">
                 <em className="font-serif font-light not-italic text-[#D94520]/60">
-                  Wie wir bauen.
+                  Was uns auszeichnet.
                 </em>
               </span>
             </span>

@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { useRef, useEffect } from "react";
 import { gsap, ScrollTrigger } from "../../../utils/gsap";
@@ -74,7 +74,7 @@ export function Header78() {
     // Window flag (resets on page refresh, persists across SPA navigation).
     // sessionStorage was wrong — it persisted across refreshes, but the intro
     // ALWAYS replays on refresh (App.tsx introComplete inits to false).
-    const introAlreadyDone = window.__schmidIntroDone === true;
+    const introAlreadyDone = window.__kmIntroDone === true;
 
     let tl = null;
     const animatableSelector = ".hero-bg-img, .hero-eyebrow-line, .hero-eyebrow-inner, .hero-headline-inner, .hero-body, .hero-cta";
@@ -127,14 +127,14 @@ export function Header78() {
       gsap.set(scope.querySelectorAll(".hero-cta"), { y: 22, opacity: 0 });
 
       onIntroComplete = () => startAnimations(0.3, 1);
-      window.addEventListener("schmid-intro-complete", onIntroComplete, { once: true });
+      window.addEventListener("km-intro-complete", onIntroComplete, { once: true });
     }
 
     return () => {
       if (tl) tl.kill();
       ctx.revert();
       if (onIntroComplete) {
-        window.removeEventListener("schmid-intro-complete", onIntroComplete);
+        window.removeEventListener("km-intro-complete", onIntroComplete);
       }
     };
   }, []);
@@ -203,7 +203,7 @@ export function Header78() {
           <span className="hero-eyebrow-line h-px w-10 flex-shrink-0" style={{ background: "#F07040" }} />
           <div style={{ overflow: "hidden" }}>
             <p className="hero-eyebrow-inner font-body text-xs font-semibold uppercase tracking-[0.28em]" style={{ color: "#F07040" }}>
-              Dorfen · Gegründet 2020
+              Regensburg · Innenausbau & Trockenbau
             </p>
           </div>
         </div>
@@ -215,22 +215,22 @@ export function Header78() {
         >
           <span className="block" style={{ overflow: "hidden", paddingBottom: "0.1em" }}>
             <span className="hero-headline-inner block">
-              Bauen,{" "}
-              <em className="italic" style={{ color: "#FFFFFF" }}>das bleibt.</em>
+              Leistung{" "}
+              <em className="italic" style={{ color: "#FFFFFF" }}>& Vertrauen.</em>
             </span>
           </span>
           <span className="block" style={{ overflow: "hidden", paddingBottom: "0.1em" }}>
             <span className="hero-headline-inner block">
-              Seit 2020.
+              Ihr Trockenbauer.
             </span>
           </span>
         </h1>
 
         {/* Body */}
         <p className="hero-body mb-16 max-w-[440px] font-body text-base leading-relaxed text-white/70 md:text-lg">
-          Schlüsselfertiges Bauen, Rohbau, Sanierung, Tiefbau und mehr aus Dorfen.
-          WM Bau GmbH steht seit 2020 für Qualität, Verlässlichkeit
-          und Projekte, die bleiben.
+          Wir haben langjährige Erfahrung im Innenausbau und beherrschen alle Systeme
+          im Wand-, Decken- und Bodenbereich. Von der Erstberatung bis zur Fertigstellung —
+          für Sie in Regensburg und Umgebung.
         </p>
 
         {/* CTAs — both get the fill-on-hover effect */}
@@ -239,14 +239,14 @@ export function Header78() {
             href="/kontakt"
             className="hero-cta group inline-flex items-center gap-3 border border-white/40 bg-transparent px-7 py-4 font-body text-sm font-semibold uppercase tracking-[0.14em] text-white/85 transition-all duration-300 hover:bg-white hover:border-white hover:text-[#D94520]"
           >
-            Projekt anfragen
+            Angebot anfragen
             <span className="transition-transform duration-300 group-hover:translate-x-1">→</span>
           </a>
           <a
-            href="/projekte"
+            href="/galerie"
             className="hero-cta group inline-flex items-center gap-3 border border-white/40 bg-transparent px-7 py-4 font-body text-sm font-semibold uppercase tracking-[0.14em] text-white/85 transition-all duration-300 hover:bg-white hover:border-white hover:text-[#D94520]"
           >
-            Referenzen ansehen
+            Galerie ansehen
             <span className="transition-transform duration-300 group-hover:translate-x-1">→</span>
           </a>
         </div>

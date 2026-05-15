@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import React, { useEffect, useRef } from "react";
 import { gsap } from "../../../utils/gsap";
@@ -158,7 +158,7 @@ export function HeroLeistungen() {
       <img
         ref={imageRef}
         src="/images/leistungen-hero.jpg"
-        alt="WM Bau GmbH – Leistungen"
+        alt="K.M. Trockenbau – Leistungen"
         className="absolute inset-0 h-full w-full object-cover"
         style={{ willChange: "transform, filter" }}
       />
@@ -235,7 +235,7 @@ export function HeroLeistungen() {
                   Standort
                 </span>
                 <span className="font-heading text-lg font-semibold text-white">
-                  Dorfen · Erding
+                  Regensburg · Regensburg
                 </span>
               </div>
             </div>

@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import React, { useState, useEffect, useRef } from "react";
 import { gsap } from "../../../utils/gsap";
@@ -16,7 +16,7 @@ const photos = [
   },
   {
     src: "/images/Beispiel-Projekte/Vor%20Ort%202.jpg",
-    caption: "Referenzprojekte aus dem Raum Erding und München – realisiert mit eigenem Fachpersonal.",
+    caption: "Referenzprojekte aus dem Raum Regensburg und München – realisiert mit eigenem Fachpersonal.",
     span: "col-span-1 row-span-1",
   },
   {

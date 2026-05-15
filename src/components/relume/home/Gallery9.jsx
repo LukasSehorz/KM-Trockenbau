@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { useRef, useEffect } from "react";
 import { gsap } from "../../../utils/gsap";
@@ -14,14 +14,14 @@ const projects = [
   {
     id: "02",
     image: "/images/Beispiel-Projekte/LP2.jpg",
-    title: "Wohnpark Haydn, Dorfen",
+    title: "Innenausbau Projekt, Regensburg",
     category: "Wohnungsbau · 56 WE + Tiefgarage",
     year: "2024",
   },
   {
     id: "03",
     image: "/images/projekt-03.png",
-    title: "Einfamilienhaus, Dorfen",
+    title: "Dachbodenausbau, Regensburg",
     category: "Wohnbau · Schlüsselfertig",
     year: "2024",
   },

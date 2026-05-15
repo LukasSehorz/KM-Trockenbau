@@ -1,8 +1,8 @@
-"use client";
+﻿"use client";
 import { useEffect, useState } from "react";
 import { motion, LayoutGroup } from "framer-motion";
 
-const TEXT = "WM Bau GmbH";
+const TEXT = "K.M. Trockenbau";
 const CHARS = TEXT.split("");
 
 const FONT = {

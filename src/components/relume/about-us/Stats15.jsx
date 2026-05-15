@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import React from "react";
 
@@ -16,7 +16,7 @@ export function Stats15() {
         <img
           src="/images/munich-residential.jpg"
           className="size-full object-cover"
-          alt="WM Bau GmbH Bauprojekt"
+          alt="K.M. Trockenbau Bauprojekt"
         />
         <div className="absolute inset-0 bg-text-primary/75" />
       </div>
@@ -27,11 +27,11 @@ export function Stats15() {
               Das Unternehmen in Zahlen
             </p>
             <h2 className="mb-5 font-heading text-4xl font-bold leading-tight tracking-tight text-white md:mb-6 md:text-5xl lg:text-6xl">
-              Dorfen.<br />Qualität aus einer Hand.
+              Regensburg.<br />Qualität aus einer Hand.
             </h2>
             <p className="font-body text-base text-white/65 md:text-lg">
-              Gegründet 2020 von Lukas Winter und Philip Marsmann –
-              heute ein etabliertes Bauunternehmen in der Region Dorfen und Erding.
+              Gegründet von Kalac Mujo in Regensburg –
+              heute ein etabliertes Trockenbau in der Region Regensburg und Regensburg.
             </p>
             <div className="mt-8">
               <a

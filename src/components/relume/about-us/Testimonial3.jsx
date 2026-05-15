@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 const reviews = [
   {
@@ -12,7 +12,7 @@ const reviews = [
     initials: "CW",
   },
   {
-    quote: "Teil 2 der Rezension: Auch nach der Fertigstellung stand das Team jederzeit für Rückfragen zur Verfügung. Selten so einen guten Service erlebt – WM Bau GmbH ist erste Wahl!",
+    quote: "Teil 2 der Rezension: Auch nach der Fertigstellung stand das Team jederzeit für Rückfragen zur Verfügung. Selten so einen guten Service erlebt – K.M. Trockenbau ist erste Wahl!",
     name: "Manuela Hiermer",
     initials: "MH",
   },

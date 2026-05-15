@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import React from "react";
 import { BiEnvelope, BiMap, BiPhone } from "react-icons/bi";
@@ -23,16 +23,16 @@ export function Contact14() {
               Sprechen Sie mit uns.
             </h2>
             <p className="font-body text-base leading-relaxed text-[#0A1628]/60 md:text-lg">
-              Wir sind Ihr direkter Ansprechpartner für alle Fragen rund um Ihr Bauvorhaben –
-              von der ersten Idee bis zur Fertigstellung.
+              Zögern Sie nicht, uns zu kontaktieren. Gerne fertigen wir Ihnen
+              ein individuelles Angebot für Ihren Innenausbau in Regensburg an.
             </p>
           </div>
 
           {/* Right: Google Maps */}
           <div className="overflow-hidden rounded-sm" style={{ minHeight: 280 }}>
             <iframe
-              title="WM Bau GmbH Standort"
-              src="https://maps.google.com/maps?q=Breitenloh+1%2C+84405+Dorfen&t=&z=15&ie=UTF8&iwloc=&output=embed"
+              title="K.M. Trockenbau Standort"
+              src="https://maps.google.com/maps?q=Siegfriedstrasse+3%2C+93051+Regensburg&t=&z=15&ie=UTF8&iwloc=&output=embed"
               width="100%"
               height="100%"
               style={{ border: 0, minHeight: 280 }}
@@ -53,13 +53,13 @@ export function Contact14() {
               Telefon
             </h3>
             <p className="mb-2 font-body text-sm text-[#0A1628]/50">
-              Mo – Fr, 7:00 – 18:00 Uhr · Sa, 7:00 – 12:00 Uhr
+              Jetzt anrufen und Angebot anfragen
             </p>
             <a
               className="font-body text-base font-semibold text-[#0A1628] transition-colors duration-200 hover:text-[#D94520]"
-              href="tel:+4915158720108"
+              href="tel:+4917638583954"
             >
-              0151 58 72 01 08
+              +49 (0) 176 38 58 39 54
             </a>
           </div>
 
@@ -75,9 +75,9 @@ export function Contact14() {
             </p>
             <a
               className="font-body text-base font-semibold text-[#0A1628] transition-colors duration-200 hover:text-[#D94520]"
-              href="mailto:info@wmbau.com"
+              href="mailto:info-kalac-trockenbau@web.de"
             >
-              info@wmbau.com
+              info-kalac-trockenbau@web.de
             </a>
           </div>
 
@@ -89,8 +89,8 @@ export function Contact14() {
               Standort
             </h3>
             <p className="font-body text-base text-[#0A1628]/60">
-              Breitenloh 1<br />
-              84405 Dorfen
+              Siegfriedstrasse 3<br />
+              93051 Regensburg
             </p>
           </div>
         </div>

@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import React, { useEffect, useRef } from "react";
 import { gsap } from "../../../utils/gsap";
@@ -125,7 +125,7 @@ export function Stats20() {
           Ergebnisse, die für sich sprechen
         </h2>
         <p ref={subRef} className="mt-4 max-w-xl font-body text-base text-white/60">
-          Seit 2020 in der Region Dorfen & Erding. Projekte für Generationen. Ein Name.
+          Seit 2020 in der Region Regensburg & Regensburg. Projekte für Generationen. Ein Name.
         </p>
       </div>
 

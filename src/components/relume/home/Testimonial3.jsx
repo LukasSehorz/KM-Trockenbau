@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 const StarIcon = () => (
   <svg width="14" height="14" viewBox="0 0 24 24" fill="#C9A84C" xmlns="http://www.w3.org/2000/svg">
@@ -29,7 +29,7 @@ const testimonials = [
     initials: "CW",
   },
   {
-    quote: "Teil 2 der Rezension: Auch nach der Fertigstellung stand das Team jederzeit für Rückfragen zur Verfügung. Selten so einen guten Service erlebt – WM Bau GmbH ist erste Wahl!",
+    quote: "Teil 2 der Rezension: Auch nach der Fertigstellung stand das Team jederzeit für Rückfragen zur Verfügung. Selten so einen guten Service erlebt – K.M. Trockenbau ist erste Wahl!",
     name: "Manuela Hiermer",
     role: "Google Rezension · 5/5 Sterne",
     initials: "MH",

@@ -8,19 +8,19 @@ import hiltiLogo from "../../../assets/logos/hilti.svg";
 import heidelbergLogo from "../../../assets/logos/heidelberg.svg";
 
 const certifications = [
-  { label: "ISO 9001", sub: "Qualitätsmanagement" },
-  { label: "SCC**", sub: "Arbeitssicherheit" },
-  { label: "VOB", sub: "Vergabe & Vertragsordnung" },
-  { label: "DGNB", sub: "Nachhaltiges Bauen" },
+  { label: "DIN-Normen", sub: "Trocken- & Innenausbau" },
+  { label: "Brandschutz", sub: "Aktuelle Systeme" },
+  { label: "Qualität", sub: "Weiterbildung & Standards" },
+  { label: "Beratung", sub: "Persönlich & kostenlos" },
 ];
 
 const partners = [
-  { label: "PERI", logo: null },
-  { label: "Liebherr", logo: liebherrLogo },
-  { label: "Zeppelin", logo: zeppelinLogo },
-  { label: "Hilti", logo: hiltiLogo },
   { label: "Knauf", logo: null },
-  { label: "Heidelberg Materials", logo: heidelbergLogo },
+  { label: "Rigips", logo: null },
+  { label: "Knauf Insulation", logo: null },
+  { label: "Hilti", logo: hiltiLogo },
+  { label: "Fermacell", logo: null },
+  { label: "Armstrong", logo: null },
 ];
 
 const track = [...partners, ...partners];

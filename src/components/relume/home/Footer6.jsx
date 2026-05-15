@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import React from "react";
 
@@ -6,57 +6,37 @@ const footerLinks = [
   {
     heading: "Leistungen",
     links: [
-      { label: "Neubau", href: "/leistungen" },
-      { label: "Renovierung", href: "/leistungen" },
-      { label: "Anbauten", href: "/leistungen" },
-      { label: "Beratung", href: "/leistungen" },
-      { label: "Restaurierung", href: "/leistungen" },
+      { label: "Trockenbau", href: "/leistungen" },
+      { label: "Dachbodenausbau", href: "/leistungen" },
+      { label: "Wärme- & Schallschutz", href: "/leistungen" },
+      { label: "Trockenbaudecke", href: "/leistungen" },
+      { label: "Bodenbeläge", href: "/leistungen" },
+      { label: "Badsanierung", href: "/leistungen" },
     ],
   },
   {
     heading: "Unternehmen",
     links: [
-      { label: "Über uns", href: "/ueber-uns" },
-      { label: "Unser Team", href: "/ueber-uns" },
-      { label: "Unser Prozess", href: "/prozess" },
-      { label: "Referenzen", href: "/referenzen" },
-      { label: "Auszeichnungen", href: "/auszeichnungen" },
-    ],
-  },
-  {
-    heading: "Projekte",
-    links: [
-      { label: "Alle Projekte", href: "/projekte" },
-      { label: "Aktuelle Arbeiten", href: "/projekte" },
-      { label: "Fotogalerie", href: "/projekte" },
-      { label: "Blog", href: "/blog" },
+      { label: "Startseite", href: "/" },
+      { label: "Leistungen", href: "/leistungen" },
+      { label: "Galerie", href: "/galerie" },
+      { label: "Kontakt", href: "/kontakt" },
     ],
   },
   {
     heading: "Kontakt",
     links: [
-      { label: "Beratung anfragen", href: "/kontakt" },
-      { label: "Kontakt aufnehmen", href: "/kontakt" },
-      { label: "FAQ", href: "/kontakt" },
-      { label: "Preise", href: "/preise" },
+      { label: "Angebot anfragen", href: "/kontakt" },
+      { label: "info-kalac-trockenbau@web.de", href: "mailto:info-kalac-trockenbau@web.de" },
+      { label: "+49 176 38583954", href: "tel:+4917638583954" },
+      { label: "Siegfriedstrasse 3, Regensburg", href: "/kontakt" },
     ],
   },
   {
     heading: "Rechtliches",
     links: [
-      { label: "Impressum", href: "#" },
-      { label: "Datenschutz", href: "#" },
-      { label: "AGB", href: "#" },
-      { label: "Cookie-Einstellungen", href: "#" },
-    ],
-  },
-  {
-    heading: "Folgen Sie uns",
-    links: [
-      { label: "Instagram", href: "#" },
-      { label: "Facebook", href: "#" },
-      { label: "LinkedIn", href: "#" },
-      { label: "YouTube", href: "#" },
+      { label: "Impressum", href: "/impressum" },
+      { label: "Datenschutz", href: "/datenschutz" },
     ],
   },
 ];
@@ -65,36 +45,28 @@ export function Footer6() {
   return (
     <footer className="bg-background-alternative px-[5%] py-12 md:py-18 lg:py-20">
       <div className="container">
-        {/* Top: newsletter */}
+        {/* Top: contact info */}
         <div className="mb-12 flex flex-col gap-6 border-b border-border-alternative pb-12 lg:flex-row lg:items-start lg:justify-between lg:gap-0">
           <div>
             <p className="mb-1 font-heading text-base font-bold tracking-wide text-text-alternative">
-              Immer auf dem Laufenden
+              K.M. Trockenbau
             </p>
             <p className="font-body text-sm text-text-alternative/60">
-              Tipps und Einblicke für Ihr Bauprojekt in Bayern.
+              Kalac Mujo · Siegfriedstrasse 3 · 93051 Regensburg
             </p>
           </div>
-          <form
-            className="flex w-full max-w-sm gap-0"
-            onSubmit={(e) => e.preventDefault()}
-          >
-            <input
-              type="email"
-              placeholder="Ihre E-Mail-Adresse"
-              className="w-full border border-border-alternative bg-transparent px-4 py-2.5 font-body text-sm text-text-alternative placeholder-text-alternative/40 outline-none focus:border-hoser-gold transition-colors duration-200"
-            />
-            <button
-              type="submit"
-              className="shrink-0 bg-hoser-gold px-5 font-body text-sm font-semibold tracking-wide text-text-primary transition-colors duration-200 hover:bg-hoser-gold-light"
-            >
-              Abonnieren
-            </button>
-          </form>
+          <div className="flex flex-col gap-1 text-sm font-body text-text-alternative/60">
+            <a href="tel:+4917638583954" className="hover:text-hoser-gold transition-colors duration-200">
+              +49 (0) 176 38 58 39 54
+            </a>
+            <a href="mailto:info-kalac-trockenbau@web.de" className="hover:text-hoser-gold transition-colors duration-200">
+              info-kalac-trockenbau@web.de
+            </a>
+          </div>
         </div>
 
         {/* Links grid */}
-        <div className="mb-12 grid grid-cols-2 gap-x-6 gap-y-10 sm:grid-cols-3 lg:grid-cols-6">
+        <div className="mb-12 grid grid-cols-2 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-4">
           {footerLinks.map((col) => (
             <div key={col.heading}>
               <h3 className="mb-4 font-heading text-xs font-bold uppercase tracking-[0.15em] text-text-alternative">
@@ -119,10 +91,10 @@ export function Footer6() {
         {/* Bottom bar */}
         <div className="border-t border-border-alternative pt-8 flex flex-col items-start gap-4 sm:flex-row sm:items-center sm:justify-between">
           <a href="/" className="font-heading text-base font-bold tracking-[0.12em] uppercase text-text-alternative">
-            WM Bau GmbH
+            K.M. Trockenbau
           </a>
           <p className="font-body text-xs text-text-alternative/40">
-            © {new Date().getFullYear()} WM Bau GmbH. Alle Rechte vorbehalten.
+            © {new Date().getFullYear()} K.M. Trockenbau · Kalac Mujo · Steuernr. 24423430024
           </p>
         </div>
       </div>

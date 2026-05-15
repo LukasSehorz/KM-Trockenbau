@@ -1,35 +1,35 @@
-"use client";
+﻿"use client";
 
 import { useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 
 const lukas = {
   num: "01",
-  name: "Lukas Winter",
+  name: "Kalac Mujo",
   title: "Geschäftsführer",
   role: "Geschäftsführung",
   image: "/images/lukas-winter.png",
-  email: "info@wmbau.com",
-  bio: "Lukas Winter führt die WM Bau GmbH mit Leidenschaft für Qualität und handwerklicher Präzision. Mit seinem Team realisiert er Projekte von der Planung bis zur Schlüsselübergabe – in Dorfen, der Region Erding und weit darüber hinaus.",
+  email: "info-kalac-trockenbau@web.de",
+  bio: "Kalac Mujo führt K.M. Trockenbau mit Leidenschaft für Qualität und handwerklicher Präzision. Langjährige Erfahrung im Innenausbau und kontinuierliche Weiterbildung machen ihn zu Ihrem zuverlässigen Ansprechpartner in Regensburg.",
   facts: [
-    { label: "Unternehmen", value: "WM Bau GmbH" },
+    { label: "Unternehmen", value: "K.M. Trockenbau" },
     { label: "Schwerpunkt", value: "Hochbau, Tiefbau & Schlüsselfertigbau" },
-    { label: "Standort", value: "Breitenloh 1, 84405 Dorfen" },
+    { label: "Standort", value: "Siegfriedstrasse 3, 93051 Regensburg" },
   ],
 };
 
 const philip = {
   num: "02",
-  name: "Philip Marsmann",
+  name: "",
   title: "Geschäftsführer",
   role: "Geschäftsführung",
   image: "/images/philip-marsmann.png",
-  email: "info@wmbau.com",
-  bio: "Philip Marsmann verantwortet die operative und kaufmännische Führung der WM Bau GmbH und sorgt mit seinem Organisationstalent für reibungslose Abläufe – von der Angebotserstellung bis zur Projektabrechnung.",
+  email: "info-kalac-trockenbau@web.de",
+  bio: "",
   facts: [
-    { label: "Unternehmen", value: "WM Bau GmbH" },
+    { label: "Unternehmen", value: "K.M. Trockenbau" },
     { label: "Schwerpunkt", value: "Projektleitung & Verwaltung" },
-    { label: "Standort", value: "Breitenloh 1, 84405 Dorfen" },
+    { label: "Standort", value: "Siegfriedstrasse 3, 93051 Regensburg" },
   ],
 };
 

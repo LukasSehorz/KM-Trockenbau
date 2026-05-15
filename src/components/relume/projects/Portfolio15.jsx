@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import React, { useState, useEffect, useRef } from "react";
 import { gsap, ScrollTrigger } from "../../../utils/gsap";
@@ -31,37 +31,37 @@ const projects = [
     desc: "Neubau einer Wohnanlage mit 97 Wohneinheiten und Tiefgarage",
     location: "München / Trudering",
     img: "/images/Beispiel-Projekte/LP1.jpg",
-    detail: "Im Münchner Stadtteil Trudering realisierte WM Bau GmbH eine moderne Wohnanlage mit 97 Wohneinheiten sowie einer Tiefgarage. Das Projekt umfasste alle Rohbau- und Ausbauarbeiten und wurde termingerecht und im vereinbarten Kostenrahmen übergeben. Die Anlage überzeugt durch ihre durchdachte Grundrissplanung und hochwertige Ausstattung.",
+    detail: "Im Münchner Stadtteil Trudering realisierte K.M. Trockenbau eine moderne Wohnanlage mit 97 Wohneinheiten sowie einer Tiefgarage. Das Projekt umfasste alle Rohbau- und Ausbauarbeiten und wurde termingerecht und im vereinbarten Kostenrahmen übergeben. Die Anlage überzeugt durch ihre durchdachte Grundrissplanung und hochwertige Ausstattung.",
     images: ["/images/Beispiel-Projekte/LP1.jpg", PLACEHOLDER, PLACEHOLDER],
   },
   {
     id: "02",
-    title: "Wohnpark Haydn, Dorfen",
+    title: "Innenausbau Projekt, Regensburg",
     category: "Wohnungsbau",
     desc: "Neubau eines Wohnparks mit 56 Wohneinheiten und Tiefgarage",
-    location: "Dorfen",
+    location: "Regensburg",
     img: "/images/Beispiel-Projekte/LP2.jpg",
-    detail: "In Dorfen entstand der Wohnpark Haydn mit 56 modernen Wohneinheiten und einer Tiefgarage. WM Bau GmbH übernahm die schlüsselfertige Realisierung des gesamten Projekts – von der Rohbauphase bis zur Fertigstellung. Die Anlage vereint zeitgemäße Architektur mit einer nachhaltigen Bauweise und einem hohen Wohnkomfort.",
+    detail: "In Regensburg entstand der Wohnpark Haydn mit 56 modernen Wohneinheiten und einer Tiefgarage. K.M. Trockenbau übernahm die schlüsselfertige Realisierung des gesamten Projekts – von der Rohbauphase bis zur Fertigstellung. Die Anlage vereint zeitgemäße Architektur mit einer nachhaltigen Bauweise und einem hohen Wohnkomfort.",
     images: ["/images/Beispiel-Projekte/LP2.jpg", PLACEHOLDER, PLACEHOLDER],
   },
   {
     id: "03",
-    title: "Einfamilienhaus, Dorfen",
+    title: "Dachbodenausbau, Regensburg",
     category: "Wohnbau",
     desc: "Schlüsselfertiger Neubau eines Einfamilienhauses",
-    location: "Dorfen",
+    location: "Regensburg",
     img: "/images/projekt-03.png",
-    detail: "Für eine Privatfamilie in Dorfen realisierte WM Bau GmbH ein schlüsselfertiges Einfamilienhaus mit durchdachter Grundrissplanung und hochwertigen Materialien. Das klare, moderne Erscheinungsbild wurde in enger Zusammenarbeit mit dem Bauherrn entwickelt. Alle Gewerke wurden termingerecht und im vereinbarten Kostenrahmen abgeschlossen.",
+    detail: "Für eine Privatfamilie in Regensburg realisierte K.M. Trockenbau ein schlüsselfertiges Einfamilienhaus mit durchdachter Grundrissplanung und hochwertigen Materialien. Das klare, moderne Erscheinungsbild wurde in enger Zusammenarbeit mit dem Bauherrn entwickelt. Alle Gewerke wurden termingerecht und im vereinbarten Kostenrahmen abgeschlossen.",
     images: ["/images/projekt-03.png", PLACEHOLDER, PLACEHOLDER],
   },
   {
     id: "04",
-    title: "Einfamilienhaus Dorfen",
+    title: "Einfamilienhaus Regensburg",
     category: "Wohnbau",
     desc: "Schlüsselfertiger Neubau eines Einfamilienhauses mit Carport",
-    location: "Dorfen",
+    location: "Regensburg",
     img: "/images/bild-wohnhaus.jpg",
-    detail: "Für eine Privatfamilie in Dorfen realisierte WM Bau GmbH ein schlüsselfertiges Einfamilienhaus mit Keller, Carport und Gartengestaltung. Das klare, moderne Erscheinungsbild mit hochwertigen Materialien und durchdachter Grundrissplanung wurde in enger Zusammenarbeit mit dem Bauherrn entwickelt.",
+    detail: "Für eine Privatfamilie in Regensburg realisierte K.M. Trockenbau ein schlüsselfertiges Einfamilienhaus mit Keller, Carport und Gartengestaltung. Das klare, moderne Erscheinungsbild mit hochwertigen Materialien und durchdachter Grundrissplanung wurde in enger Zusammenarbeit mit dem Bauherrn entwickelt.",
     images: [PLACEHOLDER, PLACEHOLDER, PLACEHOLDER],
   },
   {
@@ -71,7 +71,7 @@ const projects = [
     desc: "Kernsanierung und Modernisierung eines denkmalgeschützten Bauernhofs",
     location: "Buch am Buchrain",
     img: "/images/bild-bauernhof.jpg",
-    detail: "In Buch am Buchrain sanierte WM Bau GmbH einen historischen Bauernhof unter denkmalschutzrechtlichen Auflagen. Neue Fenster, Dämmung, Haustechnik und Fassade wurden behutsam integriert, ohne den traditionellen Charakter des Gebäudes zu beeinträchtigen. Ein anspruchsvolles Projekt, das Handwerkskunst und moderne Bautechnik vereint.",
+    detail: "In Buch am Buchrain sanierte K.M. Trockenbau einen historischen Bauernhof unter denkmalschutzrechtlichen Auflagen. Neue Fenster, Dämmung, Haustechnik und Fassade wurden behutsam integriert, ohne den traditionellen Charakter des Gebäudes zu beeinträchtigen. Ein anspruchsvolles Projekt, das Handwerkskunst und moderne Bautechnik vereint.",
     images: [PLACEHOLDER, PLACEHOLDER, PLACEHOLDER],
   },
 ];

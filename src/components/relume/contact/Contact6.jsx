@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import React from "react";
 import { BiEnvelope, BiMap, BiPhone } from "react-icons/bi";
@@ -33,15 +33,15 @@ export function Contact6() {
           <div className="grid gap-4">
             <div className="flex items-center gap-4">
               <BiEnvelope className="size-5 flex-none text-[#D94520]" />
-              <p className="font-body text-sm text-[#0A1628]">info@wmbau.com</p>
+              <p className="font-body text-sm text-[#0A1628]">info-kalac-trockenbau@web.de</p>
             </div>
             <div className="flex items-center gap-4">
               <BiPhone className="size-5 flex-none text-[#D94520]" />
-              <p className="font-body text-sm text-[#0A1628]">0151 58 72 01 08</p>
+              <p className="font-body text-sm text-[#0A1628]">+49 176 38583954</p>
             </div>
             <div className="flex items-center gap-4">
               <BiMap className="size-5 flex-none text-[#D94520]" />
-              <p className="font-body text-sm text-[#0A1628]">Breitenloh 1, 84405 Dorfen</p>
+              <p className="font-body text-sm text-[#0A1628]">Siegfriedstrasse 3, 93051 Regensburg</p>
             </div>
           </div>
         </div>

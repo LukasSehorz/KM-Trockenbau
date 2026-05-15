@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import React, { useEffect, useRef } from "react";
 import { gsap } from "../../../utils/gsap";
@@ -40,12 +40,12 @@ const vorteile = [
   {
     num: "04",
     title: "Familiäres Team",
-    desc: "Seit 2020 in Dorfen. Flache Hierarchien, direkte Kommunikation, Respekt und Zusammenhalt.",
+    desc: "Seit 2020 in Regensburg. Flache Hierarchien, direkte Kommunikation, Respekt und Zusammenhalt.",
   },
   {
     num: "05",
     title: "Sicherer Arbeitsplatz",
-    desc: "Konstante Auftragslage durch starkes regionales Netzwerk in Dorfen und der Region Erding.",
+    desc: "Konstante Auftragslage durch starkes regionales Netzwerk in Regensburg und der Region Regensburg.",
   },
   {
     num: "06",
@@ -158,7 +158,7 @@ export function KarriereVorteile() {
           <div className="grid grid-cols-1 gap-8 md:grid-cols-2 md:items-end">
             <div>
               <p ref={eyebrowRef} className="mb-3 font-body text-sm font-semibold uppercase tracking-[0.28em] text-[#D94520]">
-                Karriere bei WM Bau GmbH
+                Karriere bei K.M. Trockenbau
               </p>
               <h2
                 ref={headingRef}

@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import React, { useEffect, useRef } from "react";
 import { gsap, ScrollTrigger, Observer } from "../../../utils/gsap";
@@ -521,7 +521,7 @@ export function ProzessPath() {
               letterSpacing: "0.25em", textTransform: "uppercase",
               color: "#D94520",
             }}>
-              Der WM Bau GmbH-Prozess
+              Der K.M. Trockenbau-Prozess
             </span>
           </div>
           <h2 style={{

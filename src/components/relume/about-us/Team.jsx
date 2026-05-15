@@ -1,11 +1,11 @@
-"use client";
+﻿"use client";
 
 import React, { useEffect, useRef } from "react";
 import { gsap } from "../../../utils/gsap";
 
 const team = [
-  { name: "Lukas Winter",   role: "Geschäftsführer", img: "/images/lukas-winter.png" },
-  { name: "Philip Marsmann", role: "Geschäftsführer", img: "/images/philip-marsmann.png" },
+  { name: "Kalac Mujo",   role: "Inhaber & Geschäftsführer", img: "/images/team-kalac.jpg" },
+  
 ];
 
 const splitWords = (el, text) => {
@@ -91,7 +91,7 @@ export function Team() {
         {/* Heading */}
         <div className="mb-14 md:mb-18">
           <p ref={eyebrowRef} className="mb-3 font-body text-sm font-semibold uppercase tracking-[0.25em] text-[#D94520]">
-            Menschen bei WM Bau GmbH
+            Menschen bei K.M. Trockenbau
           </p>
           <h2
             ref={headingRef}
@@ -101,7 +101,7 @@ export function Team() {
             Unser Team
           </h2>
           <p ref={subRef} className="mt-4 max-w-xl font-body text-base text-[#0A1628]/60">
-            Lukas Winter und Philip Marsmann führen die WM Bau GmbH gemeinsam – mit Leidenschaft für Qualität und handwerklicher Präzision.
+            Kalac Mujo führt K.M. Trockenbau mit Leidenschaft für Qualität und handwerklicher Präzision.
           </p>
         </div>
 

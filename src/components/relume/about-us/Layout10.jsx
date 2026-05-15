@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import React from "react";
 
@@ -15,9 +15,9 @@ export function Layout10() {
               Gegründet 2020. Qualität aus einer Hand.
             </h2>
             <p className="mb-6 font-body text-base leading-relaxed text-text-secondary md:text-lg">
-              <strong className="text-text-primary font-semibold">Lukas Winter</strong> und <strong className="text-text-primary font-semibold">Philip Marsmann</strong> gründeten die WM Bau GmbH 2020 in Dorfen.
+              <strong className="text-text-primary font-semibold">Kalac Mujo</strong> gründete K.M. Trockenbau in Regensburg.
               Von Anfang an stand das Unternehmen für klare Werte: Qualität, Verlässlichkeit und persönliche Betreuung.
-              Mit eigenem Fachpersonal und moderner Ausstattung wächst WM Bau GmbH stetig in der Region Erding.
+              Mit eigenem Fachpersonal und moderner Ausstattung wächst K.M. Trockenbau stetig in der Region Regensburg.
             </p>
             <p className="mb-8 font-body text-base leading-relaxed text-text-secondary md:text-lg">
               Unser Aufgabenschwerpunkt liegt in der Ausführung von Baumeisterarbeiten im Hoch-, Erd- und Kanalbau.
@@ -62,7 +62,7 @@ export function Layout10() {
             <img
               src="/images/craftsmen-stone-facade.jpg"
               className="w-full object-cover transition-transform duration-700 hover:scale-105"
-              alt="WM Bau GmbH – Facharbeiter auf der Baustelle"
+              alt="K.M. Trockenbau – Facharbeiter auf der Baustelle"
             />
           </div>
         </div>

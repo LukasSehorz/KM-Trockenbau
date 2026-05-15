@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+﻿import { useState, useEffect } from "react";
 import { BrowserRouter, Route, Routes, useLocation } from "react-router-dom";
 import { AnimatePresence } from "framer-motion";
 import IntroScreen from "./components/IntroScreen";
@@ -32,8 +32,8 @@ export default function App() {
       <AnimatePresence>
         {!introComplete && (
           <IntroScreen key="intro" onComplete={() => {
-            (window as any).__schmidIntroDone = true;
-            window.dispatchEvent(new CustomEvent("schmid-intro-complete"));
+            (window as any).__kmIntroDone = true;
+            window.dispatchEvent(new CustomEvent("km-intro-complete"));
             setIntroComplete(true);
           }} />
         )}

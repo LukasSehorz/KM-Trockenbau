@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import React from "react";
 
@@ -13,12 +13,12 @@ export function Header69() {
           className="mb-5 font-heading font-bold leading-[1.05] tracking-tight text-white"
           style={{ fontSize: "clamp(2.8rem, 6vw, 6rem)" }}
         >
-          Dorfen.<br />Qualität, die bleibt.
+          Regensburg.<br />Qualität, die bleibt.
         </h1>
         <p className="font-body text-base leading-relaxed text-white/65 md:text-lg">
-          Seit 2020 bauen wir in Dorfen und der Region Erding.
+          Seit 2020 bauen wir in Regensburg und der Region Regensburg.
           Was mit klaren Werten und eigenem Fachpersonal begann, ist heute
-          ein zuverlässiges Bauunternehmen – mit moderner Technik und
+          ein zuverlässiges Trockenbau – mit moderner Technik und
           dem Anspruch, Qualität zu liefern, die bleibt.
         </p>
       </div>
@@ -26,7 +26,7 @@ export function Header69() {
         <img
           src="/images/villa-twilight.jpg"
           className="size-full object-cover"
-          alt="WM Bau GmbH Dorfen"
+          alt="K.M. Trockenbau Regensburg"
         />
         <div className="absolute inset-0 bg-gradient-to-r from-black/85 via-black/50 to-black/20" />
       </div>

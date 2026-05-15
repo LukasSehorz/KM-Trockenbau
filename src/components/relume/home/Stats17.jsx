@@ -1,13 +1,13 @@
-"use client";
+﻿"use client";
 
 import { useRef, useEffect } from "react";
 import { gsap } from "../../../utils/gsap";
 
 const stats = [
-  { value: "57",  label: "Abgeschlossene Projekte",  num: 57,  suffix: "" },
-  { value: "98%", label: "Pünktliche Fertigstellung", num: 98,  suffix: "%" },
-  { value: "96%", label: "Im Budgetrahmen",           num: 96,  suffix: "%" },
-  { value: "30+", label: "Jahre in der Region",       num: 30,  suffix: "+" },
+  { value: "6",   label: "Leistungsbereiche",        num: 6,   suffix: "" },
+  { value: "100%", label: "DIN-normgerecht",         num: 100, suffix: "%" },
+  { value: "1",   label: "Fester Ansprechpartner",   num: 1,   suffix: "" },
+  { value: "∞",   label: "Beratung inklusive",       num: 0,   suffix: "" },
 ];
 
 const splitWords = (el, text) => {
@@ -168,14 +168,15 @@ export function Stats17() {
             </h2>
 
             <p className="s17-sub font-body text-base text-[#0A1628]/65 md:text-lg">
-              Seit 2020 in der Region Dorfen & Erding. Projekte für Generationen. Ein Name.
+              K.M. Trockenbau in Regensburg — Innenausbau nach aktuellen DIN-Normen,
+              mit persönlicher Beratung und kontinuierlicher Weiterbildung.
             </p>
             <div className="mt-8">
               <a
-                href="/projekte"
+                href="/leistungen"
                 className="s17-cta group inline-flex items-center gap-3 border border-[#C8784A]/30 px-7 py-3 font-body text-sm font-semibold tracking-[0.14em] uppercase text-[#C8784A] transition-all duration-200 hover:bg-[#C8784A] hover:text-white hover:border-[#C8784A]"
               >
-                Projekte entdecken
+                Leistungen entdecken
                 <span className="transition-transform duration-300 group-hover:translate-x-1">→</span>
               </a>
             </div>

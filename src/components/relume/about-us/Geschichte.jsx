@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import React, { useEffect, useRef } from "react";
 import gsap from "gsap";
@@ -10,28 +10,28 @@ const milestones = [
   {
     year: "2020",
     title: "Die Gründung",
-    desc: "Lukas Winter und Philip Marsmann gründen die WM Bau GmbH in Dorfen. Von Anfang an stehen Qualität, Verlässlichkeit und persönliche Betreuung im Mittelpunkt.",
-    detail: "Was in Dorfen im Landkreis Erding begann, legte den Grundstein für ein modernes, leistungsstarkes Bauunternehmen in der Region.",
+    desc: "Kalac Mujo gründet K.M. Trockenbau in Regensburg. Von Anfang an stehen Qualität, Verlässlichkeit und persönliche Betreuung im Mittelpunkt.",
+    detail: "Was in Regensburg im Landkreis Regensburg begann, legte den Grundstein für ein modernes, leistungsstarkes Trockenbau in der Region.",
     img: "/images/timeline/gruendung.jpg",
   },
   {
     year: "2021",
     title: "Erste Projekte",
     desc: "Das Team wächst und erste Referenzprojekte entstehen – von Rohbau über Sanierung bis hin zu schlüsselfertigen Bauprojekten in der Region.",
-    detail: "Mit eigenem Fachpersonal und moderner Ausstattung übernimmt WM Bau GmbH Projekte termingerecht und auf höchstem handwerklichen Niveau.",
+    detail: "Mit eigenem Fachpersonal und moderner Ausstattung übernimmt K.M. Trockenbau Projekte termingerecht und auf höchstem handwerklichen Niveau.",
     img: "/images/timeline/erste-projekte.jpg",
   },
   {
     year: "2022",
     title: "Wachstum & Ausbau",
-    desc: "Erweiterung des Leistungsspektrums und des Fuhrparks. WM Bau GmbH etabliert sich als zuverlässiger Partner für Privat- und Gewerbekunden.",
-    detail: "Das Betriebsgelände in Breitenloh 1, Dorfen, bietet optimale Voraussetzungen für Fuhrpark, Maschinen und Lager – eine solide Basis für alle Gewerke.",
+    desc: "Erweiterung des Leistungsspektrums und des Fuhrparks. K.M. Trockenbau etabliert sich als zuverlässiger Partner für Privat- und Gewerbekunden.",
+    detail: "Das Betriebsgelände in Siegfriedstrasse 3, Regensburg, bietet optimale Voraussetzungen für Fuhrpark, Maschinen und Lager – eine solide Basis für alle Gewerke.",
     img: "/images/timeline/wachstum.jpg",
   },
   {
     year: "Heute",
     title: "Etabliert in der Region",
-    desc: "WM Bau GmbH steht für bayerisches Handwerk auf höchstem Niveau – mit einem erfahrenen Team und einem breiten Leistungsspektrum aus einer Hand.",
+    desc: "K.M. Trockenbau steht für bayerisches Handwerk auf höchstem Niveau – mit einem erfahrenen Team und einem breiten Leistungsspektrum aus einer Hand.",
     detail: "Von schlüsselfertigem Wohnungsbau über Rohbau und Renovierung bis zu Tiefbau, Gerüst und Transporten – zuverlässig und persönlich für Bauherren in der Region.",
     img: "/images/timeline/heute.jpg",
   },
@@ -201,7 +201,7 @@ export function Geschichte() {
               Unsere Geschichte
             </h2>
             <p ref={subRef} className="font-body text-base leading-relaxed text-[#0A1628]/55">
-              Gegründet 2020 in Dorfen.<br />Ein Anspruch: Projekte für Generationen.
+              Gegründet 2020 in Regensburg.<br />Ein Anspruch: Projekte für Generationen.
             </p>
           </div>
         </div>

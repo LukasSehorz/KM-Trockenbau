@@ -4,9 +4,9 @@ import React, { useEffect, useRef } from "react";
 import { gsap, ScrollTrigger } from "../../../utils/gsap";
 
 const points = [
-  "Eigenes, ausgebildetes Fachpersonal – kein Rückgriff auf Werklohnfirmen",
-  "Umfangreicher Maschinen- und Fuhrpark für alle Gewerke",
-  "Direkte Kommunikation mit der Geschäftsführung",
+  "Einhaltung aller aktuellen DIN-Normen beim Trocken- und Innenausbau",
+  "Kontinuierliche Weiterbildung für höchste Qualität und Terminsicherheit",
+  "Persönliche Beratung auch zu Brandschutz und Sicherheitssystemen",
 ];
 
 // Helper: split text into char spans
@@ -94,7 +94,7 @@ export function Layout16() {
       // Heading: word-by-word lift from below
       let headingWords = [];
       if (headingRef.current) {
-        headingWords = splitWords(headingRef.current, "Kompetenz und Terminsicherheit – garantiert.");
+        headingWords = splitWords(headingRef.current, "Ihr zuverlässiger Trockenbauexperte in Regensburg.");
         gsap.set(headingWords, { yPercent: 110 });
       }
 
@@ -179,23 +179,23 @@ export function Layout16() {
         <div className="grid grid-cols-1 gap-y-12 md:grid-cols-2 md:items-center md:gap-x-12 lg:gap-x-20">
           <div>
             <p ref={eyebrowRef} className="mb-4 font-body text-sm font-semibold uppercase tracking-[0.25em] text-[#F07040]">
-              Warum WM Bau GmbH
+              Warum K.M. Trockenbau
             </p>
             <h2
               ref={headingRef}
               className="mb-5 font-heading text-4xl font-bold leading-tight tracking-tight text-white md:text-5xl"
             >
-              Kompetenz und Terminsicherheit – garantiert.
+              Ihr zuverlässiger Trockenbauexperte in Regensburg.
             </h2>
             <p
               ref={paraRef}
-              data-text="Durch geschultes Personal, neueste Technik und einen umfangreichen Maschinenpark bieten wir Ihnen ein Know-how, das Kompetenz und Terminsicherheit garantiert. Hoher Qualitätsstandard der verarbeiteten Materialien und erfahrene Fachkräfte bürgen für zuverlässige Ausführung."
+              data-text="Wir haben langjährige Erfahrung im Innenausbau und beherrschen alle Systeme im Wand-, Decken- und Bodenbereich. Von der individuellen Erstberatung bis zur Fertigstellung sorgen wir für klar konzipierte Strukturen und gehen auf Ihre Wünsche und Vorstellungen ein."
               className="mb-6 font-body text-base leading-relaxed text-white/90 md:text-lg"
             >
-              Durch geschultes Personal, neueste Technik und einen umfangreichen
-              Maschinenpark bieten wir Ihnen ein Know-how, das Kompetenz und
-              Terminsicherheit garantiert. Hoher Qualitätsstandard der verarbeiteten
-              Materialien und erfahrene Fachkräfte bürgen für zuverlässige Ausführung.
+              Wir haben langjährige Erfahrung im Innenausbau und beherrschen alle
+              Systeme im Wand-, Decken- und Bodenbereich. Von der individuellen
+              Erstberatung bis zur Fertigstellung sorgen wir für klar konzipierte
+              Strukturen und gehen auf Ihre Wünsche und Vorstellungen ein.
             </p>
             <ul ref={listRef} className="mb-8 space-y-4">
               {points.map((p) => (

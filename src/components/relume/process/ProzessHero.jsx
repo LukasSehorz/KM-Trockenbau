@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import React, { useEffect, useRef } from "react";
 import { gsap } from "../../../utils/gsap";
@@ -44,7 +44,7 @@ export function ProzessHero() {
       {/* Background image */}
       <img
         src="/images/prozess-hero.jpg"
-        alt="WM Bau GmbH – Prozess"
+        alt="K.M. Trockenbau – Prozess"
         className="prozess-hero-bg absolute inset-0 h-full w-full object-cover object-center"
         style={{ willChange: "transform" }}
       />
