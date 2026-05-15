@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(git rm *)",
+      "Bash(cp -r \"c:/Users/lukas/OneDrive/Desktop/Webseiten/Erstgespräch anstehend/KM-Trockenbau/WM-Bau-GmbH/.\" \"c:/Users/lukas/OneDrive/Desktop/Webseiten/Erstgespräch anstehend/KM-Trockenbau/\" --exclude=\".git\")",
+      "Bash(echo \"Exit: $?\")",
+      "Bash(rsync -av --exclude='.git' \"c:/Users/lukas/OneDrive/Desktop/Webseiten/Erstgespräch anstehend/KM-Trockenbau/WM-Bau-GmbH/\" \"c:/Users/lukas/OneDrive/Desktop/Webseiten/Erstgespräch anstehend/KM-Trockenbau/\")"
+    ]
+  }
+}
