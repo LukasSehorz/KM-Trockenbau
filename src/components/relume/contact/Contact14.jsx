@@ -5,7 +5,7 @@ import { BiEnvelope, BiMap, BiPhone } from "react-icons/bi";
 
 export function Contact14() {
   return (
-    <section className="px-[5%] pt-10 pb-16 md:pt-14 md:pb-24" style={{ backgroundColor: "#FDFCF8" }}>
+    <section className="px-[5%] pt-10 pb-16 md:pt-14 md:pb-24" style={{ backgroundColor: "#FFFFFF" }}>
       <div className="container">
 
         {/* Top row: text left, map right */}
@@ -13,16 +13,16 @@ export function Contact14() {
 
           {/* Left: heading + description */}
           <div className="flex flex-col justify-center">
-            <p className="mb-4 font-body text-sm font-semibold uppercase tracking-[0.25em] text-[#D94520]">
+            <p className="mb-4 font-body text-sm font-semibold uppercase tracking-[0.25em] text-[#5AACB5]">
               Kontakt
             </p>
             <h2
-              className="mb-5 font-heading font-bold leading-tight tracking-tight text-[#D94520]"
+              className="mb-5 font-heading font-bold leading-tight tracking-tight text-[#5AACB5]"
               style={{ fontSize: "clamp(2rem, 4vw, 4rem)" }}
             >
               Sprechen Sie mit uns.
             </h2>
-            <p className="font-body text-base leading-relaxed text-[#0A1628]/60 md:text-lg">
+            <p className="font-body text-base leading-relaxed text-[#0D2020]/60 md:text-lg">
               Zögern Sie nicht, uns zu kontaktieren. Gerne fertigen wir Ihnen
               ein individuelles Angebot für Ihren Innenausbau in Regensburg an.
             </p>
@@ -46,17 +46,17 @@ export function Contact14() {
         {/* Bottom row: contact info */}
         <div className="grid grid-cols-1 gap-y-10 md:grid-cols-3 md:gap-x-16">
           <div>
-            <div className="mb-3 text-[#D94520] md:mb-4">
+            <div className="mb-3 text-[#5AACB5] md:mb-4">
               <BiPhone className="size-6" />
             </div>
-            <h3 className="mb-1 font-heading text-base font-bold text-[#D94520]">
+            <h3 className="mb-1 font-heading text-base font-bold text-[#5AACB5]">
               Telefon
             </h3>
-            <p className="mb-2 font-body text-sm text-[#0A1628]/50">
+            <p className="mb-2 font-body text-sm text-[#0D2020]/50">
               Jetzt anrufen und Angebot anfragen
             </p>
             <a
-              className="font-body text-base font-semibold text-[#0A1628] transition-colors duration-200 hover:text-[#D94520]"
+              className="font-body text-base font-semibold text-[#0D2020] transition-colors duration-200 hover:text-[#5AACB5]"
               href="tel:+4917638583954"
             >
               +49 (0) 176 38 58 39 54
@@ -64,17 +64,17 @@ export function Contact14() {
           </div>
 
           <div>
-            <div className="mb-3 text-[#D94520] md:mb-4">
+            <div className="mb-3 text-[#5AACB5] md:mb-4">
               <BiEnvelope className="size-6" />
             </div>
-            <h3 className="mb-1 font-heading text-base font-bold text-[#D94520]">
+            <h3 className="mb-1 font-heading text-base font-bold text-[#5AACB5]">
               E-Mail
             </h3>
-            <p className="mb-2 font-body text-sm text-[#0A1628]/50">
+            <p className="mb-2 font-body text-sm text-[#0D2020]/50">
               Projektanfragen und allgemeine Fragen
             </p>
             <a
-              className="font-body text-base font-semibold text-[#0A1628] transition-colors duration-200 hover:text-[#D94520]"
+              className="font-body text-base font-semibold text-[#0D2020] transition-colors duration-200 hover:text-[#5AACB5]"
               href="mailto:info-kalac-trockenbau@web.de"
             >
               info-kalac-trockenbau@web.de
@@ -82,13 +82,13 @@ export function Contact14() {
           </div>
 
           <div>
-            <div className="mb-3 text-[#D94520] md:mb-4">
+            <div className="mb-3 text-[#5AACB5] md:mb-4">
               <BiMap className="size-6" />
             </div>
-            <h3 className="mb-1 font-heading text-base font-bold text-[#D94520]">
+            <h3 className="mb-1 font-heading text-base font-bold text-[#5AACB5]">
               Standort
             </h3>
-            <p className="font-body text-base text-[#0A1628]/60">
+            <p className="font-body text-base text-[#0D2020]/60">
               Siegfriedstrasse 3<br />
               93051 Regensburg
             </p>

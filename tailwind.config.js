@@ -14,39 +14,33 @@ export default {
       },
       colors: {
         // ── Surfaces ────────────────────────────────────────────────
-        // primary  = warm "blueprint paper" canvas — main page bg
-        // secondary = slightly more pigmented for alternating sections
-        // alternative = deep brand blue — used for accent / feature blocks
         background: {
-          primary: "#FDFCF8",
-          secondary: "#F2EFE6",
-          alternative: "#D94520",
+          primary: "#FFFFFF",
+          secondary: "#F0F8F7",
+          alternative: "#5AACB5",
         },
         // ── Text ────────────────────────────────────────────────────
-        // primary  = near-black w/ warm undertone (on light)
-        // secondary = mid-gray (on light)
-        // alternative = white (used on accent orange blocks)
         text: {
-          DEFAULT: "#0A1628",
-          primary: "#0A1628",
-          secondary: "#D94520",
+          DEFAULT: "#0D2020",
+          primary: "#0D2020",
+          secondary: "#5AACB5",
           alternative: "#FFFFFF",
         },
         // ── Borders ─────────────────────────────────────────────────
         border: {
-          primary: "rgba(217,69,32,0.14)",
-          alternative: "rgba(217,69,32,0.08)",
+          primary: "rgba(90,172,181,0.18)",
+          alternative: "rgba(90,172,181,0.10)",
         },
-        // ── Brand palette ───────────────────────────────────────────
+        // ── Brand palette — KM Trockenbau Teal ──────────────────────
         hoser: {
-          gold: "#D94520",         // primary brand accent (Härtl Orange)
-          "gold-light": "#E55528", // brighter orange
-          cream: "#FDFCF8",        // canvas off-white
-          charcoal: "#0A1628",     // near-black ink
-          stone: "#5A6478",        // mid gray
-          navy: "#D94520",         // brand orange — feature blocks
-          "navy-light": "#E55528",
-          "navy-deep": "#9E300E",
+          gold: "#5AACB5",         // primary teal accent
+          "gold-light": "#7BBFB8", // lighter teal
+          cream: "#FFFFFF",
+          charcoal: "#0D2020",
+          stone: "#4A7878",
+          navy: "#5AACB5",
+          "navy-light": "#7BBFB8",
+          "navy-deep": "#3A8F8A",
         },
         neutral: {
           lightest: "#FFFFFF",

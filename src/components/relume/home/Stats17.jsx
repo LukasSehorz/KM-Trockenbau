@@ -139,7 +139,7 @@ export function Stats17() {
     <section
       ref={sectionRef}
       className="relative overflow-hidden"
-      style={{ height: "100vh", backgroundColor: "#FDFCF8" }}
+      style={{ height: "100vh", backgroundColor: "#FFFFFF" }}
     >
       {/* Background */}
       <div className="s17-bg-clip absolute inset-0 z-0">
@@ -149,7 +149,7 @@ export function Stats17() {
           className="s17-bg-img absolute inset-0 size-full object-cover"
           style={{ willChange: "transform" }}
         />
-        <div className="s17-overlay absolute inset-0" style={{ backgroundColor: "#FDFCF8" }} />
+        <div className="s17-overlay absolute inset-0" style={{ backgroundColor: "#FFFFFF" }} />
       </div>
 
       {/* Content */}
@@ -158,23 +158,23 @@ export function Stats17() {
 
           {/* Left */}
           <div>
-            <p className="s17-eyebrow mb-3 font-body text-sm font-semibold uppercase tracking-[0.28em] text-[#0D1B2A] md:mb-4">
+            <p className="s17-eyebrow mb-3 font-body text-sm font-semibold uppercase tracking-[0.28em] text-[#0D2020] md:mb-4">
               Unsere Zahlen
             </p>
 
-            <h2 className="mb-5 font-heading text-4xl font-bold leading-tight tracking-tight text-[#0D1B2A] md:mb-6 md:text-5xl lg:text-6xl">
+            <h2 className="mb-5 font-heading text-4xl font-bold leading-tight tracking-tight text-[#0D2020] md:mb-6 md:text-5xl lg:text-6xl">
               <span ref={line1Ref} className="block">Ergebnisse,</span>
               <span ref={line2Ref} className="block">die für sich sprechen</span>
             </h2>
 
-            <p className="s17-sub font-body text-base text-[#0A1628]/65 md:text-lg">
+            <p className="s17-sub font-body text-base text-[#0D2020]/65 md:text-lg">
               K.M. Trockenbau in Regensburg — Innenausbau nach aktuellen DIN-Normen,
               mit persönlicher Beratung und kontinuierlicher Weiterbildung.
             </p>
             <div className="mt-8">
               <a
                 href="/leistungen"
-                className="s17-cta group inline-flex items-center gap-3 border border-[#C8784A]/30 px-7 py-3 font-body text-sm font-semibold tracking-[0.14em] uppercase text-[#C8784A] transition-all duration-200 hover:bg-[#C8784A] hover:text-white hover:border-[#C8784A]"
+                className="s17-cta group inline-flex items-center gap-3 border border-[#5AACB5]/30 px-7 py-3 font-body text-sm font-semibold tracking-[0.14em] uppercase text-[#5AACB5] transition-all duration-200 hover:bg-[#5AACB5] hover:text-white hover:border-[#5AACB5]"
               >
                 Leistungen entdecken
                 <span className="transition-transform duration-300 group-hover:translate-x-1">→</span>
@@ -187,13 +187,13 @@ export function Stats17() {
             {stats.map((stat) => (
               <div key={stat.label} className="s17-stat-item relative pl-6">
                 <div
-                  className="s17-item-border absolute left-0 top-0 h-full w-0.5 bg-[#C8784A]/70"
+                  className="s17-item-border absolute left-0 top-0 h-full w-0.5 bg-[#5AACB5]/70"
                   style={{ transformOrigin: "top center" }}
                 />
-                <p className="s17-num mb-2 font-heading text-5xl font-bold leading-tight text-[#C8784A] md:text-6xl lg:text-7xl">
+                <p className="s17-num mb-2 font-heading text-5xl font-bold leading-tight text-[#5AACB5] md:text-6xl lg:text-7xl">
                   {stat.value}
                 </p>
-                <p className="font-body text-sm font-medium text-[#0A1628]/65 md:text-base">
+                <p className="font-body text-sm font-medium text-[#0D2020]/65 md:text-base">
                   {stat.label}
                 </p>
               </div>

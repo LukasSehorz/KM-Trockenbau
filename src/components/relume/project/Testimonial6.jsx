@@ -29,19 +29,19 @@ const reviews = [
 
 export function Testimonial6() {
   return (
-    <section className="px-[5%] py-16 md:py-24 lg:py-28" style={{ backgroundColor: "#FDFCF8" }}>
+    <section className="px-[5%] py-16 md:py-24 lg:py-28" style={{ backgroundColor: "#FFFFFF" }}>
       <div className="container">
         <div className="mb-12 w-full md:mb-18 lg:mb-20">
-          <p className="mb-3 font-body text-sm font-semibold uppercase tracking-[0.25em] text-[#D94520]">
+          <p className="mb-3 font-body text-sm font-semibold uppercase tracking-[0.25em] text-[#5AACB5]">
             Kundenstimmen
           </p>
           <h2
-            className="font-heading font-bold leading-tight tracking-tight text-[#0A1628]"
+            className="font-heading font-bold leading-tight tracking-tight text-[#0D2020]"
             style={{ fontSize: "clamp(2rem, 4vw, 3.5rem)" }}
           >
             Was Bauherren sagen.
           </h2>
-          <p className="mt-4 font-body text-base text-[#0A1628]/60 md:text-lg">
+          <p className="mt-4 font-body text-base text-[#0D2020]/60 md:text-lg">
             Echte Erfahrungen – direkt von unseren Kunden.
           </p>
         </div>
@@ -52,12 +52,12 @@ export function Testimonial6() {
               {/* Stars */}
               <div className="mb-6 flex gap-0.5">
                 {[...Array(5)].map((_, i) => (
-                  <BiSolidStar key={i} className="size-5 text-[#D94520]" />
+                  <BiSolidStar key={i} className="size-5 text-[#5AACB5]" />
                 ))}
               </div>
 
               {/* Quote */}
-              <blockquote className="font-body text-base font-semibold leading-relaxed text-[#0A1628] md:text-lg">
+              <blockquote className="font-body text-base font-semibold leading-relaxed text-[#0D2020] md:text-lg">
                 "{r.quote}"
               </blockquote>
 
@@ -65,13 +65,13 @@ export function Testimonial6() {
               <div className="mt-6 flex items-center gap-3 md:mt-8">
                 <div
                   className="flex size-12 shrink-0 items-center justify-center rounded-full font-heading text-base font-bold text-white"
-                  style={{ backgroundColor: "#D94520" }}
+                  style={{ backgroundColor: "#5AACB5" }}
                 >
                   {r.initial}
                 </div>
                 <div>
-                  <p className="font-body text-sm font-semibold text-[#0A1628]">{r.name}</p>
-                  <p className="font-body text-xs text-[#0A1628]/50">{r.label}</p>
+                  <p className="font-body text-sm font-semibold text-[#0D2020]">{r.name}</p>
+                  <p className="font-body text-xs text-[#0D2020]/50">{r.label}</p>
                 </div>
               </div>
             </div>

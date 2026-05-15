@@ -136,7 +136,7 @@ export function KarriereVorteile() {
       ref={sectionRef}
       id="jobs"
       className="overflow-hidden"
-      style={{ backgroundColor: "#FDFCF8" }}
+      style={{ backgroundColor: "#FFFFFF" }}
     >
       {/* Top: image background behind heading */}
       <div
@@ -157,26 +157,26 @@ export function KarriereVorteile() {
         <div className="container relative z-10">
           <div className="grid grid-cols-1 gap-8 md:grid-cols-2 md:items-end">
             <div>
-              <p ref={eyebrowRef} className="mb-3 font-body text-sm font-semibold uppercase tracking-[0.28em] text-[#D94520]">
+              <p ref={eyebrowRef} className="mb-3 font-body text-sm font-semibold uppercase tracking-[0.28em] text-[#5AACB5]">
                 Karriere bei K.M. Trockenbau
               </p>
               <h2
                 ref={headingRef}
-                className="font-heading font-bold leading-tight tracking-tight text-[#D94520]"
+                className="font-heading font-bold leading-tight tracking-tight text-[#5AACB5]"
                 style={{ fontSize: "clamp(2rem, 4vw, 4rem)" }}
               >
                 Warum bei uns arbeiten?
               </h2>
             </div>
             <div className="md:text-right">
-              <p ref={subRef} className="font-body text-base leading-relaxed text-[#0A1628]/60 max-w-md md:ml-auto">
+              <p ref={subRef} className="font-body text-base leading-relaxed text-[#0D2020]/60 max-w-md md:ml-auto">
                 Als gewachsenes Familienunternehmen bieten wir mehr als nur einen Job –
                 einen Arbeitsplatz, der sich lohnt. Langfristig, sicher und fair.
               </p>
               <a
                 ref={ctaRef}
                 href="#stellenangebote"
-                className="mt-6 inline-flex items-center gap-2 border border-[#D94520]/40 px-6 py-3 font-body text-sm font-semibold uppercase tracking-[0.12em] text-[#D94520] transition-all duration-200 hover:bg-[#D94520] hover:text-white hover:border-[#D94520]"
+                className="mt-6 inline-flex items-center gap-2 border border-[#5AACB5]/40 px-6 py-3 font-body text-sm font-semibold uppercase tracking-[0.12em] text-[#5AACB5] transition-all duration-200 hover:bg-[#5AACB5] hover:text-white hover:border-[#5AACB5]"
               >
                 Alle Stellen ansehen <span>→</span>
               </a>
@@ -186,7 +186,7 @@ export function KarriereVorteile() {
       </div>
 
       {/* Benefits grid */}
-      <div className="px-[5%] pb-16 md:pb-24 lg:pb-28" style={{ backgroundColor: "#FDFCF8" }}>
+      <div className="px-[5%] pb-16 md:pb-24 lg:pb-28" style={{ backgroundColor: "#FFFFFF" }}>
         <div className="container">
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-px" style={{ backgroundColor: "rgba(217,69,32,0.10)" }}>
             {vorteile.map((v, idx) => (
@@ -194,18 +194,18 @@ export function KarriereVorteile() {
                 key={v.num}
                 ref={(el) => (cellsRef.current[idx] = el)}
                 className="group relative p-8 md:p-10 transition-colors duration-300 hover:bg-[#FDF3EF]"
-                style={{ backgroundColor: "#FDFCF8" }}
+                style={{ backgroundColor: "#FFFFFF" }}
               >
-                <span data-vt-num className="mb-6 block font-body text-[10px] font-semibold uppercase tracking-[0.32em] text-[#D94520]">
+                <span data-vt-num className="mb-6 block font-body text-[10px] font-semibold uppercase tracking-[0.32em] text-[#5AACB5]">
                   {v.num}
                 </span>
-                <h3 data-vt-title className="mb-3 font-heading text-lg font-bold text-[#0A1628] md:text-xl">
+                <h3 data-vt-title className="mb-3 font-heading text-lg font-bold text-[#0D2020] md:text-xl">
                   {v.title}
                 </h3>
-                <p data-vt-desc className="font-body text-sm leading-relaxed text-[#0A1628]/55">
+                <p data-vt-desc className="font-body text-sm leading-relaxed text-[#0D2020]/55">
                   {v.desc}
                 </p>
-                <div data-vt-line className="absolute bottom-0 left-0 h-[2px] w-full bg-[#D94520]/30" />
+                <div data-vt-line className="absolute bottom-0 left-0 h-[2px] w-full bg-[#5AACB5]/30" />
               </div>
             ))}
           </div>

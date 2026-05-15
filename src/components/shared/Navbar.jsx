@@ -7,7 +7,7 @@ import clsx from "clsx";
 import React, { useState, useEffect, useRef } from "react";
 
 const HOUSE_PATH = "M6 20L24 6L42 20V42H30V30H18V42H6V20Z";
-const ACCENT = "#D94520";
+const ACCENT = "#5AACB5";
 
 const navLinks = [
   { label: "Leistungen", href: "/leistungen" },
@@ -57,7 +57,7 @@ function DropdownLink({ link, active, dark }) {
           "relative flex items-center gap-1 text-sm font-medium tracking-wide transition-all duration-300",
           dark
             ? active ? "text-white opacity-100" : "text-white opacity-65 hover:opacity-100"
-            : active ? "text-[#0A1628] opacity-100" : "text-[#0A1628] opacity-60 hover:opacity-100"
+            : active ? "text-[#0D2020] opacity-100" : "text-[#0D2020] opacity-60 hover:opacity-100"
         )}
       >
         {link.label}
@@ -67,7 +67,7 @@ function DropdownLink({ link, active, dark }) {
         {active && (
           <motion.span
             layoutId="nav-underline"
-            className={clsx("absolute -bottom-[1.5px] left-0 right-0 h-px", dark ? "bg-white" : "bg-[#0A1628]")}
+            className={clsx("absolute -bottom-[1.5px] left-0 right-0 h-px", dark ? "bg-white" : "bg-[#0D2020]")}
           />
         )}
       </Link>
@@ -83,8 +83,8 @@ function DropdownLink({ link, active, dark }) {
             <div className={clsx(
               "min-w-[160px] shadow-xl py-1 border",
               dark
-                ? "bg-[#0A1628] border-white/10"
-                : "bg-[#FDFCF8] border-[#0A1628]/10"
+                ? "bg-[#0D2020] border-white/10"
+                : "bg-[#FFFFFF] border-[#0D2020]/10"
             )}>
               {link.children.map((child) => (
                 <Link
@@ -95,7 +95,7 @@ function DropdownLink({ link, active, dark }) {
                     "block px-5 py-3 text-sm font-medium transition-colors duration-150",
                     dark
                       ? "text-white/70 hover:text-white hover:bg-white/5"
-                      : "text-[#0A1628]/70 hover:text-[#0A1628] hover:bg-[#0A1628]/5"
+                      : "text-[#0D2020]/70 hover:text-[#0D2020] hover:bg-[#0D2020]/5"
                   )}
                 >
                   {child.label}
@@ -186,7 +186,7 @@ export function Navbar() {
         "sticky top-0 z-50 w-full border-b backdrop-blur-md transition-colors duration-300",
         isDark
           ? "bg-[#040D1C] border-white/10"
-          : "bg-[#FDFCF8]/95 border-[#0A1628]/10"
+          : "bg-[#FFFFFF]/95 border-[#0D2020]/10"
       )}
     >
       <div className="grid h-auto min-h-[4.5rem] grid-cols-[1fr_max-content_1fr] items-center px-[5%]">
@@ -205,7 +205,7 @@ export function Navbar() {
             ].map((anim, i) => (
               <motion.span
                 key={i}
-                className={clsx("h-[1.5px] w-6 origin-center block transition-colors duration-300", isDark ? "bg-white" : "bg-[#0A1628]")}
+                className={clsx("h-[1.5px] w-6 origin-center block transition-colors duration-300", isDark ? "bg-white" : "bg-[#0D2020]")}
                 animate={anim}
                 transition={{ duration: i === 1 ? 0.15 : 0.25, ease: "easeInOut" }}
               />
@@ -226,14 +226,14 @@ export function Navbar() {
                     "relative text-sm font-medium tracking-wide transition-all duration-300",
                     isDark
                       ? active ? "text-white opacity-100" : "text-white opacity-65 hover:opacity-100"
-                      : active ? "text-[#0A1628] opacity-100" : "text-[#0A1628] opacity-60 hover:opacity-100"
+                      : active ? "text-[#0D2020] opacity-100" : "text-[#0D2020] opacity-60 hover:opacity-100"
                   )}
                 >
                   {link.label}
                   {active && (
                     <motion.span
                       layoutId="nav-underline"
-                      className={clsx("absolute -bottom-[1.5px] left-0 right-0 h-px transition-colors duration-300", isDark ? "bg-white" : "bg-[#0A1628]")}
+                      className={clsx("absolute -bottom-[1.5px] left-0 right-0 h-px transition-colors duration-300", isDark ? "bg-white" : "bg-[#0D2020]")}
                     />
                   )}
                 </Link>
@@ -252,10 +252,10 @@ export function Navbar() {
               strokeLinejoin="round"
               strokeLinecap="round"
               fill="none"
-              className={clsx("transition-colors duration-300", isDark ? "text-white" : "text-[#0A1628]")}
+              className={clsx("transition-colors duration-300", isDark ? "text-white" : "text-[#0D2020]")}
             />
           </svg>
-          <span className={clsx("font-heading text-xl font-bold tracking-[0.08em] uppercase transition-colors duration-300", isDark ? "text-white" : "text-[#0A1628]")}>
+          <span className={clsx("font-heading text-xl font-bold tracking-[0.08em] uppercase transition-colors duration-300", isDark ? "text-white" : "text-[#0D2020]")}>
             K.M. Trockenbau
           </span>
         </Link>
@@ -272,7 +272,7 @@ export function Navbar() {
                   : "border-white/25 text-white/75 hover:border-white/60 hover:text-white"
                 : pathname === "/kontakt"
                   ? `border-[${ACCENT}] text-[${ACCENT}]`
-                  : "border-[#0A1628]/20 text-[#0A1628]/70 hover:border-[#0A1628]/50 hover:text-[#0A1628]"
+                  : "border-[#0D2020]/20 text-[#0D2020]/70 hover:border-[#0D2020]/50 hover:text-[#0D2020]"
             )}
           >
             Kontakt
@@ -283,7 +283,7 @@ export function Navbar() {
               "hidden sm:inline-flex items-center gap-2 rounded-full border px-5 py-2 font-body text-sm font-medium tracking-wide transition-all duration-300",
               isDark
                 ? "border-white/25 text-white/75 hover:border-white/60 hover:text-white"
-                : "border-[#0A1628]/20 text-[#0A1628]/70 hover:border-[#0A1628]/50 hover:text-[#0A1628]"
+                : "border-[#0D2020]/20 text-[#0D2020]/70 hover:border-[#0D2020]/50 hover:text-[#0D2020]"
             )}
           >
             <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="opacity-60">
@@ -356,7 +356,7 @@ export function Navbar() {
                 <Link
                   to="/kontakt"
                   onClick={toggle}
-                  className="flex w-full items-center justify-center rounded-full bg-white px-6 py-3 text-sm font-semibold tracking-wide text-[#0A1628] hover:opacity-90 transition-opacity duration-200"
+                  className="flex w-full items-center justify-center rounded-full bg-white px-6 py-3 text-sm font-semibold tracking-wide text-[#0D2020] hover:opacity-90 transition-opacity duration-200"
                 >
                   Beratung anfragen
                 </Link>

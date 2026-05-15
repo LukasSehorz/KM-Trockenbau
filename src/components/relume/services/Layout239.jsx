@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import React, { useEffect, useRef } from "react";
 import { gsap, ScrollTrigger } from "../../../utils/gsap";
@@ -221,7 +221,7 @@ export function Layout239() {
     <section
       ref={sectionRef}
       className="px-[5%] pt-24 pb-16 md:pt-32 md:pb-24 lg:pt-36 lg:pb-28"
-      style={{ backgroundColor: "#FDFCF8" }}
+      style={{ backgroundColor: "#FFFFFF" }}
     >
       <div className="container">
 
@@ -229,14 +229,14 @@ export function Layout239() {
         <div className="mb-12 md:mb-16">
           <p
             ref={eyebrowRef}
-            className="mb-3 font-body text-sm font-semibold uppercase tracking-[0.25em] text-[#D94520]"
+            className="mb-3 font-body text-sm font-semibold uppercase tracking-[0.25em] text-[#5AACB5]"
             style={{ willChange: "transform, opacity" }}
           >
             Unsere Leistungen auf einen Blick
           </p>
           <h2
             ref={headingRef}
-            className="font-heading font-bold leading-tight tracking-tight text-[#D94520] whitespace-nowrap"
+            className="font-heading font-bold leading-tight tracking-tight text-[#5AACB5] whitespace-nowrap"
             style={{ fontSize: "clamp(2rem, 4vw, 4rem)", willChange: "transform, opacity" }}
           >
             Gewerke. Ein Ansprechpartner.
@@ -341,17 +341,17 @@ export function Layout239() {
         <div ref={ctaWrapRef} className="mt-10 flex flex-wrap items-center gap-6 md:mt-14">
           <a
             href="/kontakt"
-            className="inline-flex items-center gap-2 border border-[#D94520]/30 px-8 py-4 font-body text-sm font-semibold uppercase tracking-[0.1em] text-[#D94520] transition-all duration-300 hover:bg-[#D94520] hover:text-white hover:border-[#D94520]"
+            className="inline-flex items-center gap-2 border border-[#5AACB5]/30 px-8 py-4 font-body text-sm font-semibold uppercase tracking-[0.1em] text-[#5AACB5] transition-all duration-300 hover:bg-[#5AACB5] hover:text-white hover:border-[#5AACB5]"
           >
             Termin vereinbaren
             <span>→</span>
           </a>
           <a
             href="/kontakt"
-            className="inline-flex items-center gap-2 font-body text-sm font-semibold uppercase tracking-[0.12em] text-[#D94520]/70 transition-colors duration-200 hover:text-[#D94520]"
+            className="inline-flex items-center gap-2 font-body text-sm font-semibold uppercase tracking-[0.12em] text-[#5AACB5]/70 transition-colors duration-200 hover:text-[#5AACB5]"
           >
             Projekt anfragen
-            <span className="text-[#D94520]">→</span>
+            <span className="text-[#5AACB5]">→</span>
           </a>
         </div>
 

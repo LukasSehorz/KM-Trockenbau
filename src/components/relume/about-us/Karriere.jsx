@@ -143,7 +143,7 @@ export function Karriere() {
       ref={sectionRef}
       id="stellenangebote"
       className="overflow-hidden"
-      style={{ backgroundColor: "#FDFCF8" }}
+      style={{ backgroundColor: "#FFFFFF" }}
     >
       {/* Heading with image background */}
       <div
@@ -163,19 +163,19 @@ export function Karriere() {
         <div className="container relative z-10">
           <div className="grid grid-cols-1 gap-8 md:grid-cols-2 md:items-end">
             <div>
-              <p ref={eyebrowRef} className="mb-3 font-body text-sm font-semibold uppercase tracking-[0.25em] text-[#D94520]">
+              <p ref={eyebrowRef} className="mb-3 font-body text-sm font-semibold uppercase tracking-[0.25em] text-[#5AACB5]">
                 Stellenangebote
               </p>
               <h2
                 ref={headingRef}
-                className="font-heading font-bold leading-tight tracking-tight text-[#D94520]"
+                className="font-heading font-bold leading-tight tracking-tight text-[#5AACB5]"
                 style={{ fontSize: "clamp(2rem, 4vw, 4rem)" }}
               >
                 Offene Stellen
               </h2>
             </div>
             <div>
-              <p ref={subRef} className="font-body text-base leading-relaxed text-[#0A1628]/60">
+              <p ref={subRef} className="font-body text-base leading-relaxed text-[#0D2020]/60">
                 Wir suchen laufend qualifizierte Fachkräfte, Vorarbeiter und Poliere.
                 Alle Stellen sind unbefristet und mit sofortigem Einstieg möglich.
               </p>
@@ -185,7 +185,7 @@ export function Karriere() {
       </div>
 
       {/* Job list + contact */}
-      <div className="px-[5%] pb-16 md:pb-24 lg:pb-28" style={{ backgroundColor: "#FDFCF8" }}>
+      <div className="px-[5%] pb-16 md:pb-24 lg:pb-28" style={{ backgroundColor: "#FFFFFF" }}>
         <div className="container">
 
           {/* Job cards grid */}
@@ -202,10 +202,10 @@ export function Karriere() {
                   <div
                     className="relative overflow-hidden transition-all duration-300"
                     style={{
-                      backgroundColor: isOpen ? "#FDF3EF" : "#F2EFE6",
+                      backgroundColor: isOpen ? "#FDF3EF" : "#F0F8F7",
                       border: "1px solid",
                       borderColor: isOpen ? "rgba(217,69,32,0.35)" : "rgba(217,69,32,0.12)",
-                      borderLeft: `3px solid ${isOpen ? "#D94520" : "rgba(217,69,32,0.18)"}`,
+                      borderLeft: `3px solid ${isOpen ? "#5AACB5" : "rgba(217,69,32,0.18)"}`,
                     }}
                   >
                     {/* Ghost number */}
@@ -219,28 +219,28 @@ export function Karriere() {
                     {/* Card header */}
                     <div className="p-7 pb-5">
                       <div className="mb-3 flex flex-wrap items-center gap-2">
-                        <span className="font-body text-[10px] font-semibold uppercase tracking-[0.28em] text-[#D94520]/80">
+                        <span className="font-body text-[10px] font-semibold uppercase tracking-[0.28em] text-[#5AACB5]/80">
                           {job.type}
                         </span>
-                        <span className="text-[#0A1628]/20">·</span>
-                        <span className="font-body text-[10px] uppercase tracking-wider text-[#0A1628]/40">
+                        <span className="text-[#0D2020]/20">·</span>
+                        <span className="font-body text-[10px] uppercase tracking-wider text-[#0D2020]/40">
                           {job.location}
                         </span>
                       </div>
 
                       <h3
-                        className="mb-4 font-heading font-bold text-[#0A1628]"
+                        className="mb-4 font-heading font-bold text-[#0D2020]"
                         style={{ fontSize: "clamp(1.1rem, 2vw, 1.5rem)" }}
                       >
                         {job.title}
                       </h3>
 
                       <div className="flex items-center justify-between gap-4">
-                        <p className="font-body text-xs text-[#0A1628]/45 leading-relaxed line-clamp-1 max-w-[260px]">
+                        <p className="font-body text-xs text-[#0D2020]/45 leading-relaxed line-clamp-1 max-w-[260px]">
                           {job.desc.split(".")[0]}.
                         </p>
                         <div
-                          className="flex-shrink-0 w-8 h-8 rounded-full border border-[#D94520]/30 flex items-center justify-center text-[#D94520] text-lg transition-all duration-300 group-hover:border-[#D94520]"
+                          className="flex-shrink-0 w-8 h-8 rounded-full border border-[#5AACB5]/30 flex items-center justify-center text-[#5AACB5] text-lg transition-all duration-300 group-hover:border-[#5AACB5]"
                           style={{ transform: isOpen ? "rotate(45deg)" : "rotate(0deg)", transition: "transform 0.3s ease" }}
                         >
                           +
@@ -253,32 +253,32 @@ export function Karriere() {
                       className="overflow-hidden"
                       style={{ maxHeight: isOpen ? "500px" : "0px", transition: "max-height 0.5s ease" }}
                     >
-                      <div className="px-7 pb-7 pt-1 border-t border-[#D94520]/10">
-                        <p className="mb-6 mt-4 font-body text-sm leading-relaxed text-[#0A1628]/60">
+                      <div className="px-7 pb-7 pt-1 border-t border-[#5AACB5]/10">
+                        <p className="mb-6 mt-4 font-body text-sm leading-relaxed text-[#0D2020]/60">
                           {job.desc}
                         </p>
                         <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-6">
                           <div>
-                            <p className="mb-3 font-body text-[10px] font-semibold uppercase tracking-[0.25em] text-[#0A1628]">
+                            <p className="mb-3 font-body text-[10px] font-semibold uppercase tracking-[0.25em] text-[#0D2020]">
                               Was du mitbringst
                             </p>
                             <ul className="space-y-2">
                               {job.anforderungen.map((a) => (
-                                <li key={a} className="flex items-start gap-2.5 font-body text-xs text-[#0A1628]/55">
-                                  <span className="mt-[5px] flex-shrink-0 w-[4px] h-[4px] rounded-full bg-[#D94520]/60" />
+                                <li key={a} className="flex items-start gap-2.5 font-body text-xs text-[#0D2020]/55">
+                                  <span className="mt-[5px] flex-shrink-0 w-[4px] h-[4px] rounded-full bg-[#5AACB5]/60" />
                                   {a}
                                 </li>
                               ))}
                             </ul>
                           </div>
                           <div>
-                            <p className="mb-3 font-body text-[10px] font-semibold uppercase tracking-[0.25em] text-[#0A1628]">
+                            <p className="mb-3 font-body text-[10px] font-semibold uppercase tracking-[0.25em] text-[#0D2020]">
                               Was wir bieten
                             </p>
                             <ul className="space-y-2">
                               {job.bieten.map((b) => (
-                                <li key={b} className="flex items-start gap-2.5 font-body text-xs text-[#0A1628]/55">
-                                  <span className="mt-[5px] flex-shrink-0 w-[4px] h-[4px] rounded-full bg-[#D94520]/60" />
+                                <li key={b} className="flex items-start gap-2.5 font-body text-xs text-[#0D2020]/55">
+                                  <span className="mt-[5px] flex-shrink-0 w-[4px] h-[4px] rounded-full bg-[#5AACB5]/60" />
                                   {b}
                                 </li>
                               ))}
@@ -288,7 +288,7 @@ export function Karriere() {
                         <a
                           href="mailto:info-kalac-trockenbau@web.de"
                           onClick={(e) => e.stopPropagation()}
-                          className="inline-flex items-center gap-2 bg-[#D94520] px-5 py-2.5 font-body text-xs font-semibold uppercase tracking-[0.12em] text-white transition-opacity hover:opacity-85"
+                          className="inline-flex items-center gap-2 bg-[#5AACB5] px-5 py-2.5 font-body text-xs font-semibold uppercase tracking-[0.12em] text-white transition-opacity hover:opacity-85"
                         >
                           Jetzt bewerben →
                         </a>
@@ -301,34 +301,34 @@ export function Karriere() {
           </div>
 
           {/* Contact box */}
-          <div ref={contactRef} className="border border-[#D94520]/15 px-8 py-10 md:px-12">
+          <div ref={contactRef} className="border border-[#5AACB5]/15 px-8 py-10 md:px-12">
             <div className="grid grid-cols-1 gap-8 md:grid-cols-2 md:items-center">
               <div>
-                <p className="mb-2 font-body text-xs font-semibold uppercase tracking-[0.25em] text-[#D94520]">
+                <p className="mb-2 font-body text-xs font-semibold uppercase tracking-[0.25em] text-[#5AACB5]">
                   Initiativbewerbung & Kontakt
                 </p>
-                <h3 className="font-heading text-2xl font-bold text-[#0A1628] md:text-3xl">
+                <h3 className="font-heading text-2xl font-bold text-[#0D2020] md:text-3xl">
                   Kein passendes Angebot?
                 </h3>
-                <p className="mt-3 font-body text-sm text-[#0A1628]/50 leading-relaxed">
+                <p className="mt-3 font-body text-sm text-[#0D2020]/50 leading-relaxed">
                   Wir freuen uns jederzeit über Initiativbewerbungen qualifizierter Handwerker.
                   Schriftlich an:<br />
-                  <span className="text-[#0A1628]/70">K.M. Trockenbau · Siegfriedstrasse 3, 93051 Regensburg</span>
+                  <span className="text-[#0D2020]/70">K.M. Trockenbau · Siegfriedstrasse 3, 93051 Regensburg</span>
                 </p>
               </div>
               <div className="flex flex-col gap-3">
                 <a
                   href="mailto:info-kalac-trockenbau@web.de"
-                  className="inline-flex items-center gap-3 border border-[#D94520]/20 px-6 py-4 font-body text-sm text-[#0A1628] transition-all duration-200 hover:border-[#D94520] hover:text-[#D94520]"
+                  className="inline-flex items-center gap-3 border border-[#5AACB5]/20 px-6 py-4 font-body text-sm text-[#0D2020] transition-all duration-200 hover:border-[#5AACB5] hover:text-[#5AACB5]"
                 >
-                  <span className="text-[#D94520] text-base">✉</span>
+                  <span className="text-[#5AACB5] text-base">✉</span>
                   info-kalac-trockenbau@web.de
                 </a>
                 <a
                   href="tel:+4915158720108"
-                  className="inline-flex items-center gap-3 border border-[#D94520]/20 px-6 py-4 font-body text-sm text-[#0A1628] transition-all duration-200 hover:border-[#D94520] hover:text-[#D94520]"
+                  className="inline-flex items-center gap-3 border border-[#5AACB5]/20 px-6 py-4 font-body text-sm text-[#0D2020] transition-all duration-200 hover:border-[#5AACB5] hover:text-[#5AACB5]"
                 >
-                  <span className="text-[#D94520] text-base">☎</span>
+                  <span className="text-[#5AACB5] text-base">☎</span>
                   +49 176 38583954
                 </a>
               </div>

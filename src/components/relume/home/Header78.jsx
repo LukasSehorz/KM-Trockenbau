@@ -144,7 +144,7 @@ export function Header78() {
       id="hero-section"
       ref={sectionRef}
       className="relative overflow-hidden"
-      style={{ height: "calc(100vh - 4.5rem)", cursor: "none", backgroundColor: "#040D1C" }}
+      style={{ height: "calc(100vh - 4.5rem)", cursor: "none", backgroundColor: "#071A1A" }}
     >
       {/* ── Bild 1: Rohbau — vollflächiger Hintergrund ── */}
       <img
@@ -191,7 +191,7 @@ export function Header78() {
         {/* Outer ring */}
         <span className="absolute inset-0 rounded-full border" style={{ borderColor: "rgba(90,172,207,0.7)" }} />
         {/* Inner dot */}
-        <span className="block h-1.5 w-1.5 rounded-full" style={{ background: "#F07040" }} />
+        <span className="block h-1.5 w-1.5 rounded-full" style={{ background: "#7BBFB8" }} />
       </div>
 
 
@@ -200,9 +200,9 @@ export function Header78() {
 
         {/* Eyebrow */}
         <div className="mb-12 flex items-center gap-4">
-          <span className="hero-eyebrow-line h-px w-10 flex-shrink-0" style={{ background: "#F07040" }} />
+          <span className="hero-eyebrow-line h-px w-10 flex-shrink-0" style={{ background: "#7BBFB8" }} />
           <div style={{ overflow: "hidden" }}>
-            <p className="hero-eyebrow-inner font-body text-xs font-semibold uppercase tracking-[0.28em]" style={{ color: "#F07040" }}>
+            <p className="hero-eyebrow-inner font-body text-xs font-semibold uppercase tracking-[0.28em]" style={{ color: "#7BBFB8" }}>
               Regensburg · Innenausbau & Trockenbau
             </p>
           </div>
@@ -237,14 +237,14 @@ export function Header78() {
         <div className="flex flex-wrap gap-3">
           <a
             href="/kontakt"
-            className="hero-cta group inline-flex items-center gap-3 border border-white/40 bg-transparent px-7 py-4 font-body text-sm font-semibold uppercase tracking-[0.14em] text-white/85 transition-all duration-300 hover:bg-white hover:border-white hover:text-[#D94520]"
+            className="hero-cta group inline-flex items-center gap-3 border border-white/40 bg-transparent px-7 py-4 font-body text-sm font-semibold uppercase tracking-[0.14em] text-white/85 transition-all duration-300 hover:bg-white hover:border-white hover:text-[#5AACB5]"
           >
             Angebot anfragen
             <span className="transition-transform duration-300 group-hover:translate-x-1">→</span>
           </a>
           <a
             href="/galerie"
-            className="hero-cta group inline-flex items-center gap-3 border border-white/40 bg-transparent px-7 py-4 font-body text-sm font-semibold uppercase tracking-[0.14em] text-white/85 transition-all duration-300 hover:bg-white hover:border-white hover:text-[#D94520]"
+            className="hero-cta group inline-flex items-center gap-3 border border-white/40 bg-transparent px-7 py-4 font-body text-sm font-semibold uppercase tracking-[0.14em] text-white/85 transition-all duration-300 hover:bg-white hover:border-white hover:text-[#5AACB5]"
           >
             Galerie ansehen
             <span className="transition-transform duration-300 group-hover:translate-x-1">→</span>

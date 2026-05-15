@@ -169,7 +169,7 @@ export function Geschichte() {
   }, []);
 
   return (
-    <section ref={sectionRef} className="overflow-hidden" style={{ backgroundColor: "#FDFCF8" }}>
+    <section ref={sectionRef} className="overflow-hidden" style={{ backgroundColor: "#FFFFFF" }}>
 
       {/* Top third — image background with heading */}
       <div
@@ -190,17 +190,17 @@ export function Geschichte() {
 
         <div className="container relative z-10">
           <div className="max-w-2xl">
-            <p ref={eyebrowRef} className="mb-3 font-body text-sm font-semibold uppercase tracking-[0.25em] text-[#D94520]">
+            <p ref={eyebrowRef} className="mb-3 font-body text-sm font-semibold uppercase tracking-[0.25em] text-[#5AACB5]">
               Seit 2020
             </p>
             <h2
               ref={headingRef}
-              className="mb-5 font-heading font-bold leading-tight tracking-tight text-[#D94520]"
+              className="mb-5 font-heading font-bold leading-tight tracking-tight text-[#5AACB5]"
               style={{ fontSize: "clamp(2rem, 4vw, 4rem)" }}
             >
               Unsere Geschichte
             </h2>
-            <p ref={subRef} className="font-body text-base leading-relaxed text-[#0A1628]/55">
+            <p ref={subRef} className="font-body text-base leading-relaxed text-[#0D2020]/55">
               Gegründet 2020 in Regensburg.<br />Ein Anspruch: Projekte für Generationen.
             </p>
           </div>
@@ -229,7 +229,7 @@ export function Geschichte() {
               className="absolute inset-0 origin-top"
               style={{
                 borderRadius: "6px",
-                background: "linear-gradient(to right, rgba(158,48,14,0.8) 0%, #D94520 25%, #E57040 50%, #D94520 75%, rgba(158,48,14,0.8) 100%)",
+                background: "linear-gradient(to right, rgba(158,48,14,0.8) 0%, #5AACB5 25%, #E57040 50%, #5AACB5 75%, rgba(158,48,14,0.8) 100%)",
                 boxShadow: "2px 0 8px rgba(14,42,107,0.45), -1px 0 4px rgba(0,0,0,0.15)",
                 transform: "scaleY(0)",
               }}
@@ -252,7 +252,7 @@ export function Geschichte() {
                       width: "22px",
                       height: "22px",
                       borderRadius: "50%",
-                      background: "radial-gradient(circle at 35% 32%, #F07040, #D94520 48%, #9E300E 100%)",
+                      background: "radial-gradient(circle at 35% 32%, #7BBFB8, #5AACB5 48%, #3A8F8A 100%)",
                       boxShadow: "0 0 0 3px #f0f0ef, 0 0 0 5px rgba(14,42,107,0.5), 2px 3px 8px rgba(0,0,0,0.3)",
                       opacity: 0,
                       transform: "scale(0)",
@@ -270,23 +270,23 @@ export function Geschichte() {
                     {/* Year + number */}
                     <div className="flex items-baseline gap-4 mb-3">
                       <span
-                        className="font-heading font-bold leading-none text-[#D94520]/[0.07] select-none"
+                        className="font-heading font-bold leading-none text-[#5AACB5]/[0.07] select-none"
                         style={{ fontSize: "clamp(2rem, 3.5vw, 3.25rem)" }}
                       >
                         {m.year}
                       </span>
-                      <span className="font-body text-[10px] font-semibold uppercase tracking-[0.3em] text-[#D94520]">
+                      <span className="font-body text-[10px] font-semibold uppercase tracking-[0.3em] text-[#5AACB5]">
                         {String(i + 1).padStart(2, "0")}
                       </span>
                     </div>
 
-                    <h3 className="mb-3 font-heading text-2xl font-bold text-[#D94520] md:text-3xl">
+                    <h3 className="mb-3 font-heading text-2xl font-bold text-[#5AACB5] md:text-3xl">
                       {m.title}
                     </h3>
-                    <p className="mb-2 font-body text-base leading-relaxed text-[#0A1628]/65 max-w-2xl">
+                    <p className="mb-2 font-body text-base leading-relaxed text-[#0D2020]/65 max-w-2xl">
                       {m.desc}
                     </p>
-                    <p className="font-body text-sm leading-relaxed text-[#0A1628]/40 max-w-xl">
+                    <p className="font-body text-sm leading-relaxed text-[#0D2020]/40 max-w-xl">
                       {m.detail}
                     </p>
                   </div>

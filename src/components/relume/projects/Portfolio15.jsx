@@ -153,7 +153,7 @@ export function Portfolio15() {
         const activeTl = gsap.timeline({ paused: true })
           .to(rowBg,      { backgroundColor: "rgba(255,255,255,0.05)", duration: 0.4, ease: "power2.out" }, 0)
           .to(goldBorder, { height: "100%", duration: 0.5, ease: "expo.out" }, 0)
-          .to(num,        { color: "#F07040", duration: 0.4, ease: "power2.out" }, 0);
+          .to(num,        { color: "#7BBFB8", duration: 0.4, ease: "power2.out" }, 0);
 
         // Row is "active" while the viewport's vertical center intersects it.
         // start fires when row top crosses the center going up;
@@ -180,7 +180,7 @@ export function Portfolio15() {
 
         {/* Heading */}
         <div className="mb-16 md:mb-20">
-          <p ref={eyebrowRef} className="mb-3 font-body text-sm font-semibold uppercase tracking-[0.25em] text-[#F07040]">
+          <p ref={eyebrowRef} className="mb-3 font-body text-sm font-semibold uppercase tracking-[0.25em] text-[#7BBFB8]">
             Referenzprojekte
           </p>
           <h2
@@ -211,7 +211,7 @@ export function Portfolio15() {
                 {/* Gold left border */}
                 <div
                   data-row-gold-border
-                  className="absolute left-0 top-0 w-[3px] bg-[#F07040]"
+                  className="absolute left-0 top-0 w-[3px] bg-[#7BBFB8]"
                   style={{ height: "0%" }}
                 />
 
@@ -227,7 +227,7 @@ export function Portfolio15() {
 
                   {/* Title + Category */}
                   <div data-row-meta>
-                    <p className="mb-2 font-body text-[11px] font-semibold uppercase tracking-[0.25em] text-[#F07040]">
+                    <p className="mb-2 font-body text-[11px] font-semibold uppercase tracking-[0.25em] text-[#7BBFB8]">
                       {p.category}
                     </p>
                     <h3 className="font-heading text-2xl font-bold text-white md:text-3xl">
@@ -241,7 +241,7 @@ export function Portfolio15() {
                       {p.desc}
                     </p>
                     <div className="mt-3 flex items-center gap-2">
-                      <div className="h-px w-4 bg-[#F07040]/50" />
+                      <div className="h-px w-4 bg-[#7BBFB8]/50" />
                       <p className="font-body text-xs uppercase tracking-[0.2em] text-white/50">
                         {p.location}
                       </p>
@@ -260,11 +260,11 @@ export function Portfolio15() {
                     <button
                       data-row-btn
                       onClick={() => toggle(i)}
-                      className="flex items-center justify-between border border-white/20 px-4 py-2.5 font-body text-xs font-semibold uppercase tracking-[0.15em] text-white/80 transition-all duration-300 hover:border-[#F07040] hover:text-[#F07040]"
+                      className="flex items-center justify-between border border-white/20 px-4 py-2.5 font-body text-xs font-semibold uppercase tracking-[0.15em] text-white/80 transition-all duration-300 hover:border-[#7BBFB8] hover:text-[#7BBFB8]"
                     >
                       <span>{expanded === i ? "Schließen" : "Mehr erfahren"}</span>
                       <span
-                        className="ml-3 text-[#F07040] transition-transform duration-300"
+                        className="ml-3 text-[#7BBFB8] transition-transform duration-300"
                         style={{ transform: expanded === i ? "rotate(45deg)" : "rotate(0deg)" }}
                       >
                         +
@@ -283,15 +283,15 @@ export function Portfolio15() {
                   <div className="grid grid-cols-1 gap-8 lg:grid-cols-2">
                     {/* Info text */}
                     <div>
-                      <p className="mb-3 font-body text-[11px] font-semibold uppercase tracking-[0.25em] text-[#F07040]">
+                      <p className="mb-3 font-body text-[11px] font-semibold uppercase tracking-[0.25em] text-[#7BBFB8]">
                         Projektbeschreibung
                       </p>
                       <p className="font-body text-base leading-relaxed text-white/80">
                         {p.detail}
                       </p>
                       <div className="mt-6 flex items-center gap-3">
-                        <div className="h-px w-6 bg-[#F07040]/60" />
-                        <span className="font-body text-xs uppercase tracking-[0.2em] text-[#F07040]/70">
+                        <div className="h-px w-6 bg-[#7BBFB8]/60" />
+                        <span className="font-body text-xs uppercase tracking-[0.2em] text-[#7BBFB8]/70">
                           {p.category} · {p.location}
                         </span>
                       </div>

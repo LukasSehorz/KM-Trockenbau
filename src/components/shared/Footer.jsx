@@ -40,7 +40,7 @@ export function Footer() {
   return (
     <footer
       className="relative overflow-hidden"
-      style={{ background: "linear-gradient(160deg, #D94520 0%, #B83A14 55%, #9E300E 100%)" }}
+      style={{ background: "linear-gradient(160deg, #5AACB5 0%, #B83A14 55%, #3A8F8A 100%)" }}
     >
       {/* Top hairline accent */}
       <div className="h-px w-full bg-gradient-to-r from-transparent via-white/50 to-transparent" />

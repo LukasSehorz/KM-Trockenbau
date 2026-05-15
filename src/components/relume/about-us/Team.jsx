@@ -4,7 +4,7 @@ import React, { useEffect, useRef } from "react";
 import { gsap } from "../../../utils/gsap";
 
 const team = [
-  { name: "Kalac Mujo",   role: "Inhaber & Geschäftsführer", img: "/images/team-kalac.jpg" },
+  { name: "Kalac Mujo", role: "Inhaber & Geschäftsführer", img: "/images/team-kalac.svg" },
   
 ];
 
@@ -85,22 +85,22 @@ export function Team() {
   }, []);
 
   return (
-    <section ref={sectionRef} className="px-[5%] py-16 md:py-24 lg:py-28" style={{ backgroundColor: "#FDFCF8" }}>
+    <section ref={sectionRef} className="px-[5%] py-16 md:py-24 lg:py-28" style={{ backgroundColor: "#FFFFFF" }}>
       <div className="container">
 
         {/* Heading */}
         <div className="mb-14 md:mb-18">
-          <p ref={eyebrowRef} className="mb-3 font-body text-sm font-semibold uppercase tracking-[0.25em] text-[#D94520]">
+          <p ref={eyebrowRef} className="mb-3 font-body text-sm font-semibold uppercase tracking-[0.25em] text-[#5AACB5]">
             Menschen bei K.M. Trockenbau
           </p>
           <h2
             ref={headingRef}
-            className="font-heading font-bold leading-tight tracking-tight text-[#D94520]"
+            className="font-heading font-bold leading-tight tracking-tight text-[#5AACB5]"
             style={{ fontSize: "clamp(2rem, 4vw, 4rem)" }}
           >
             Unser Team
           </h2>
-          <p ref={subRef} className="mt-4 max-w-xl font-body text-base text-[#0A1628]/60">
+          <p ref={subRef} className="mt-4 max-w-xl font-body text-base text-[#0D2020]/60">
             Kalac Mujo führt K.M. Trockenbau mit Leidenschaft für Qualität und handwerklicher Präzision.
           </p>
         </div>
@@ -123,14 +123,14 @@ export function Team() {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
                 {/* Gold bottom line on hover */}
-                <div className="absolute bottom-0 left-0 h-[3px] w-0 bg-[#D94520] transition-all duration-500 group-hover:w-full" />
+                <div className="absolute bottom-0 left-0 h-[3px] w-0 bg-[#5AACB5] transition-all duration-500 group-hover:w-full" />
               </div>
 
               {/* Info */}
-              <h3 data-team-name className="font-heading text-sm font-bold text-[#D94520] md:text-base">
+              <h3 data-team-name className="font-heading text-sm font-bold text-[#5AACB5] md:text-base">
                 {member.name}
               </h3>
-              <p data-team-role className="mt-1 font-body text-xs text-[#D94520]/80">
+              <p data-team-role className="mt-1 font-body text-xs text-[#5AACB5]/80">
                 {member.role}
               </p>
             </div>

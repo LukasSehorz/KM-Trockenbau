@@ -151,7 +151,7 @@ export function HeroLeistungen() {
   return (
     <section
       ref={sectionRef}
-      className="relative w-full overflow-hidden bg-[#D94520] text-white"
+      className="relative w-full overflow-hidden bg-[#5AACB5] text-white"
       style={{ height: "100vh", minHeight: "720px" }}
     >
       {/* Background image */}
@@ -244,7 +244,7 @@ export function HeroLeistungen() {
               <a
                 ref={ctaRef}
                 href="#leistungen"
-                className="group inline-flex items-center gap-3 border border-white/45 hover:bg-[#D94520] hover:border-[#D94520] px-8 py-4 font-body text-sm font-semibold uppercase tracking-[0.15em] text-white transition-all duration-300"
+                className="group inline-flex items-center gap-3 border border-white/45 hover:bg-[#5AACB5] hover:border-[#5AACB5] px-8 py-4 font-body text-sm font-semibold uppercase tracking-[0.15em] text-white transition-all duration-300"
               >
                 <span>Gewerke entdecken</span>
                 <span className="text-base transition-transform duration-300 group-hover:translate-x-1">

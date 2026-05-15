@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import React, { useRef, useEffect, useState, useCallback } from "react";
 import { gsap, ScrollTrigger } from "../../../utils/gsap";
@@ -870,7 +870,7 @@ export function VideoScrollSection() {
         <div
           ref={overlayRef}
           className="absolute inset-0 z-[45] flex flex-col justify-center px-[5%] pt-32 md:pt-40 pb-32 md:pb-40"
-          style={{ background: "#D94520" }}
+          style={{ background: "#5AACB5" }}
         >
           {/* Layered gradient (matches Hero aesthetic) */}
           <div
@@ -1067,7 +1067,7 @@ export function VideoScrollSection() {
 
         {/* Loading screen */}
         {!isReady && (
-          <div className="absolute inset-0 z-50 flex flex-col items-center justify-center bg-[#D94520]">
+          <div className="absolute inset-0 z-50 flex flex-col items-center justify-center bg-[#5AACB5]">
             <p className="mb-4 font-body text-xs uppercase tracking-[0.3em] text-white/40">Wird geladen</p>
             <div className="h-px w-48 bg-white/10">
               <div

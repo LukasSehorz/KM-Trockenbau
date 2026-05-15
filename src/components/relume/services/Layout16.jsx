@@ -178,7 +178,7 @@ export function Layout16() {
       <div className="container relative z-10">
         <div className="grid grid-cols-1 gap-y-12 md:grid-cols-2 md:items-center md:gap-x-12 lg:gap-x-20">
           <div>
-            <p ref={eyebrowRef} className="mb-4 font-body text-sm font-semibold uppercase tracking-[0.25em] text-[#F07040]">
+            <p ref={eyebrowRef} className="mb-4 font-body text-sm font-semibold uppercase tracking-[0.25em] text-[#7BBFB8]">
               Warum K.M. Trockenbau
             </p>
             <h2

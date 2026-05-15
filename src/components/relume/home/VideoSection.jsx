@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { useEffect, useRef } from "react";
 import { gsap } from "../../../utils/gsap";
@@ -164,12 +164,12 @@ export function VideoSection() {
       id="video-section"
       ref={sectionRef}
       className="relative"
-      style={{ height: "280vh", backgroundColor: "#FDFCF8" }}
+      style={{ height: "280vh", backgroundColor: "#FFFFFF" }}
     >
-      <div className="sticky top-0 h-screen overflow-hidden" style={{ backgroundColor: "#FDFCF8" }}>
+      <div className="sticky top-0 h-screen overflow-hidden" style={{ backgroundColor: "#FFFFFF" }}>
 
         {/* Explicit light background layer behind everything */}
-        <div className="absolute inset-0" style={{ backgroundColor: "#FDFCF8", zIndex: 0 }} />
+        <div className="absolute inset-0" style={{ backgroundColor: "#FFFFFF", zIndex: 0 }} />
 
         {/* Clip-path wrapper for the entry portal effect */}
         <div

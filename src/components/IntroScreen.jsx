@@ -32,7 +32,7 @@ export default function IntroScreen({ onComplete }) {
     <motion.div
       style={{
         position: "fixed", inset: 0, zIndex: 100,
-        background: "#040D1C",
+        background: "#071A1A",
         display: "flex", alignItems: "center", justifyContent: "center",
       }}
       initial={{ opacity: 1 }}

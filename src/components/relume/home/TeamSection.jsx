@@ -1,41 +1,25 @@
 ﻿"use client";
 
-import { useRef } from "react";
-import { motion, useScroll, useTransform } from "framer-motion";
+import React from "react";
 
-const lukas = {
+const kalac = {
   num: "01",
   name: "Kalac Mujo",
-  title: "Geschäftsführer",
-  role: "Geschäftsführung",
-  image: "/images/lukas-winter.png",
+  title: "Inhaber",
+  role: "Trockenbau & Innenausbau",
+  image: "/images/team-kalac.svg",
   email: "info-kalac-trockenbau@web.de",
   bio: "Kalac Mujo führt K.M. Trockenbau mit Leidenschaft für Qualität und handwerklicher Präzision. Langjährige Erfahrung im Innenausbau und kontinuierliche Weiterbildung machen ihn zu Ihrem zuverlässigen Ansprechpartner in Regensburg.",
   facts: [
     { label: "Unternehmen", value: "K.M. Trockenbau" },
-    { label: "Schwerpunkt", value: "Hochbau, Tiefbau & Schlüsselfertigbau" },
+    { label: "Schwerpunkt", value: "Trockenbau & Innenausbau" },
     { label: "Standort", value: "Siegfriedstrasse 3, 93051 Regensburg" },
   ],
 };
 
-const philip = {
-  num: "02",
-  name: "",
-  title: "Geschäftsführer",
-  role: "Geschäftsführung",
-  image: "/images/philip-marsmann.png",
-  email: "info-kalac-trockenbau@web.de",
-  bio: "",
-  facts: [
-    { label: "Unternehmen", value: "K.M. Trockenbau" },
-    { label: "Schwerpunkt", value: "Projektleitung & Verwaltung" },
-    { label: "Standort", value: "Siegfriedstrasse 3, 93051 Regensburg" },
-  ],
-};
-
-const ACCENT = "#F07040";
-const DARK = "#0A1628";
-const LIGHT = "#f0ede8";
+const ACCENT = "#7BBFB8";
+const DARK = "#0D2020";
+const LIGHT = "#EAF6F5";
 
 function TextPanel({ person }) {
   return (
@@ -44,7 +28,7 @@ function TextPanel({ person }) {
         className="mb-4 font-body text-xs font-semibold uppercase tracking-[0.3em]"
         style={{ color: ACCENT }}
       >
-        {person.num} · Geschäftsführung
+        {person.role}
       </p>
       <h2
         className="mb-2 font-heading font-bold leading-tight tracking-tight text-white"
@@ -53,7 +37,7 @@ function TextPanel({ person }) {
         {person.name}
       </h2>
       <p className="mb-8 font-body text-sm uppercase tracking-[0.15em] text-white/40">
-        {person.title} · {person.role}
+        {person.title} · K.M. Trockenbau
       </p>
       <div className="mb-8 h-px w-12" style={{ backgroundColor: `${ACCENT}80` }} />
       <p className="mb-10 max-w-md font-body text-sm leading-relaxed text-white/55 md:text-base">
@@ -83,79 +67,25 @@ function TextPanel({ person }) {
 }
 
 export function TeamSection() {
-  const containerRef = useRef(null);
-  const { scrollYProgress } = useScroll({
-    target: containerRef,
-    offset: ["start start", "end end"],
-  });
-
-  // Timeline:
-  // 0.00–0.15: Lukas voll sichtbar
-  // 0.15–0.35: Lukas slidet aus dem Bild
-  // 0.35–0.65: Helles Panel wechselt die Seite
-  // 0.65–0.85: Philip slidet ins Bild
-  // 0.85–1.00: Philip voll sichtbar
-
-  const lukasTextX  = useTransform(scrollYProgress, [0.15, 0.35], ["0%", "-100%"]);
-  const lukasImageX = useTransform(scrollYProgress, [0.15, 0.35], ["0%", "100%"]);
-
-  const lightPanelX = useTransform(scrollYProgress, [0.35, 0.65], ["100%", "0%"]);
-
-  const philipImageX = useTransform(scrollYProgress, [0.65, 0.85], ["-100%", "0%"]);
-  const philipTextX  = useTransform(scrollYProgress, [0.65, 0.85], ["100%", "0%"]);
-
   return (
-    <div ref={containerRef} style={{ height: "400vh" }}>
+    <div style={{ height: "100vh" }}>
       <div
-        className="sticky top-0 h-screen w-full overflow-hidden"
+        className="sticky top-0 h-screen w-full overflow-hidden flex"
         style={{ backgroundColor: DARK }}
       >
-        {/* Bewegliches helles Hintergrund-Panel */}
-        <motion.div
-          className="absolute top-0 bottom-0 left-0 w-1/2"
-          style={{ x: lightPanelX, backgroundColor: LIGHT, willChange: "transform" }}
-        />
-
-        {/* Phase 1: Lukas — Text links, Bild rechts */}
-        <div className="absolute inset-0 flex pointer-events-none overflow-hidden">
-          <motion.div
-            className="flex h-full w-1/2 bg-transparent pointer-events-auto"
-            style={{ x: lukasTextX, willChange: "transform" }}
-          >
-            <TextPanel person={lukas} />
-          </motion.div>
-          <motion.div
-            className="flex h-full w-1/2 items-end justify-center bg-transparent pointer-events-auto"
-            style={{ x: lukasImageX, willChange: "transform" }}
-          >
-            <img
-              src={lukas.image}
-              alt={lukas.name}
-              className="h-full w-full object-cover"
-              style={{ objectPosition: "50% 15%" }}
-            />
-          </motion.div>
+        {/* Text links */}
+        <div className="flex h-full w-1/2">
+          <TextPanel person={kalac} />
         </div>
 
-        {/* Phase 2: Philip — Bild links, Text rechts */}
-        <div className="absolute inset-0 flex pointer-events-none overflow-hidden">
-          <motion.div
-            className="flex h-full w-1/2 items-end justify-center bg-transparent pointer-events-auto"
-            style={{ x: philipImageX, willChange: "transform" }}
-          >
-            <img
-              src={philip.image}
-              alt={philip.name}
-              className="h-full w-full object-cover"
-              style={{ objectPosition: "30% 15%" }}
-            />
-          </motion.div>
-          <motion.div
-            className="flex h-full w-1/2 bg-transparent pointer-events-auto"
-            style={{ x: philipTextX, willChange: "transform" }}
-          >
-            <TextPanel person={philip} />
-          </motion.div>
+        {/* Bild rechts */}
+        <div className="flex h-full w-1/2 overflow-hidden">
+          <img
+            src={kalac.image}
+            alt={kalac.name}
+            className="h-full w-full object-cover"
+            style={{ objectPosition: "50% 10%" }}
+          />
         </div>
       </div>
     </div>

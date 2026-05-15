@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import React, { useEffect, useRef } from "react";
 import { gsap, ScrollTrigger } from "../../../utils/gsap";
@@ -122,7 +122,7 @@ export function Layout239_1() {
         // Hover: gold underline grows
         cell.addEventListener("mouseenter", () => {
           gsap.to(accent, { scaleX: 1, duration: 0.5, ease: "power3.out" });
-          gsap.to(label,  { y: -3, color: "#D94520", duration: 0.4, ease: "power3.out" });
+          gsap.to(label,  { y: -3, color: "#5AACB5", duration: 0.4, ease: "power3.out" });
         });
         cell.addEventListener("mouseleave", () => {
           gsap.to(accent, { scaleX: 0, duration: 0.4, ease: "power3.in",
@@ -196,7 +196,7 @@ export function Layout239_1() {
         </p>
         <h2
           ref={headingRef}
-          className="font-heading font-bold leading-tight tracking-tight text-[#D94520]"
+          className="font-heading font-bold leading-tight tracking-tight text-[#5AACB5]"
           style={{ fontSize: "clamp(2rem, 4vw, 4rem)" }}
         >
           Qualität, die man nachweisen kann.
@@ -234,13 +234,13 @@ export function Layout239_1() {
 
       {/* Partner label */}
       <div className="container px-[5%] mb-6">
-        <p ref={partnerLabelRef} className="font-body text-xs font-semibold uppercase tracking-[0.2em] text-[#0A1628]/40">
+        <p ref={partnerLabelRef} className="font-body text-xs font-semibold uppercase tracking-[0.2em] text-[#0D2020]/40">
           Partner & Lieferanten
         </p>
       </div>
 
       {/* Partner marquee — full width */}
-      <div ref={marqueeWrapRef} className="overflow-hidden border-y border-[#0A1628]/8">
+      <div ref={marqueeWrapRef} className="overflow-hidden border-y border-[#0D2020]/8">
         <div className="marquee-track py-6">
           {track.map((p, i) => (
             <div
@@ -256,7 +256,7 @@ export function Layout239_1() {
                   style={{ maxHeight: "36px", width: "auto", maxWidth: "140px", display: "block" }}
                 />
               ) : (
-                <span className="font-heading text-lg font-bold text-[#D94520]/30">
+                <span className="font-heading text-lg font-bold text-[#5AACB5]/30">
                   {p.label}
                 </span>
               )}

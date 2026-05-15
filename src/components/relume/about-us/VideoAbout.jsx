@@ -82,7 +82,7 @@ export function VideoAbout() {
           <h2
             ref={headingRef}
             className="font-heading font-bold text-text-primary leading-tight"
-            style={{ fontSize: "clamp(2rem, 4vw, 3rem)", color: "#0A1628" }}
+            style={{ fontSize: "clamp(2rem, 4vw, 3rem)", color: "#0D2020" }}
           >
             Drei Generationen. Eine Überzeugung.
           </h2>
@@ -102,7 +102,7 @@ export function VideoAbout() {
         </div>
 
         {/* Text below */}
-        <p ref={paraRef} className="mt-6 font-body text-base leading-relaxed text-[#0A1628]/60 md:text-lg max-w-xl">
+        <p ref={paraRef} className="mt-6 font-body text-base leading-relaxed text-[#0D2020]/60 md:text-lg max-w-xl">
           Was 2020 mit klaren Werten begann, trägt K.M. Trockenbau heute
           über 60 Fachkräfte weiter. Die Werte haben sich nicht verändert –
           nur die Möglichkeiten, sie umzusetzen.

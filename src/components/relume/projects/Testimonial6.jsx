@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import React, { useEffect, useRef } from "react";
 import { BiSolidStar } from "react-icons/bi";
@@ -123,7 +123,7 @@ export function Testimonial6() {
 
         {/* Heading */}
         <div className="mb-14 md:mb-18">
-          <p ref={eyebrowRef} className="mb-3 font-body text-sm font-semibold uppercase tracking-[0.25em] text-[#F07040]">
+          <p ref={eyebrowRef} className="mb-3 font-body text-sm font-semibold uppercase tracking-[0.25em] text-[#7BBFB8]">
             Kundenstimmen
           </p>
           <h2
@@ -141,20 +141,20 @@ export function Testimonial6() {
             <div
               key={t.name}
               ref={(el) => (cardsRef.current[idx] = el)}
-              className="group relative flex flex-col justify-between overflow-hidden rounded-2xl border border-white/10 p-8 backdrop-blur-md transition-all duration-500 hover:border-[#F07040]/40"
+              className="group relative flex flex-col justify-between overflow-hidden rounded-2xl border border-white/10 p-8 backdrop-blur-md transition-all duration-500 hover:border-[#7BBFB8]/40"
               style={{ background: "rgba(255,255,255,0.05)" }}
             >
               {/* Decorative quote mark */}
               <span
                 data-quote-mark
-                className="absolute right-6 top-4 font-heading font-bold leading-none text-[#F07040]/10 transition-all duration-500 group-hover:text-[#F07040]/20"
+                className="absolute right-6 top-4 font-heading font-bold leading-none text-[#7BBFB8]/10 transition-all duration-500 group-hover:text-[#7BBFB8]/20"
                 style={{ fontSize: "8rem" }}
               >
                 "
               </span>
 
               {/* Stars */}
-              <div className="mb-6 flex gap-1 text-[#F07040]">
+              <div className="mb-6 flex gap-1 text-[#7BBFB8]">
                 {[...Array(5)].map((_, i) => (
                   <BiSolidStar key={i} data-star className="size-4" />
                 ))}
@@ -173,7 +173,7 @@ export function Testimonial6() {
                 <img
                   src={t.img}
                   alt={t.name}
-                  className="size-12 rounded-full object-cover ring-2 ring-[#F07040]/30"
+                  className="size-12 rounded-full object-cover ring-2 ring-[#7BBFB8]/30"
                 />
                 <div>
                   <p className="font-body text-sm font-semibold text-white">{t.name}</p>
@@ -182,7 +182,7 @@ export function Testimonial6() {
               </div>
 
               {/* Bottom gold accent */}
-              <div className="absolute bottom-0 left-0 h-[2px] w-0 bg-[#F07040] transition-all duration-500 group-hover:w-full" />
+              <div className="absolute bottom-0 left-0 h-[2px] w-0 bg-[#7BBFB8] transition-all duration-500 group-hover:w-full" />
             </div>
           ))}
         </div>

@@ -124,16 +124,16 @@ export function Layout237() {
   }, []);
 
   return (
-    <section ref={sectionRef} className="px-[5%] py-16 md:py-24 lg:py-28" style={{ backgroundColor: "#FDFCF8" }}>
+    <section ref={sectionRef} className="px-[5%] py-16 md:py-24 lg:py-28" style={{ backgroundColor: "#FFFFFF" }}>
       <div className="container">
 
         {/* Heading */}
         <div className="l237-heading-area mb-14 max-w-2xl md:mb-18">
-          <p className="l237-eyebrow mb-4 font-body text-sm font-semibold uppercase tracking-[0.25em] text-[#D94520]">
+          <p className="l237-eyebrow mb-4 font-body text-sm font-semibold uppercase tracking-[0.25em] text-[#5AACB5]">
             Unsere Stärken
           </p>
           <h2
-            className="font-heading font-bold leading-[1.05] tracking-tight text-[#D94520]"
+            className="font-heading font-bold leading-[1.05] tracking-tight text-[#5AACB5]"
             style={{ fontSize: "clamp(2.4rem, 4.5vw, 4.5rem)" }}
           >
             <span className="block" style={{ overflow: "hidden", paddingBottom: "0.08em" }}>
@@ -141,7 +141,7 @@ export function Layout237() {
             </span>
             <span className="block" style={{ overflow: "hidden", paddingBottom: "0.08em" }}>
               <span className="l237-heading-inner block">
-                <em className="font-serif font-light not-italic text-[#D94520]/60">
+                <em className="font-serif font-light not-italic text-[#5AACB5]/60">
                   Was uns auszeichnet.
                 </em>
               </span>
@@ -191,7 +191,7 @@ export function Layout237() {
                 <div
                   className={`l237-card-content absolute bottom-0 ${isEven ? "left-0" : "right-0"} p-8 md:p-12 max-w-xl`}
                 >
-                  <div className="l237-card-line mb-4 h-px w-8 bg-[#D94520]" />
+                  <div className="l237-card-line mb-4 h-px w-8 bg-[#5AACB5]" />
                   <h3
                     className="mb-3 font-heading font-bold leading-tight tracking-tight text-white"
                     style={{ fontSize: "clamp(1.5rem, 2.8vw, 2.4rem)" }}
@@ -211,16 +211,16 @@ export function Layout237() {
         <div className="l237-cta-row mt-12 flex flex-wrap items-center gap-6 md:mt-16">
           <a
             href="/leistungen"
-            className="l237-cta inline-flex items-center bg-[#D94520] px-8 py-4 font-body text-sm font-semibold uppercase tracking-[0.1em] text-white transition-opacity duration-200 hover:opacity-85"
+            className="l237-cta inline-flex items-center bg-[#5AACB5] px-8 py-4 font-body text-sm font-semibold uppercase tracking-[0.1em] text-white transition-opacity duration-200 hover:opacity-85"
           >
             Leistungen entdecken
           </a>
           <a
             href="/ueber-uns"
-            className="l237-cta inline-flex items-center gap-3 font-body text-sm font-semibold uppercase tracking-[0.1em] text-[#D94520]/70 transition-colors duration-200 hover:text-[#D94520]"
+            className="l237-cta inline-flex items-center gap-3 font-body text-sm font-semibold uppercase tracking-[0.1em] text-[#5AACB5]/70 transition-colors duration-200 hover:text-[#5AACB5]"
           >
             Unsere Geschichte
-            <span className="text-[#D94520]">→</span>
+            <span className="text-[#5AACB5]">→</span>
           </a>
         </div>
 

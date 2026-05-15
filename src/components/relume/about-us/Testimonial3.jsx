@@ -35,21 +35,21 @@ const GoogleIcon = () => (
 
 export function Testimonial3() {
   return (
-    <section className="px-[5%] py-16 md:py-24 lg:py-28" style={{ backgroundColor: "#FDFCF8" }}>
+    <section className="px-[5%] py-16 md:py-24 lg:py-28" style={{ backgroundColor: "#FFFFFF" }}>
       <div className="container">
         <div className="mx-auto mb-12 w-full max-w-xl text-center md:mb-16">
-          <p className="mb-4 font-body text-sm font-semibold uppercase tracking-[0.25em] text-[#D94520]">
+          <p className="mb-4 font-body text-sm font-semibold uppercase tracking-[0.25em] text-[#5AACB5]">
             Kundenstimmen
           </p>
-          <h2 className="mb-4 font-heading text-5xl font-bold leading-tight tracking-tight text-[#D94520] md:text-6xl lg:text-7xl">
+          <h2 className="mb-4 font-heading text-5xl font-bold leading-tight tracking-tight text-[#5AACB5] md:text-6xl lg:text-7xl">
             Was unsere Kunden sagen
           </h2>
           <div className="flex items-center justify-center gap-2 mt-4">
             <div className="flex gap-0.5">
               {[...Array(5)].map((_, i) => <StarIcon key={i} />)}
             </div>
-            <span className="font-body text-sm font-semibold text-[#0A1628]">5,0</span>
-            <span className="font-body text-sm text-[#0A1628]/50">· 5 Google-Rezensionen</span>
+            <span className="font-body text-sm font-semibold text-[#0D2020]">5,0</span>
+            <span className="font-body text-sm text-[#0D2020]/50">· 5 Google-Rezensionen</span>
           </div>
         </div>
 
@@ -65,16 +65,16 @@ export function Testimonial3() {
                 </div>
                 <GoogleIcon />
               </div>
-              <blockquote className="mb-8 flex-1 font-body text-base leading-relaxed text-[#0A1628]/80">
+              <blockquote className="mb-8 flex-1 font-body text-base leading-relaxed text-[#0D2020]/80">
                 „{r.quote}"
               </blockquote>
               <div className="flex items-center gap-3">
-                <div className="flex size-10 shrink-0 items-center justify-center bg-[#D94520] font-heading text-xs font-bold tracking-wide text-white">
+                <div className="flex size-10 shrink-0 items-center justify-center bg-[#5AACB5] font-heading text-xs font-bold tracking-wide text-white">
                   {r.initials}
                 </div>
                 <div>
-                  <p className="font-heading text-sm font-bold text-[#D94520]">{r.name}</p>
-                  <p className="font-body text-xs text-[#0A1628]/50">Google Rezension</p>
+                  <p className="font-heading text-sm font-bold text-[#5AACB5]">{r.name}</p>
+                  <p className="font-body text-xs text-[#0D2020]/50">Google Rezension</p>
                 </div>
               </div>
             </div>

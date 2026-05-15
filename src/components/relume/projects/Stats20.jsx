@@ -114,7 +114,7 @@ export function Stats20() {
 
       {/* Heading */}
       <div className="container px-[5%] mb-16">
-        <p ref={eyebrowRef} className="mb-3 font-body text-sm font-semibold uppercase tracking-[0.25em] text-[#F07040]">
+        <p ref={eyebrowRef} className="mb-3 font-body text-sm font-semibold uppercase tracking-[0.25em] text-[#7BBFB8]">
           Zahlen & Fakten
         </p>
         <h2
@@ -142,12 +142,12 @@ export function Stats20() {
             >
               <p
                 data-stat-value
-                className="font-heading font-bold leading-none text-white transition-colors duration-300 group-hover:text-[#F07040]"
+                className="font-heading font-bold leading-none text-white transition-colors duration-300 group-hover:text-[#7BBFB8]"
                 style={{ fontSize: "clamp(3.5rem, 7vw, 6rem)" }}
               >
                 0{s.suffix}
               </p>
-              <div data-stat-line className="mt-4 h-px w-8 bg-[#F07040]/50 transition-all duration-300 group-hover:w-16 group-hover:bg-[#F07040]" />
+              <div data-stat-line className="mt-4 h-px w-8 bg-[#7BBFB8]/50 transition-all duration-300 group-hover:w-16 group-hover:bg-[#7BBFB8]" />
               <p data-stat-label className="mt-3 whitespace-pre-line font-body text-sm leading-relaxed text-white/50">
                 {s.label}
               </p>
@@ -161,9 +161,9 @@ export function Stats20() {
         <a
           ref={ctaRef}
           href="#projekte"
-          className="inline-flex items-center gap-3 font-body text-sm font-semibold uppercase tracking-[0.15em] text-white/50 transition-colors duration-300 hover:text-[#F07040]"
+          className="inline-flex items-center gap-3 font-body text-sm font-semibold uppercase tracking-[0.15em] text-white/50 transition-colors duration-300 hover:text-[#7BBFB8]"
         >
-          Projekte entdecken <span className="text-[#F07040]">→</span>
+          Projekte entdecken <span className="text-[#7BBFB8]">→</span>
         </a>
       </div>
 

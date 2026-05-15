@@ -501,7 +501,7 @@ export function ProzessPath() {
         style={{
           position: "relative",
           height: "100vh", overflow: "hidden",
-          background: "#FDFCF8",
+          background: "#FFFFFF",
         }}
       >
 
@@ -514,12 +514,12 @@ export function ProzessPath() {
           }}
         >
           <div style={{ display: "flex", alignItems: "center", gap: 12, marginBottom: 16 }}>
-            <span style={{ display: "block", height: 1, width: 32, background: "#D94520" }} />
+            <span style={{ display: "block", height: 1, width: 32, background: "#5AACB5" }} />
             <span style={{
               fontFamily: "DM Sans, sans-serif",
               fontSize: "0.68rem", fontWeight: 600,
               letterSpacing: "0.25em", textTransform: "uppercase",
-              color: "#D94520",
+              color: "#5AACB5",
             }}>
               Der K.M. Trockenbau-Prozess
             </span>
@@ -527,7 +527,7 @@ export function ProzessPath() {
           <h2 style={{
             fontFamily: "Syne, sans-serif", fontWeight: 800,
             fontSize: "clamp(2rem, 3.5vw, 3.5rem)",
-            color: "#0A1628", lineHeight: 1.1, letterSpacing: "-0.02em",
+            color: "#0D2020", lineHeight: 1.1, letterSpacing: "-0.02em",
             margin: 0,
           }}>
             Von der Idee<br />zum Schlüssel.
@@ -567,7 +567,7 @@ export function ProzessPath() {
             <path
               ref={pathRef}
               d={PATH_D}
-              stroke="#D94520"
+              stroke="#5AACB5"
               strokeWidth="2.5"
               fill="none"
               strokeLinecap="round"
@@ -579,8 +579,8 @@ export function ProzessPath() {
                 style={{ transformOrigin: `${node.x}px ${node.y}px` }}
               >
                 <circle cx={node.x} cy={node.y} r="22" fill="rgba(217,69,32,0.10)" />
-                <circle cx={node.x} cy={node.y} r="13" fill="#FDFCF8" stroke="#D94520" strokeWidth="2" />
-                <circle cx={node.x} cy={node.y} r="4.5" fill="#D94520" />
+                <circle cx={node.x} cy={node.y} r="13" fill="#FFFFFF" stroke="#5AACB5" strokeWidth="2" />
+                <circle cx={node.x} cy={node.y} r="4.5" fill="#5AACB5" />
               </g>
             ))}
           </svg>
@@ -680,7 +680,7 @@ export function ProzessPath() {
                         }}>
                           <span style={{
                             width: 4, height: 4, borderRadius: "50%",
-                            background: "#D94520", flexShrink: 0, marginTop: 6,
+                            background: "#5AACB5", flexShrink: 0, marginTop: 6,
                           }} />
                           {b}
                         </li>
@@ -688,7 +688,7 @@ export function ProzessPath() {
                     </ul>
                     <h3 className="card-title" style={{
                       fontFamily: "Syne, sans-serif", fontWeight: 700,
-                      fontSize: "1.35rem", color: "#0A1628",
+                      fontSize: "1.35rem", color: "#0D2020",
                       marginBottom: 6, lineHeight: 1.2, textAlign: "center",
                     }}>
                       {step.title}
@@ -697,7 +697,7 @@ export function ProzessPath() {
                       textAlign: "center", fontFamily: "DM Sans, sans-serif",
                       fontSize: "0.72rem", fontWeight: 600,
                       letterSpacing: "0.25em", textTransform: "uppercase",
-                      color: "#D94520", marginBottom: 14,
+                      color: "#5AACB5", marginBottom: 14,
                     }}>
                       {step.num}
                     </p>
@@ -730,13 +730,13 @@ export function ProzessPath() {
                       textAlign: "center", fontFamily: "DM Sans, sans-serif",
                       fontSize: "0.72rem", fontWeight: 600,
                       letterSpacing: "0.25em", textTransform: "uppercase",
-                      color: "#D94520", marginBottom: 6,
+                      color: "#5AACB5", marginBottom: 6,
                     }}>
                       {step.num}
                     </p>
                     <h3 className="card-title" style={{
                       fontFamily: "Syne, sans-serif", fontWeight: 700,
-                      fontSize: "1.35rem", color: "#0A1628",
+                      fontSize: "1.35rem", color: "#0D2020",
                       marginBottom: 14, lineHeight: 1.2, textAlign: "center",
                     }}>
                       {step.title}
@@ -751,7 +751,7 @@ export function ProzessPath() {
                         }}>
                           <span style={{
                             width: 4, height: 4, borderRadius: "50%",
-                            background: "#D94520", flexShrink: 0, marginTop: 6,
+                            background: "#5AACB5", flexShrink: 0, marginTop: 6,
                           }} />
                           {b}
                         </li>
