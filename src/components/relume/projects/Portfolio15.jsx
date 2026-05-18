@@ -21,58 +21,80 @@ const splitWords = (el, text) => {
   });
 };
 
-const PLACEHOLDER = "/images/placeholder.svg";
-
 const projects = [
   {
     id: "01",
-    title: "Wohnanlage München/Trudering",
-    category: "Wohnungsbau",
-    desc: "Neubau einer Wohnanlage mit 97 Wohneinheiten und Tiefgarage",
-    location: "München / Trudering",
-    img: "/images/Beispiel-Projekte/LP1.jpg",
-    detail: "Im Münchner Stadtteil Trudering realisierte K.M. Trockenbau eine moderne Wohnanlage mit 97 Wohneinheiten sowie einer Tiefgarage. Das Projekt umfasste alle Rohbau- und Ausbauarbeiten und wurde termingerecht und im vereinbarten Kostenrahmen übergeben. Die Anlage überzeugt durch ihre durchdachte Grundrissplanung und hochwertige Ausstattung.",
-    images: ["/images/Beispiel-Projekte/LP1.jpg", PLACEHOLDER, PLACEHOLDER],
+    title: "TV-Wand mit Mediannische",
+    category: "Trockenbau",
+    desc: "Maßgefertigte TV-Wand mit integrierter Mediannische aus Trockenbau",
+    location: "Regensburg",
+    img: "/images/projekt-tvwand.png",
+    detail: "Für ein Einfamilienhaus in Regensburg realisierte K.M. Trockenbau eine raumhohe TV-Wand aus Rigips. Die eingebaute Mediannische bietet Platz für TV, AV-Geräte und Dekoration – alles sauber verputzt und bereit zur Endbeschichtung. Sämtliche Kabel verlaufen unsichtbar in der Konstruktion.",
   },
   {
     id: "02",
-    title: "Innenausbau Projekt, Regensburg",
-    category: "Wohnungsbau",
-    desc: "Neubau eines Wohnparks mit 56 Wohneinheiten und Tiefgarage",
+    title: "Abhangdecke mit Beleuchtung",
+    category: "Trockenbaudecke",
+    desc: "Abgehängte Decke mit LED-Einbauspots und indirekter Beleuchtung",
     location: "Regensburg",
-    img: "/images/Beispiel-Projekte/LP2.jpg",
-    detail: "In Regensburg entstand der Wohnpark Haydn mit 56 modernen Wohneinheiten und einer Tiefgarage. K.M. Trockenbau übernahm die schlüsselfertige Realisierung des gesamten Projekts – von der Rohbauphase bis zur Fertigstellung. Die Anlage vereint zeitgemäße Architektur mit einer nachhaltigen Bauweise und einem hohen Wohnkomfort.",
-    images: ["/images/Beispiel-Projekte/LP2.jpg", PLACEHOLDER, PLACEHOLDER],
+    img: "/images/projekt-abhangdecke.png",
+    detail: "In einem Wohnraum in Regensburg baute K.M. Trockenbau eine moderne Abhangdecke mit indirekter LED-Beleuchtung und Einbauspots. Der umlaufende Lichtkanal schafft eine warme Raumwirkung. Die saubere Ausführung in Rigips bildet die perfekte Basis für die Endbeschichtung.",
   },
   {
     id: "03",
-    title: "Dachbodenausbau, Regensburg",
-    category: "Wohnbau",
-    desc: "Schlüsselfertiger Neubau eines Einfamilienhauses",
+    title: "Dachgeschossausbau",
+    category: "Dachbodenausbau",
+    desc: "Ausbau eines Dachgeschosses mit Trockenbau-Schrägen und Verkleidung",
     location: "Regensburg",
-    img: "/images/projekt-03.png",
-    detail: "Für eine Privatfamilie in Regensburg realisierte K.M. Trockenbau ein schlüsselfertiges Einfamilienhaus mit durchdachter Grundrissplanung und hochwertigen Materialien. Das klare, moderne Erscheinungsbild wurde in enger Zusammenarbeit mit dem Bauherrn entwickelt. Alle Gewerke wurden termingerecht und im vereinbarten Kostenrahmen abgeschlossen.",
-    images: ["/images/projekt-03.png", PLACEHOLDER, PLACEHOLDER],
+    img: "/images/projekt-dachgeschoss.png",
+    detail: "Im Zuge eines Dachgeschossausbaus in Regensburg verkleidete K.M. Trockenbau die Dachschrägen und Wände vollständig in Rigips. Die saubere Ausführung der Schrägenverkleidung schafft einen hellen, modernen Wohnraum. Inklusive Dämmung nach aktuellen Energiesparstandards.",
   },
   {
     id: "04",
-    title: "Einfamilienhaus Regensburg",
-    category: "Wohnbau",
-    desc: "Schlüsselfertiger Neubau eines Einfamilienhauses mit Carport",
+    title: "Lichtdecke – Indirekte Beleuchtung",
+    category: "Trockenbaudecke",
+    desc: "Raumhohe Lichtdecke mit umlaufendem LED-Lichtkanal",
     location: "Regensburg",
-    img: "/images/bild-wohnhaus.jpg",
-    detail: "Für eine Privatfamilie in Regensburg realisierte K.M. Trockenbau ein schlüsselfertiges Einfamilienhaus mit Keller, Carport und Gartengestaltung. Das klare, moderne Erscheinungsbild mit hochwertigen Materialien und durchdachter Grundrissplanung wurde in enger Zusammenarbeit mit dem Bauherrn entwickelt.",
-    images: [PLACEHOLDER, PLACEHOLDER, PLACEHOLDER],
+    img: "/images/projekt-lichtdecke.png",
+    detail: "Diese Lichtdecke entstand im Wohnzimmer eines Privathauses in Regensburg. K.M. Trockenbau baute eine abgehängte Konstruktion mit umlaufendem Lichtkanal für indirektes LED-Licht. Das Ergebnis: ein stimmungsvoller Raum mit gleichmäßiger, blendfreier Beleuchtung.",
   },
   {
     id: "05",
-    title: "Sanierung Bauernhof Buch",
-    category: "Sanierung",
-    desc: "Kernsanierung und Modernisierung eines denkmalgeschützten Bauernhofs",
-    location: "Buch am Buchrain",
-    img: "/images/bild-bauernhof.jpg",
-    detail: "In Buch am Buchrain sanierte K.M. Trockenbau einen historischen Bauernhof unter denkmalschutzrechtlichen Auflagen. Neue Fenster, Dämmung, Haustechnik und Fassade wurden behutsam integriert, ohne den traditionellen Charakter des Gebäudes zu beeinträchtigen. Ein anspruchsvolles Projekt, das Handwerkskunst und moderne Bautechnik vereint.",
-    images: [PLACEHOLDER, PLACEHOLDER, PLACEHOLDER],
+    title: "Wohnzimmer-Nische mit Naturstein",
+    category: "Innenausbau",
+    desc: "Individuelle Sitz-Nische aus Trockenbau mit Natursteinverkleidung",
+    location: "Regensburg",
+    img: "/images/projekt-nische.png",
+    detail: "Für ein Wohnzimmer in Regensburg fertigte K.M. Trockenbau eine gemütliche Sitz-Nische an. Die Trockenbauwände wurden mit Naturstein verkleidet und mit beleuchteten Nischen kombiniert. Ein individuelles Gestaltungselement das Wohnkomfort und handwerkliche Präzision vereint.",
+  },
+  {
+    id: "06",
+    title: "Badezimmer-Ausbau mit Nischen",
+    category: "Innenausbau",
+    desc: "Trockenbauarbeiten im Bad – Duschbereich mit eingebauten Nischen und Regalturm",
+    location: "Regensburg",
+    img: "/images/Beispiel-Projekte/20191210_151717.jpg",
+    detail: "Für ein Badezimmer in Regensburg realisierte K.M. Trockenbau einen modernen Duschbereich mit eingelassenen Wandnischen sowie einen freistehenden Regalturm aus Rigips. Die Konstruktion wurde wasserfest verspachtelt und ist bereit für die Fliesenarbeiten.",
+    imgAspect: "2/5",
+  },
+  {
+    id: "07",
+    title: "Deckenverkleidung & Ausbau",
+    category: "Trockenbaudecke",
+    desc: "Professionelle Deckenverkleidung mit Trockenbau nach Maß",
+    location: "Regensburg",
+    img: "/images/Beispiel-Projekte/Decken.jpg",
+    detail: "Für dieses Projekt in Regensburg realisierte K.M. Trockenbau eine maßgefertigte Deckenverkleidung. Die sorgfältige Ausführung in Rigips ermöglicht eine optimale Grundlage für Anstrich oder weitere Gestaltung. Präzise Verarbeitung auf den letzten Millimeter.",
+  },
+  {
+    id: "08",
+    title: "Trockenbau Innenraumgestaltung",
+    category: "Innenausbau",
+    desc: "Individuelle Raumgestaltung mit Trockenbau-Elementen",
+    location: "Regensburg",
+    img: "/images/Beispiel-Projekte/20191210_151726.jpg",
+    detail: "In diesem Projekt gestaltete K.M. Trockenbau einen Innenraum mit individuellen Trockenbau-Elementen. Von der Planung bis zur Fertigstellung wurde alles aus einer Hand geliefert – termintreu, sauber und mit höchster handwerklicher Qualität.",
+    imgAspect: "2/5",
   },
 ];
 
@@ -91,7 +113,7 @@ export function Portfolio15() {
       // Eyebrow + heading reveal
       gsap.set(eyebrowRef.current, { y: 22, opacity: 0 });
       const headingWords = headingRef.current
-        ? splitWords(headingRef.current, "Abgeschlossene Projekte in Bayern")
+        ? splitWords(headingRef.current, "Abgeschlossene Projekte in Regensburg")
         : [];
       gsap.set(headingWords, { yPercent: 110 });
 
@@ -188,7 +210,7 @@ export function Portfolio15() {
             className="font-heading font-bold leading-tight tracking-tight text-white"
             style={{ fontSize: "clamp(2rem, 4vw, 4rem)" }}
           >
-            Abgeschlossene Projekte in Bayern
+            Abgeschlossene Projekte in Regensburg
           </h2>
         </div>
 
@@ -277,7 +299,7 @@ export function Portfolio15() {
               {/* Expand panel */}
               <div
                 className="overflow-hidden transition-all duration-700"
-                style={{ maxHeight: expanded === i ? "800px" : "0px" }}
+                style={{ maxHeight: expanded === i ? "600px" : "0px" }}
               >
                 <div className="border-t border-white/10 bg-black/30 px-6 py-10 backdrop-blur-sm md:pl-[calc(60px+1.5rem)]">
                   <div className="grid grid-cols-1 gap-8 lg:grid-cols-2">
@@ -297,20 +319,19 @@ export function Portfolio15() {
                       </div>
                     </div>
 
-                    {/* Image grid */}
+                    {/* Single image */}
                     <div
-                      className="grid gap-2"
-                      style={{ gridTemplateColumns: `repeat(${Math.min(p.images.length, 2)}, 1fr)` }}
+                      className="overflow-hidden rounded-sm"
+                      style={{
+                        aspectRatio: p.imgAspect || "4/3",
+                        maxWidth: p.imgAspect ? "220px" : "100%",
+                      }}
                     >
-                      {p.images.map((img, j) => (
-                        <div key={j} className="overflow-hidden rounded-sm aspect-[4/3]">
-                          <img
-                            src={img}
-                            alt={`${p.title} ${j + 1}`}
-                            className="h-full w-full object-cover transition-transform duration-700 hover:scale-105"
-                          />
-                        </div>
-                      ))}
+                      <img
+                        src={p.img}
+                        alt={p.title}
+                        className="h-full w-full object-cover transition-transform duration-700 hover:scale-105"
+                      />
                     </div>
                   </div>
                 </div>

@@ -4,10 +4,10 @@ import { useRef, useEffect } from "react";
 import { gsap } from "../../../utils/gsap";
 
 const stats = [
-  { value: "6",   label: "Leistungsbereiche",        num: 6,   suffix: "" },
-  { value: "100%", label: "DIN-normgerecht",         num: 100, suffix: "%" },
-  { value: "1",   label: "Fester Ansprechpartner",   num: 1,   suffix: "" },
-  { value: "∞",   label: "Beratung inklusive",       num: 0,   suffix: "" },
+  { value: "10+",  label: "Jahre Erfahrung",          num: 10,  suffix: "+" },
+  { value: "100%", label: "DIN-normgerecht",           num: 100, suffix: "%" },
+  { value: "1",    label: "Fester Ansprechpartner",    num: 1,   suffix: "" },
+  { value: "200+", label: "Abgeschlossene Projekte",   num: 200, suffix: "+" },
 ];
 
 const splitWords = (el, text) => {

@@ -5,14 +5,14 @@ import { gsap } from "../../../utils/gsap";
 
 const keyFacts = [
   {
-    lead: "12–18",
-    leadUnit: "Monate",
-    desc: "Vom ersten Entwurf bis zur Schlüsselübergabe.",
+    lead: "1–5",
+    leadUnit: "Tage",
+    desc: "Vom Aufmaß bis zur fertigen Wand – termingerecht und präzise.",
   },
   {
     lead: "1",
     leadUnit: "Ansprechpartner",
-    desc: "Statt zehn Fachgewerken – eine Stimme.",
+    desc: "Direkt, persönlich und ohne Umwege.",
   },
   {
     lead: "Festpreis",
@@ -22,7 +22,7 @@ const keyFacts = [
   {
     lead: "100%",
     leadUnit: "eigenes Personal",
-    desc: "Ausgebildete Maurer, Maler, Zimmerer.",
+    desc: "Ausgebildete Trockenbauer für Wand, Decke & Boden.",
   },
 ];
 
@@ -178,8 +178,8 @@ export function VideoSection() {
           style={{ willChange: "clip-path", zIndex: 1 }}
         >
           <img
-            src="/images/zwei-bauarbeiter.jpg"
-            alt="Zwei Bauarbeiter mit Bauplänen"
+            src="/images/trockenbau-section.jpg"
+            alt="Trockenbauer beim Einbauen von Rigips-Platten"
             className="vs-video absolute inset-0 h-full w-full object-cover"
             style={{ willChange: "transform" }}
           />
@@ -210,33 +210,33 @@ export function VideoSection() {
           >
             <div style={{ overflow: "hidden", paddingBottom: "0.08em" }}>
               <span className="vs-line-inner block">
-                Von der{" "}
+                Vom ersten{" "}
                 <strong
                   className="font-bold"
                   style={{
                     textDecoration: "underline",
-                    textDecorationColor: "rgba(240, 112, 64, 0.65)",
+                    textDecorationColor: "rgba(90, 172, 181, 0.8)",
                     textUnderlineOffset: "6px",
                     textDecorationThickness: "2px",
                   }}
                 >
-                  Bauskizze auf dem Schreibtisch
+                  Aufmaß
                 </strong>
               </span>
             </div>
             <div style={{ overflow: "hidden", paddingBottom: "0.08em" }}>
               <span className="vs-line-inner block">
-                bis zum{" "}
+                bis zur{" "}
                 <strong
                   className="font-bold"
                   style={{
                     textDecoration: "underline",
-                    textDecorationColor: "rgba(240, 112, 64, 0.65)",
+                    textDecorationColor: "rgba(90, 172, 181, 0.8)",
                     textUnderlineOffset: "6px",
                     textDecorationThickness: "2px",
                   }}
                 >
-                  fertigen Gebäude.
+                  perfekten Oberfläche.
                 </strong>
               </span>
             </div>
@@ -246,12 +246,12 @@ export function VideoSection() {
         {/* Key facts overlay — appears AFTER the title fades */}
         <div className="absolute inset-0 z-20 flex items-center px-[5%]">
           <div className="container">
-            <p className="vs-keyfact-eyebrow mb-3 font-body text-sm font-semibold uppercase tracking-[0.28em] text-white">
-              So bauen wir
+            <p className="vs-keyfact-eyebrow mb-3 font-body text-sm font-semibold uppercase tracking-[0.28em] text-white" style={{ opacity: 0, transform: "translateY(20px)" }}>
+              So arbeiten wir
             </p>
             <div
               className="vs-keyfact-divider mb-12 h-px w-16 bg-white/60"
-              style={{ transformOrigin: "left center" }}
+              style={{ transformOrigin: "left center", transform: "scaleX(0)" }}
             />
 
             <div className="grid grid-cols-1 gap-x-12 gap-y-10 md:grid-cols-2 md:gap-y-14 lg:gap-x-20">
@@ -259,6 +259,7 @@ export function VideoSection() {
                 <div
                   key={f.lead + f.leadUnit}
                   className="vs-keyfact relative pl-6"
+                  style={{ opacity: 0, transform: "translateY(40px)" }}
                 >
                   <div className="absolute left-0 top-0 h-full w-px bg-white/45" />
 

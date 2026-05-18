@@ -8,31 +8,31 @@ gsap.registerPlugin(ScrollTrigger);
 
 const milestones = [
   {
-    year: "2020",
+    year: "2016",
     title: "Die Gründung",
-    desc: "Kalac Mujo gründet K.M. Trockenbau in Regensburg. Von Anfang an stehen Qualität, Verlässlichkeit und persönliche Betreuung im Mittelpunkt.",
-    detail: "Was in Regensburg im Landkreis Regensburg begann, legte den Grundstein für ein modernes, leistungsstarkes Trockenbau in der Region.",
-    img: "/images/timeline/gruendung.jpg",
+    desc: "Kalac Mujo gründet K.M. Trockenbau in Regensburg – mit jahrelanger Handwerkserfahrung im Gepäck und dem klaren Ziel: Qualität, die man sieht und spürt.",
+    detail: "Der erste Schritt in die Selbstständigkeit. Was als Ein-Mann-Betrieb begann, legte den Grundstein für eines der verlässlichsten Trockenbauunternehmen der Region.",
+    img: "/images/timeline/gruendung.png",
   },
   {
-    year: "2021",
-    title: "Erste Projekte",
-    desc: "Das Team wächst und erste Referenzprojekte entstehen – von Rohbau über Sanierung bis hin zu schlüsselfertigen Bauprojekten in der Region.",
+    year: "2019",
+    title: "Erste Referenzprojekte",
+    desc: "Das Team wächst und namhafte Referenzprojekte entstehen – von Trockenbau und Innenausbau bis hin zu Dachbodenausbauten im Raum Regensburg.",
     detail: "Mit eigenem Fachpersonal und moderner Ausstattung übernimmt K.M. Trockenbau Projekte termingerecht und auf höchstem handwerklichen Niveau.",
-    img: "/images/timeline/erste-projekte.jpg",
+    img: "/images/timeline/erste-projekte.png",
   },
   {
     year: "2022",
     title: "Wachstum & Ausbau",
-    desc: "Erweiterung des Leistungsspektrums und des Fuhrparks. K.M. Trockenbau etabliert sich als zuverlässiger Partner für Privat- und Gewerbekunden.",
-    detail: "Das Betriebsgelände in Siegfriedstrasse 3, Regensburg, bietet optimale Voraussetzungen für Fuhrpark, Maschinen und Lager – eine solide Basis für alle Gewerke.",
-    img: "/images/timeline/wachstum.jpg",
+    desc: "Erweiterung des Leistungsspektrums und des Teams. K.M. Trockenbau etabliert sich als bevorzugter Partner für Privat- und Gewerbekunden in ganz Regensburg.",
+    detail: "Neue Leistungsbereiche wie Wärme- & Schallschutz, Bodenbeläge und Badsanierung runden das Angebot ab – alles aus einer Hand.",
+    img: "/images/timeline/wachstum.png",
   },
   {
     year: "Heute",
-    title: "Etabliert in der Region",
-    desc: "K.M. Trockenbau steht für bayerisches Handwerk auf höchstem Niveau – mit einem erfahrenen Team und einem breiten Leistungsspektrum aus einer Hand.",
-    detail: "Von schlüsselfertigem Wohnungsbau über Rohbau und Renovierung bis zu Tiefbau, Gerüst und Transporten – zuverlässig und persönlich für Bauherren in der Region.",
+    title: "Über 10 Jahre Erfahrung",
+    desc: "K.M. Trockenbau steht für über 10 Jahre Erfahrung im Innenausbau – mit einem eingespielten Team und einem Leistungsspektrum, das keine Wünsche offenlässt.",
+    detail: "Von Trockenbau und Abhangdecken über Bodenbeläge bis zur Badsanierung – präzise, termintreu und persönlich für Bauherren in der Region.",
     img: "/images/timeline/heute.jpg",
   },
 ];
@@ -191,7 +191,7 @@ export function Geschichte() {
         <div className="container relative z-10">
           <div className="max-w-2xl">
             <p ref={eyebrowRef} className="mb-3 font-body text-sm font-semibold uppercase tracking-[0.25em] text-[#5AACB5]">
-              Seit 2020
+              Seit 2016
             </p>
             <h2
               ref={headingRef}
@@ -201,7 +201,7 @@ export function Geschichte() {
               Unsere Geschichte
             </h2>
             <p ref={subRef} className="font-body text-base leading-relaxed text-[#0D2020]/55">
-              Gegründet 2020 in Regensburg.<br />Ein Anspruch: Projekte für Generationen.
+              Gegründet 2016 in Regensburg.<br />Über 10 Jahre Erfahrung im Innenausbau.
             </p>
           </div>
         </div>
@@ -214,13 +214,13 @@ export function Geschichte() {
           {/* Timeline */}
         <div ref={timelineRef} className="relative">
 
-          {/* Red thread — full height, grows with scroll */}
+          {/* Teal thread — full height, grows with scroll */}
           <div
             className="absolute top-0 bottom-0"
             style={{
               left: "18px",
               width: "12px",
-              background: "linear-gradient(to right, rgba(14,42,107,0.18) 0%, #DDDED8 30%, #E5E4DC 50%, #DDDED8 70%, rgba(14,42,107,0.12) 100%)",
+              background: "rgba(90,172,181,0.15)",
               borderRadius: "6px",
             }}
           >
@@ -229,8 +229,8 @@ export function Geschichte() {
               className="absolute inset-0 origin-top"
               style={{
                 borderRadius: "6px",
-                background: "linear-gradient(to right, rgba(158,48,14,0.8) 0%, #5AACB5 25%, #E57040 50%, #5AACB5 75%, rgba(158,48,14,0.8) 100%)",
-                boxShadow: "2px 0 8px rgba(14,42,107,0.45), -1px 0 4px rgba(0,0,0,0.15)",
+                background: "linear-gradient(to bottom, #5AACB5, #3A8F8A)",
+                boxShadow: "0 0 12px rgba(90,172,181,0.4)",
                 transform: "scaleY(0)",
               }}
             />

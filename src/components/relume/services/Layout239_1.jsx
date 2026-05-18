@@ -20,7 +20,7 @@ const partners = [
   { label: "Knauf Insulation", logo: null },
   { label: "Hilti", logo: hiltiLogo },
   { label: "Fermacell", logo: null },
-  { label: "Armstrong", logo: null },
+  { label: "Würth", logo: null },
 ];
 
 const track = [...partners, ...partners];

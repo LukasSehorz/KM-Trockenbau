@@ -8,30 +8,27 @@ const navCols = [
   {
     heading: "Leistungen",
     links: [
-      { label: "Schlüsselfertiges Bauen", to: "/leistungen" },
-      { label: "Rohbau & Planung", to: "/leistungen" },
-      { label: "Renovierung & Sanierung", to: "/leistungen" },
-      { label: "Tiefbau", to: "/leistungen" },
-      { label: "Transporte & Gerüstbau", to: "/leistungen" },
+      { label: "Trockenbau", to: "/leistungen" },
+      { label: "Dachbodenausbau", to: "/leistungen" },
+      { label: "Wärme- & Schallschutz", to: "/leistungen" },
+      { label: "Trockenbaudecke", to: "/leistungen" },
+      { label: "Bodenbeläge", to: "/leistungen" },
+      { label: "Badsanierung", to: "/leistungen" },
     ],
   },
   {
     heading: "Unternehmen",
     links: [
       { label: "Über uns", to: "/ueber-uns" },
-      { label: "Unser Prozess", to: "/prozess" },
-      { label: "Projekte", to: "/projekte" },
-      { label: "Referenzen", to: "/referenzen" },
+      { label: "Galerie", to: "/galerie" },
+      { label: "Kontakt", to: "/kontakt" },
     ],
   },
   {
-    heading: "Kontakt",
+    heading: "Rechtliches",
     links: [
-      { label: "Beratung anfragen", to: "/kontakt" },
-      { label: "FAQ", to: "/kontakt" },
-      { label: "Auszeichnungen", to: "/auszeichnungen" },
-      { label: "Impressum", to: "#" },
-      { label: "Datenschutz", to: "#" },
+      { label: "Impressum", to: "/impressum" },
+      { label: "Datenschutz", to: "/datenschutz" },
     ],
   },
 ];
@@ -40,7 +37,7 @@ export function Footer() {
   return (
     <footer
       className="relative overflow-hidden"
-      style={{ background: "linear-gradient(160deg, #5AACB5 0%, #B83A14 55%, #3A8F8A 100%)" }}
+      style={{ background: "linear-gradient(160deg, #3A8F8A 0%, #5AACB5 50%, #7BBFB8 100%)" }}
     >
       {/* Top hairline accent */}
       <div className="h-px w-full bg-gradient-to-r from-transparent via-white/50 to-transparent" />
@@ -55,13 +52,13 @@ export function Footer() {
         }}
       />
 
-      {/* Ghost "HÄRTL" */}
+      {/* Ghost brand mark */}
       <div
         className="pointer-events-none absolute bottom-0 left-0 select-none font-heading font-bold leading-none text-white"
         style={{ fontSize: "clamp(6rem, 18vw, 22rem)", opacity: 0.04, letterSpacing: "-0.02em", lineHeight: 0.85 }}
         aria-hidden="true"
       >
-        WM BAU
+        K.M.
       </div>
 
       <div className="container relative px-[5%] pt-16 pb-10 md:pt-24 md:pb-12">
@@ -150,15 +147,12 @@ export function Footer() {
             © {new Date().getFullYear()} K.M. Trockenbau. Alle Rechte vorbehalten.
           </p>
           <div className="flex items-center gap-6">
-            <a href="#" className="font-body text-xs text-white/30 transition-colors duration-200 hover:text-white/60">
+            <Link to="/impressum" className="font-body text-xs text-white/30 transition-colors duration-200 hover:text-white/60">
               Impressum
-            </a>
-            <a href="#" className="font-body text-xs text-white/30 transition-colors duration-200 hover:text-white/60">
+            </Link>
+            <Link to="/datenschutz" className="font-body text-xs text-white/30 transition-colors duration-200 hover:text-white/60">
               Datenschutz
-            </a>
-            <a href="#" className="font-body text-xs text-white/30 transition-colors duration-200 hover:text-white/60">
-              AGB
-            </a>
+            </Link>
           </div>
         </div>
       </div>

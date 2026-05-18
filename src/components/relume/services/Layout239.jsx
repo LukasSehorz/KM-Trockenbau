@@ -5,42 +5,42 @@ import { gsap, ScrollTrigger } from "../../../utils/gsap";
 
 const services = [
   {
-    image: "/images/service-schluessel.jpg",
+    image: "/images/Leistungen/01%20Trockenbau.png",
     num: "01",
     title: "Trockenbau",
     body: "Wenn Sie ein zusätzliches Kinderzimmer benötigen oder ein Büro erweitern möchten. Wir erstellen Wände und Zwischenwände nach Maß.",
     tags: ["Wände", "Zwischenwände", "Innenausbau"],
   },
   {
-    image: "/images/craftsmen-stone-facade.jpg",
+    image: "/images/Leistungen/02%20Dachbodenausbau.png",
     num: "02",
     title: "Dachbodenausbau",
     body: "Wenn Sie einen noch nicht genutzten Rohbau besitzen und mehr Wohnfläche haben möchten. Wir verwandeln ungenutzten Dachraum in wertvollen Wohnraum.",
     tags: ["Dachausbau", "Wohnfläche", "Rohbau"],
   },
   {
-    image: "/images/team-blueprints.jpg",
+    image: "/images/Leistungen/03%20Waermeschutz.png",
     num: "03",
     title: "Wärme- & Schallschutz",
     body: "Wenn Sie Ihr Haus, Dachgeschoss oder Ihre Wohnung nach heutigen Standards dämmen und isolieren möchten. Energieeffizient und normgerecht.",
     tags: ["Dämmung", "Isolierung", "DIN-Normen"],
   },
   {
-    image: "/images/service-tiefbau.jpg",
+    image: "/images/Leistungen/04%20Trockenbaudecke.png",
     num: "04",
     title: "Trockenbaudecke",
     body: "Wenn Sie Ihre Holzdecke modernisieren wollen und den Raum größer wirken lassen möchten. Moderne Abhangdecken für jeden Geschmack.",
     tags: ["Abhangdecke", "Modernisierung", "Gestaltung"],
   },
   {
-    image: "/images/service-geruest.jpg",
+    image: "/images/Leistungen/05%20Bodenbel%C3%A4ge.png",
     num: "05",
     title: "Bodenbeläge",
     body: "Wenn ein neuer Boden schon lange überfällig ist oder Sie einfach einen schöneren Bodenbelag möchten. Wir verlegen Ihren Wunschboden professionell.",
     tags: ["Parkett", "Laminat", "Fliesen"],
   },
   {
-    image: "/images/service-schluessel.jpg",
+    image: "/images/Leistungen/06%20Badsanierung.png",
     num: "06",
     title: "Badsanierung",
     body: "Falls Sie Ihr in die Jahre gekommenes Bad nach Ihren Wünschen umgestalten möchten. Von der Planung bis zur Fertigstellung — alles aus einer Hand.",
@@ -239,7 +239,7 @@ export function Layout239() {
             className="font-heading font-bold leading-tight tracking-tight text-[#5AACB5] whitespace-nowrap"
             style={{ fontSize: "clamp(2rem, 4vw, 4rem)", willChange: "transform, opacity" }}
           >
-            Gewerke. Ein Ansprechpartner.
+            Viele Leistungen. Ein Ansprechpartner.
           </h2>
         </div>
 

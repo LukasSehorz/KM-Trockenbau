@@ -6,23 +6,23 @@ import { gsap } from "../../../utils/gsap";
 const projects = [
   {
     id: "01",
-    image: "/images/Beispiel-Projekte/LP1.jpg",
-    title: "Wohnanlage München/Trudering",
-    category: "Wohnungsbau · 97 WE + Tiefgarage",
-    year: "2023",
+    image: "/images/projekt-tvwand.png",
+    title: "TV-Wand mit Mediannische",
+    category: "Trockenbau · Wohnzimmer",
+    year: "2024",
   },
   {
     id: "02",
-    image: "/images/Beispiel-Projekte/LP2.jpg",
-    title: "Innenausbau Projekt, Regensburg",
-    category: "Wohnungsbau · 56 WE + Tiefgarage",
+    image: "/images/projekt-lichtdecke.png",
+    title: "Lichtdecke – Indirekte Beleuchtung",
+    category: "Trockenbaudecke · Innenausbau",
     year: "2024",
   },
   {
     id: "03",
-    image: "/images/projekt-03.png",
-    title: "Dachbodenausbau, Regensburg",
-    category: "Wohnbau · Schlüsselfertig",
+    image: "/images/projekt-dachgeschoss.png",
+    title: "Dachgeschossausbau",
+    category: "Dachbodenausbau · Regensburg",
     year: "2024",
   },
 ];

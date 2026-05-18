@@ -4,7 +4,23 @@
       "Bash(git rm *)",
       "Bash(cp -r \"c:/Users/lukas/OneDrive/Desktop/Webseiten/Erstgespräch anstehend/KM-Trockenbau/WM-Bau-GmbH/.\" \"c:/Users/lukas/OneDrive/Desktop/Webseiten/Erstgespräch anstehend/KM-Trockenbau/\" --exclude=\".git\")",
       "Bash(echo \"Exit: $?\")",
-      "Bash(rsync -av --exclude='.git' \"c:/Users/lukas/OneDrive/Desktop/Webseiten/Erstgespräch anstehend/KM-Trockenbau/WM-Bau-GmbH/\" \"c:/Users/lukas/OneDrive/Desktop/Webseiten/Erstgespräch anstehend/KM-Trockenbau/\")"
+      "Bash(rsync -av --exclude='.git' \"c:/Users/lukas/OneDrive/Desktop/Webseiten/Erstgespräch anstehend/KM-Trockenbau/WM-Bau-GmbH/\" \"c:/Users/lukas/OneDrive/Desktop/Webseiten/Erstgespräch anstehend/KM-Trockenbau/\")",
+      "mcp__gemini-mcp__generate_image",
+      "Bash(cp \"Beispiel-Projekte/Screenshot 2026-05-15 142808.png\" \"projekt-dachgeschoss.png\")",
+      "Bash(cp \"Beispiel-Projekte/Screenshot 2026-05-15 142816.png\" \"projekt-tresen.png\")",
+      "Bash(cp \"Beispiel-Projekte/Screenshot 2026-05-15 142824.png\" \"projekt-nische.png\")",
+      "Bash(cp \"Beispiel-Projekte/Screenshot 2026-05-15 142834.png\" \"projekt-tvwand.png\")",
+      "Bash(cp \"Beispiel-Projekte/Screenshot 2026-05-15 142842.png\" \"projekt-lichtdecke.png\")",
+      "mcp__gemini-mcp__edit_image",
+      "PowerShell(& \"c:\\\\Users\\\\lukas\\\\OneDrive\\\\Desktop\\\\Webseiten\\\\Erstgespr�ch anstehend\\\\KM-Trockenbau\\\\scripts\\\\kie-generate.ps1\")",
+      "PowerShell(& \"c:\\\\Users\\\\lukas\\\\OneDrive\\\\Desktop\\\\Webseiten\\\\Erstgespr�ch anstehend\\\\KM-Trockenbau\\\\scripts\\\\kie-retry-decke.ps1\")",
+      "Bash(tasklist)",
+      "PowerShell(& \"c:\\\\Users\\\\lukas\\\\OneDrive\\\\Desktop\\\\Webseiten\\\\Erstgespr�ch anstehend\\\\KM-Trockenbau\\\\scripts\\\\kie-retry-dachboden.ps1\")",
+      "Bash(start http://localhost:5178/)",
+      "PowerShell(Get-ChildItem \"public\\\\images\\\\Beispiel-Projekte\\\\IMG-20191203-WA0004.jpg\",\"public\\\\images\\\\Beispiel-Projekte\\\\20170804_161012.jpg\" | ForEach-Object { Add-Type -AssemblyName System.Drawing; $img = [System.Drawing.Image]::FromFile\\($_.FullName\\); \"$\\($_.Name\\): $\\($img.Width\\)x$\\($img.Height\\) \\($\\([math]::Round\\($_.Length/1KB\\)\\) KB\\)\"; $img.Dispose\\(\\) })",
+      "WebFetch(domain:www.km-trockenbau-regensburg.de)",
+      "PowerShell(Get-NetTCPConnection -State Listen | Where-Object { $_.LocalPort -in @\\(3000,5173,4173,8080,8000,4000,1234,5000\\) } | ForEach-Object { $p = Get-Process -Id $_.OwningProcess -ErrorAction SilentlyContinue; [PSCustomObject]@{Port=$_.LocalPort; PID=$_.OwningProcess; Name=$p.Name} })",
+      "PowerShell(Get-Process | Where-Object { $_.Name -in @\\(\"node\",\"vite\",\"npm\",\"bun\",\"deno\"\\) } | Select-Object Id, Name, CPU, StartTime)"
     ]
   }
 }

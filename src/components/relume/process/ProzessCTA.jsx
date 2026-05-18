@@ -205,13 +205,13 @@ export function ProzessCTA() {
             <p className="font-body text-[0.58rem] font-semibold uppercase tracking-[0.32em] text-white/30 mb-2">
               Kontakt
             </p>
-            <p className="font-body text-sm text-white/85">info@hoser-bau.de</p>
+            <p className="font-body text-sm text-white/85">info-kalac-trockenbau@web.de</p>
           </div>
           <div className="cta-meta">
             <p className="font-body text-[0.58rem] font-semibold uppercase tracking-[0.32em] text-white/30 mb-2">
               Standort
             </p>
-            <p className="font-body text-sm text-white/85">München · Bayern</p>
+            <p className="font-body text-sm text-white/85">Regensburg · Bayern</p>
           </div>
           <div className="cta-meta">
             <p className="font-body text-[0.58rem] font-semibold uppercase tracking-[0.32em] text-white/30 mb-2">

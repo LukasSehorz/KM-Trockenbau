@@ -5,28 +5,28 @@ import { gsap } from "../../../utils/gsap";
 
 const photos = [
   {
-    src: "/images/hero-aerial-construction.jpg",
-    caption: "Luftaufnahme einer aktiven Baustelle – präzise Koordination aller Gewerke von Beginn an.",
+    src: "/images/Beispiel-Projekte/projekt-highlight.png",
+    caption: "Innenausbau in vollem Gange – Ständerwerk und Rigips-Platten für neue Raumaufteilung.",
     span: "col-span-2 row-span-2",
   },
   {
-    src: "/images/Beispiel-Projekte/Vor%20Ort%201.jpg",
-    caption: "Gerüstbau für sichere und effiziente Arbeiten auf jeder Baustelle.",
+    src: "/images/Beispiel-Projekte/20170804_161012.jpg",
+    caption: "Montage der Gipskartonplatten auf Metallständer – sauber, schnell, normgerecht.",
     span: "col-span-1 row-span-1",
   },
   {
-    src: "/images/Beispiel-Projekte/Vor%20Ort%202.jpg",
-    caption: "Referenzprojekte aus dem Raum Regensburg und München – realisiert mit eigenem Fachpersonal.",
+    src: "/images/Beispiel-Projekte/IMG-20191203-WA0002.jpg",
+    caption: "Fugenspachtelung für eine glatte, makellose Oberfläche als Grundlage für den Anstrich.",
     span: "col-span-1 row-span-1",
   },
   {
-    src: "/images/Beispiel-Projekte/Vor%20Ort%203.jpg",
-    caption: "Solider Rohbau als Basis für alle Folgegewerke – präzise und termingerecht.",
+    src: "/images/Beispiel-Projekte/20191210_151717.jpg",
+    caption: "Präzises Zuschneiden der Gipskartonplatten – Maßgenauigkeit von der ersten Linie an.",
     span: "col-span-1 row-span-1",
   },
   {
-    src: "/images/bild13.jpg",
-    caption: "Fertigstellung und Übergabe – pünktlich, im Budgetrahmen, mit Festpreisgarantie.",
+    src: "/images/Beispiel-Projekte/20191210_151726.jpg",
+    caption: "Fertig verputzte Wände und Abhangdecke mit integrierter LED-Beleuchtung.",
     span: "col-span-1 row-span-1",
   },
 ];

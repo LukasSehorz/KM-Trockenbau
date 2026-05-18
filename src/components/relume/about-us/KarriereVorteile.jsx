@@ -40,7 +40,7 @@ const vorteile = [
   {
     num: "04",
     title: "Familiäres Team",
-    desc: "Seit 2020 in Regensburg. Flache Hierarchien, direkte Kommunikation, Respekt und Zusammenhalt.",
+    desc: "Seit 2016 in Regensburg. Flache Hierarchien, direkte Kommunikation, Respekt und Zusammenhalt.",
   },
   {
     num: "05",

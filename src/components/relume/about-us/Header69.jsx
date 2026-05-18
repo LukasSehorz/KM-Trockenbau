@@ -16,7 +16,7 @@ export function Header69() {
           Regensburg.<br />Qualität, die bleibt.
         </h1>
         <p className="font-body text-base leading-relaxed text-white/65 md:text-lg">
-          Seit 2020 bauen wir in Regensburg und der Region Regensburg.
+          Seit 2016 bauen wir in Regensburg und der Region Regensburg.
           Was mit klaren Werten und eigenem Fachpersonal begann, ist heute
           ein zuverlässiges Trockenbau – mit moderner Technik und
           dem Anspruch, Qualität zu liefern, die bleibt.

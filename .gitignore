@@ -15,6 +15,9 @@ dist-ssr
 # WM-Bau-GmbH bleibt lokal als Referenz, wird nicht ins Repo gepusht
 WM-Bau-GmbH/
 
+# Firecrawl temp data
+.firecrawl/
+
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json
