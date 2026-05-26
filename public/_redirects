@@ -1,0 +1,8 @@
+# 301 Redirects von alten Domains zur neuen Domain (SEO-Erhalt)
+https://www.km-trockenbau-regensburg.de/* https://www.k-m-trockenbau.de/:splat 301!
+https://km-trockenbau-regensburg.de/* https://www.k-m-trockenbau.de/:splat 301!
+https://www.trockenbau-hm.com/* https://www.k-m-trockenbau.de/:splat 301!
+https://trockenbau-hm.com/* https://www.k-m-trockenbau.de/:splat 301!
+
+# SPA Fallback (React Router)
+/* /index.html 200
