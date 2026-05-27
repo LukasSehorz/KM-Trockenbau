@@ -92,13 +92,13 @@ export function TeamSection() {
   }, []);
 
   return (
-    <div ref={sectionRef} style={{ height: "100vh" }}>
+    <div ref={sectionRef} className="h-auto md:h-screen">
       <div
-        className="sticky top-0 h-screen w-full overflow-hidden flex"
+        className="relative md:sticky md:top-0 h-auto md:h-screen w-full overflow-visible md:overflow-hidden flex flex-col md:flex-row"
         style={{ backgroundColor: DARK }}
       >
         {/* Text links */}
-        <div className="flex h-full w-1/2 flex-col justify-center px-12 md:px-16 lg:px-20">
+        <div className="flex h-auto w-full md:w-1/2 flex-col justify-center px-6 py-12 md:py-0 md:px-16 lg:px-20">
           <p
             ref={eyebrowRef}
             className="mb-4 font-body text-xs font-semibold uppercase tracking-[0.3em]"
@@ -159,12 +159,12 @@ export function TeamSection() {
         {/* Orange divider */}
         <div
           ref={borderRef}
-          className="w-px flex-shrink-0"
+          className="h-px w-full md:h-full md:w-px flex-shrink-0"
           style={{ backgroundColor: "#D94520" }}
         />
 
         {/* Bild rechts */}
-        <div ref={imageRef} className="flex h-full w-1/2 overflow-hidden">
+        <div ref={imageRef} className="flex h-[320px] md:h-full w-full md:w-1/2 overflow-hidden">
           <img
             src={kalac.image}
             alt={kalac.name}

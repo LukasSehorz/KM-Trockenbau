@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import React, { useState, useEffect, useRef } from "react";
 import { gsap } from "../../../utils/gsap";
@@ -10,22 +10,22 @@ const photos = [
     span: "col-span-2 row-span-2",
   },
   {
-    src: "/images/Beispiel-Projekte/20170804_161012.jpg",
+    src: "/images/Beispiel-Projekte/Screenshot%202026-05-15%20142808.png",
     caption: "Montage der Gipskartonplatten auf Metallständer – sauber, schnell, normgerecht.",
     span: "col-span-1 row-span-1",
   },
   {
-    src: "/images/Beispiel-Projekte/IMG-20191203-WA0002.jpg",
+    src: "/images/Beispiel-Projekte/Screenshot%202026-05-15%20142816.png",
     caption: "Fugenspachtelung für eine glatte, makellose Oberfläche als Grundlage für den Anstrich.",
     span: "col-span-1 row-span-1",
   },
   {
-    src: "/images/Beispiel-Projekte/20191210_151717.jpg",
+    src: "/images/Beispiel-Projekte/Screenshot%202026-05-15%20142824.png",
     caption: "Präzises Zuschneiden der Gipskartonplatten – Maßgenauigkeit von der ersten Linie an.",
     span: "col-span-1 row-span-1",
   },
   {
-    src: "/images/Beispiel-Projekte/20191210_151726.jpg",
+    src: "/images/Beispiel-Projekte/Screenshot%202026-05-15%20142834.png",
     caption: "Fertig verputzte Wände und Abhangdecke mit integrierter LED-Beleuchtung.",
     span: "col-span-1 row-span-1",
   },

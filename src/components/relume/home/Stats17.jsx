@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import { useRef, useEffect } from "react";
 import { gsap } from "../../../utils/gsap";
@@ -49,85 +49,139 @@ export function Stats17() {
       gsap.set(".s17-stat-item",   { y: 44, opacity: 0 });
       gsap.set(".s17-item-border", { scaleY: 0 });
 
-      // ── Pinned scrubbed master timeline ────────────────────────────────
-      const tl = gsap.timeline({
-        scrollTrigger: {
-          trigger: sectionRef.current,
-          start: "top top",
-          end: "+=180%",
-          pin: true,
-          scrub: 1,
-          anticipatePin: 1,
-        },
+      const mm = gsap.matchMedia();
+
+      // ── Desktop Layout (min-width: 1024px) ──
+      mm.add("(min-width: 1024px)", () => {
+        const tl = gsap.timeline({
+          scrollTrigger: {
+            trigger: sectionRef.current,
+            start: "top top",
+            end: "+=180%",
+            pin: true,
+            scrub: 1,
+            anticipatePin: 1,
+          },
+        });
+
+        // Phase 1 (0 → 0.55): clip-path portal + Ken Burns
+        tl.fromTo(".s17-bg-clip",
+          { clipPath: "inset(18% 22% 18% 22%)" },
+          { clipPath: "inset(0% 0% 0% 0%)", ease: "power2.inOut", duration: 0.55 },
+          0
+        );
+        tl.to(".s17-bg-img",
+          { scale: 1, ease: "power2.out", duration: 0.55 },
+          0
+        );
+
+        // Phase 2 (0.50 → 0.65): overlay deepens
+        tl.to(".s17-overlay",
+          { opacity: 0.7, ease: "power2.inOut", duration: 0.15 },
+          0.50
+        );
+
+        // Phase 3a (0.60): eyebrow slides up
+        tl.to(".s17-eyebrow",
+          { y: 0, opacity: 1, ease: "power3.out", duration: 0.08 },
+          0.60
+        );
+
+        // Phase 3b (0.63): heading words mask-reveal, staggered
+        tl.to(words1,
+          { yPercent: 0, ease: "expo.out", stagger: 0.022, duration: 0.14 },
+          0.63
+        );
+        tl.to(words2,
+          { yPercent: 0, ease: "expo.out", stagger: 0.022, duration: 0.14 },
+          0.68
+        );
+
+        // Phase 3c (0.76): sub text + CTA
+        tl.to(".s17-sub",
+          { y: 0, opacity: 1, ease: "power3.out", duration: 0.09 },
+          0.76
+        );
+        tl.to(".s17-cta",
+          { y: 0, opacity: 1, ease: "back.out(1.5)", duration: 0.09 },
+          0.80
+        );
+
+        // Phase 4 (0.66): stat cards stagger in from below
+        tl.to(".s17-stat-item",
+          { y: 0, opacity: 1, ease: "power3.out", stagger: 0.05, duration: 0.12 },
+          0.66
+        );
+
+        // Phase 4 parallel: borders draw down
+        tl.fromTo(".s17-item-border",
+          { scaleY: 0 },
+          { scaleY: 1, transformOrigin: "top center", stagger: 0.05, ease: "power3.out", duration: 0.10 },
+          0.68
+        );
+
+        // Phase 4 parallel: counters tick up
+        const numEls = gsap.utils.toArray(".s17-num", sectionRef.current);
+        numEls.forEach((el, i) => {
+          const stat = stats[i];
+          const obj  = { val: 0 };
+          tl.to(obj, {
+            val: stat.num,
+            ease: "power2.out",
+            duration: 0.14,
+            onUpdate() { el.textContent = Math.round(obj.val) + stat.suffix; },
+          }, 0.72 + i * 0.04);
+        });
       });
 
-      // Phase 1 (0 → 0.55): clip-path portal + Ken Burns
-      tl.fromTo(".s17-bg-clip",
-        { clipPath: "inset(18% 22% 18% 22%)" },
-        { clipPath: "inset(0% 0% 0% 0%)", ease: "power2.inOut", duration: 0.55 },
-        0
-      );
-      tl.to(".s17-bg-img",
-        { scale: 1, ease: "power2.out", duration: 0.55 },
-        0
-      );
+      // ── Mobile Layout (max-width: 1023px) ──
+      mm.add("(max-width: 1023px)", () => {
+        const tl = gsap.timeline({
+          scrollTrigger: {
+            trigger: sectionRef.current,
+            start: "top 75%",
+            toggleActions: "play none none reverse",
+          },
+        });
 
-      // Phase 2 (0.50 → 0.65): overlay deepens
-      tl.to(".s17-overlay",
-        { opacity: 0.7, ease: "power2.inOut", duration: 0.15 },
-        0.50
-      );
+        // Simple background reveal without pinning
+        tl.fromTo(".s17-bg-clip",
+          { clipPath: "inset(10% 12% 10% 12%)" },
+          { clipPath: "inset(0% 0% 0% 0%)", ease: "power2.out", duration: 0.8 },
+          0
+        );
+        tl.to(".s17-bg-img",
+          { scale: 1, ease: "power2.out", duration: 0.8 },
+          0
+        );
+        tl.to(".s17-overlay",
+          { opacity: 0.88, ease: "power2.out", duration: 0.6 },
+          0.2
+        );
 
-      // Phase 3a (0.60): eyebrow slides up
-      tl.to(".s17-eyebrow",
-        { y: 0, opacity: 1, ease: "power3.out", duration: 0.08 },
-        0.60
-      );
+        // Animate copy
+        tl.to(".s17-eyebrow", { y: 0, opacity: 1, duration: 0.4 }, 0.3);
+        tl.to(words1, { yPercent: 0, stagger: 0.03, duration: 0.6, ease: "expo.out" }, 0.4);
+        tl.to(words2, { yPercent: 0, stagger: 0.03, duration: 0.6, ease: "expo.out" }, 0.5);
+        tl.to(".s17-sub", { y: 0, opacity: 1, duration: 0.4 }, 0.6);
+        tl.to(".s17-cta", { y: 0, opacity: 1, duration: 0.4 }, 0.7);
 
-      // Phase 3b (0.63): heading words mask-reveal, staggered
-      tl.to(words1,
-        { yPercent: 0, ease: "expo.out", stagger: 0.022, duration: 0.14 },
-        0.63
-      );
-      tl.to(words2,
-        { yPercent: 0, ease: "expo.out", stagger: 0.022, duration: 0.14 },
-        0.68
-      );
+        // Stats items
+        tl.to(".s17-stat-item", { y: 0, opacity: 1, stagger: 0.08, duration: 0.5, ease: "power3.out" }, 0.5);
+        tl.to(".s17-item-border", { scaleY: 1, transformOrigin: "top center", stagger: 0.08, duration: 0.4, ease: "power3.out" }, 0.6);
 
-      // Phase 3c (0.76): sub text + CTA
-      tl.to(".s17-sub",
-        { y: 0, opacity: 1, ease: "power3.out", duration: 0.09 },
-        0.76
-      );
-      tl.to(".s17-cta",
-        { y: 0, opacity: 1, ease: "back.out(1.5)", duration: 0.09 },
-        0.80
-      );
-
-      // Phase 4 (0.66): stat cards stagger in from below
-      tl.to(".s17-stat-item",
-        { y: 0, opacity: 1, ease: "power3.out", stagger: 0.05, duration: 0.12 },
-        0.66
-      );
-
-      // Phase 4 parallel: borders draw down
-      tl.fromTo(".s17-item-border",
-        { scaleY: 0 },
-        { scaleY: 1, transformOrigin: "top center", stagger: 0.05, ease: "power3.out", duration: 0.10 },
-        0.68
-      );
-
-      // Phase 4 parallel: counters tick up
-      const numEls = gsap.utils.toArray(".s17-num", sectionRef.current);
-      numEls.forEach((el, i) => {
-        const stat = stats[i];
-        const obj  = { val: 0 };
-        tl.to(obj, {
-          val: stat.num,
-          ease: "power2.out",
-          duration: 0.14,
-          onUpdate() { el.textContent = Math.round(obj.val) + stat.suffix; },
-        }, 0.72 + i * 0.04);
+        // Counters
+        const numEls = gsap.utils.toArray(".s17-num", sectionRef.current);
+        numEls.forEach((el, i) => {
+          const stat = stats[i];
+          const obj  = { val: 0 };
+          tl.to(obj, {
+            val: stat.num,
+            ease: "power2.out",
+            duration: 0.8,
+            onUpdate() { el.textContent = Math.round(obj.val) + stat.suffix; },
+          }, 0.7 + i * 0.08);
+        });
       });
 
     }, sectionRef);
@@ -138,8 +192,8 @@ export function Stats17() {
   return (
     <section
       ref={sectionRef}
-      className="relative overflow-hidden"
-      style={{ height: "100vh", backgroundColor: "#FFFFFF" }}
+      className="relative overflow-hidden h-auto lg:h-screen"
+      style={{ backgroundColor: "#FFFFFF" }}
     >
       {/* Background */}
       <div className="s17-bg-clip absolute inset-0 z-0">

@@ -1,6 +1,6 @@
-﻿"use client";
+"use client";
 
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { gsap, ScrollTrigger, Observer } from "../../../utils/gsap";
 import { MessageSquare, Ruler, ClipboardCheck, Building2, KeyRound } from "lucide-react";
 
@@ -85,6 +85,7 @@ const PATH_D =
   "C 3820,150 4180,300 4500,300";
 
 export function ProzessPath() {
+  const [isMobile, setIsMobile] = useState(false);
   const sectionRef  = useRef(null);
   const stripRef    = useRef(null);
   const pathRef     = useRef(null);
@@ -95,10 +96,21 @@ export function ProzessPath() {
   const imgRefs     = useRef([]);
 
   useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 1024);
+    };
+    checkMobile();
+    window.addEventListener("resize", checkMobile);
+    return () => window.removeEventListener("resize", checkMobile);
+  }, []);
+
+  useEffect(() => {
     const section = sectionRef.current;
     const strip   = stripRef.current;
     const path    = pathRef.current;
     if (!section || !strip || !path) return;
+
+    const checkIsMobileSize = () => window.innerWidth < 1024;
 
     const STEP_DURATION = 1.2;
     const STEP_EASE     = "power2.inOut";
@@ -124,7 +136,8 @@ export function ProzessPath() {
       const setCardContent = (i, visible) => {
         if (!cardRefs.current[i]) return;
         const s = gsap.utils.selector(cardRefs.current[i]);
-        const yDir = STEPS[i].above ? 14 : -14;
+        const isMobileSize = checkIsMobileSize();
+        const yDir = isMobileSize ? 14 : (STEPS[i].above ? 14 : -14);
         if (visible) {
           gsap.set(s(".card-icon"),   { scale: 1, opacity: 1 });
           gsap.set(s(".card-num"),    { y: 0, opacity: 1 });
@@ -140,6 +153,7 @@ export function ProzessPath() {
 
       // ── Initial states ────────────────────────────────────────────────
       NODES.forEach((node, i) => {
+        const isMobileSize = checkIsMobileSize();
         if (dotRefs.current[i]) {
           gsap.set(dotRefs.current[i], {
             scale: i === 0 ? 1 : 0,
@@ -151,7 +165,7 @@ export function ProzessPath() {
         if (cardRefs.current[i]) {
           gsap.set(cardRefs.current[i], {
             opacity: i === 0 ? 1 : 0,
-            y: i === 0 ? 0 : (STEPS[i].above ? 22 : -22),
+            y: i === 0 ? 0 : (isMobileSize ? 22 : (STEPS[i].above ? 22 : -22)),
             force3D: true,
             willChange: "transform, opacity",
           });
@@ -202,9 +216,9 @@ export function ProzessPath() {
 
         // Heading + PROZESS fade out when leaving step 0, fade in when returning
         if (dir > 0 && prev === 0) {
-          tl.to([headingRef.current, prozessRef.current], { opacity: 0, y: -12, duration: 0.4, ease: "power2.in" }, 0);
+          tl.to(prozessRef.current, { opacity: 0, y: -12, duration: 0.4, ease: "power2.in" }, 0);
         } else if (dir < 0 && target === 0) {
-          tl.to([headingRef.current, prozessRef.current], { opacity: 1, y: 0, duration: 0.5, ease: "power2.out" }, STEP_DURATION * 0.4);
+          tl.to(prozessRef.current, { opacity: 1, y: 0, duration: 0.5, ease: "power2.out" }, STEP_DURATION * 0.4);
         }
 
         if (dir > 0) {
@@ -244,7 +258,8 @@ export function ProzessPath() {
           // ── Staggered inner-content reveal ──────────────────────────
           const cOff = STEP_DURATION * 0.31;   // ~0.37s
           const s = gsap.utils.selector(cardRefs.current[target]);
-          const yDir = STEPS[target].above ? 14 : -14;
+          const isMobileSize = checkIsMobileSize();
+          const yDir = isMobileSize ? 14 : (STEPS[target].above ? 14 : -14);
 
           // Icon circle springs in
           tl.fromTo(s(".card-icon"),
@@ -285,7 +300,7 @@ export function ProzessPath() {
 
           tl.to(cardRefs.current[prev], {
             opacity: 0,
-            y: STEPS[prev].above ? 22 : -22,
+            y: checkIsMobileSize() ? 22 : (STEPS[prev].above ? 22 : -22),
             duration: STEP_DURATION * 0.5,
             ease: "power2.in",
           }, 0);
@@ -302,6 +317,7 @@ export function ProzessPath() {
 
       // ── Instant snap to a step (no animation) ────────────────────────
       const setStateInstant = (idx) => {
+        const isMobileSize = checkIsMobileSize();
         gsap.set(strip, { xPercent: -idx * 20 });
         gsap.set(path,  { strokeDashoffset: len * (1 - idx / (STEPS.length - 1)) });
         NODES.forEach((_, i) => {
@@ -315,7 +331,7 @@ export function ProzessPath() {
           if (cardRefs.current[i]) {
             gsap.set(cardRefs.current[i], {
               opacity: visible ? 1 : 0,
-              y: visible ? 0 : (STEPS[i].above ? 22 : -22),
+              y: visible ? 0 : (isMobileSize ? 22 : (STEPS[i].above ? 22 : -22)),
             });
           }
           if (imgRefs.current[i]) {
@@ -328,7 +344,7 @@ export function ProzessPath() {
           setCardContent(i, visible);
         });
         currentStep = idx;
-        gsap.set([headingRef.current, prozessRef.current], { opacity: idx === 0 ? 1 : 0, y: idx === 0 ? 0 : -12 });
+        gsap.set(prozessRef.current, { opacity: idx === 0 ? 1 : 0, y: idx === 0 ? 0 : -12 });
       };
 
       // ── Pinning ScrollTrigger ─────────────────────────────────────────
@@ -488,8 +504,8 @@ export function ProzessPath() {
   }, []);
 
   // ── Layout helpers ───────────────────────────────────────────────────────
-  const SVG_H_VH  = 44;
-  const SVG_TOP_VH = (100 - SVG_H_VH) / 2;
+  const SVG_H_VH  = isMobile ? 15 : 44;
+  const SVG_TOP_VH = isMobile ? 38 : (100 - SVG_H_VH) / 2;
   const nodeYVh = (i) => SVG_TOP_VH + (NODES[i].y / 600) * SVG_H_VH;
 
   return (
@@ -506,33 +522,7 @@ export function ProzessPath() {
       >
 
         {/* Section label — fixed to section, not strip */}
-        <div
-          ref={headingRef}
-          style={{
-            position: "absolute", top: 96, left: "5%", zIndex: 10,
-            pointerEvents: "none", maxWidth: "min(36vw, 460px)",
-          }}
-        >
-          <div style={{ display: "flex", alignItems: "center", gap: 12, marginBottom: 16 }}>
-            <span style={{ display: "block", height: 1, width: 32, background: "#5AACB5" }} />
-            <span style={{
-              fontFamily: "DM Sans, sans-serif",
-              fontSize: "0.68rem", fontWeight: 600,
-              letterSpacing: "0.25em", textTransform: "uppercase",
-              color: "#5AACB5",
-            }}>
-              Der K.M. Trockenbau-Prozess
-            </span>
-          </div>
-          <h2 style={{
-            fontFamily: "Syne, sans-serif", fontWeight: 800,
-            fontSize: "clamp(2rem, 3.5vw, 3.5rem)",
-            color: "#0D2020", lineHeight: 1.1, letterSpacing: "-0.02em",
-            margin: 0,
-          }}>
-            Von der Idee<br />zum Schlüssel.
-          </h2>
-        </div>
+
 
         {/* Horizontal strip */}
         <div
@@ -593,13 +583,16 @@ export function ProzessPath() {
             const imgStyle = {
               position: "absolute",
               left: `${xVw}vw`,
-              marginLeft: -160,
-              width: 320,
+              marginLeft: isMobile ? -140 : -160,
+              width: isMobile ? 280 : 320,
               zIndex: 2,
               willChange: "transform, opacity",
-              ...(above
-                ? { top:    `calc(${nyVh + 8}vh)` }
-                : { bottom: `calc(${100 - nyVh + 8}vh)` }),
+              ...(isMobile
+                ? { top: "14vh" }
+                : (above
+                    ? { top:    `calc(${nyVh + 8}vh)` }
+                    : { bottom: `calc(${100 - nyVh + 8}vh)` })
+              ),
             };
             return (
               <div
@@ -653,13 +646,16 @@ export function ProzessPath() {
             const cardStyle = {
               position: "absolute",
               left: `${xVw}vw`,
-              marginLeft: -140,
-              width: 280,
+              marginLeft: isMobile ? -135 : -140,
+              width: isMobile ? 270 : 280,
               zIndex: 2,
               willChange: "transform, opacity",
-              ...(above
-                ? { bottom: `calc(${100 - nyVh + 3}vh)` }
-                : { top:    `calc(${nyVh + 3}vh)` }),
+              ...(isMobile
+                ? { top: "43vh" }
+                : (above
+                    ? { bottom: `calc(${100 - nyVh + 3}vh)` }
+                    : { top:    `calc(${nyVh + 3}vh)` })
+              ),
             };
 
             return (
@@ -668,7 +664,7 @@ export function ProzessPath() {
                 ref={(el) => (cardRefs.current[i] = el)}
                 style={cardStyle}
               >
-                {above ? (
+                {above && !isMobile ? (
                   <>
                     <ul style={{ padding: 0, margin: 0, listStyle: "none", marginBottom: 14 }}>
                       {step.bullets.map((b, bi) => (
@@ -715,15 +711,15 @@ export function ProzessPath() {
                   </>
                 ) : (
                   <>
-                    <div className="card-icon" style={{ display: "flex", justifyContent: "center", marginBottom: 14 }}>
+                    <div className="card-icon" style={{ display: "flex", justifyContent: "center", marginBottom: isMobile ? 8 : 14 }}>
                       <div style={{
-                        width: 62, height: 62,
+                        width: isMobile ? 50 : 62, height: isMobile ? 50 : 62,
                         border: "1.5px solid rgba(14,42,107,0.25)",
                         borderRadius: "50%",
                         display: "flex", alignItems: "center", justifyContent: "center",
                         background: "rgba(14,42,107,0.06)",
                       }}>
-                        <Icon size={26} color="rgba(14,42,107,0.80)" />
+                        <Icon size={isMobile ? 20 : 26} color="rgba(14,42,107,0.80)" />
                       </div>
                     </div>
                     <p className="card-num" style={{
@@ -736,8 +732,8 @@ export function ProzessPath() {
                     </p>
                     <h3 className="card-title" style={{
                       fontFamily: "Syne, sans-serif", fontWeight: 700,
-                      fontSize: "1.35rem", color: "#0D2020",
-                      marginBottom: 14, lineHeight: 1.2, textAlign: "center",
+                      fontSize: isMobile ? "1.15rem" : "1.35rem", color: "#0D2020",
+                      marginBottom: isMobile ? 8 : 14, lineHeight: 1.2, textAlign: "center",
                     }}>
                       {step.title}
                     </h3>
@@ -745,7 +741,7 @@ export function ProzessPath() {
                       {step.bullets.map((b, bi) => (
                         <li key={bi} className="card-bullet" style={{
                           display: "flex", alignItems: "flex-start", gap: 8,
-                          fontFamily: "DM Sans, sans-serif", fontSize: "0.88rem",
+                          fontFamily: "DM Sans, sans-serif", fontSize: isMobile ? "0.8rem" : "0.88rem",
                           color: "rgba(10,22,40,0.55)", lineHeight: 1.55,
                           marginBottom: 5, textAlign: "left",
                         }}>

@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import { useMediaQuery } from "@relume_io/relume-ui";
 import { AnimatePresence, motion } from "framer-motion";
@@ -10,17 +10,12 @@ const HOUSE_PATH = "M6 20L24 6L42 20V42H30V30H18V42H6V20Z";
 const ACCENT = "#5AACB5";
 
 const navLinks = [
+  { label: "Home", href: "/" },
   { label: "Leistungen", href: "/leistungen" },
   { label: "Projekte", href: "/projekte" },
-  {
-    label: "Über uns",
-    href: "/ueber-uns",
-    children: [
-      { label: "Über uns", href: "/ueber-uns" },
-      { label: "Jobs", href: "/ueber-uns#jobs" },
-    ],
-  },
+  { label: "Über uns", href: "/ueber-uns" },
   { label: "Prozess", href: "/prozess" },
+  { label: "Kontakt", href: "/kontakt" },
 ];
 
 function DropdownLink({ link, active, dark }) {

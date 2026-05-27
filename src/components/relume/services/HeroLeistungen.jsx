@@ -198,7 +198,7 @@ export function HeroLeistungen() {
       </div>
 
       {/* Main content */}
-      <div className="relative z-10 h-full flex flex-col justify-end px-[5%] pb-20 md:pb-28">
+      <div className="relative z-10 h-full flex flex-col justify-center md:justify-end px-[5%] pt-20 md:pt-0 pb-36 md:pb-28">
         <div className="max-w-[1400px]">
           <p
             ref={eyebrowRef}
@@ -259,12 +259,12 @@ export function HeroLeistungen() {
       {/* Scroll indicator */}
       <div
         ref={scrollRef}
-        className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-3"
+        className="absolute bottom-20 md:bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-3"
       >
-        <span className="font-body text-[10px] uppercase tracking-[0.4em] text-white/50">
+        <span className="font-body text-[10px] uppercase tracking-[0.4em] text-white/80 md:text-white/50">
           Scroll
         </span>
-        <div className="relative h-12 w-px bg-white/15 overflow-hidden">
+        <div className="relative h-8 md:h-12 w-px bg-white/35 md:bg-white/15 overflow-hidden">
           <span data-scroll-dot className="absolute top-0 left-1/2 -translate-x-1/2 h-3 w-px bg-hoser-gold" />
         </div>
       </div>

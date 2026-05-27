@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import React, { useEffect, useRef } from "react";
 import { gsap, ScrollTrigger } from "../../../utils/gsap";
@@ -116,7 +116,7 @@ export function Layout16() {
       const tl = gsap.timeline({
         scrollTrigger: {
           trigger: sectionRef.current,
-          start: "top 70%",
+          start: "top 95%",
           toggleActions: "play none none reverse",
         },
       });
@@ -148,7 +148,7 @@ export function Layout16() {
           delay: 0.1 + idx * 0.14,
           scrollTrigger: {
             trigger: sectionRef.current,
-            start: "top 70%",
+            start: "top 95%",
             toggleActions: "play none none reverse",
           },
         });

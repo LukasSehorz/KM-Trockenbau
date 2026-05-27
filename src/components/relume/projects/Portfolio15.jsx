@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import React, { useState, useEffect, useRef } from "react";
 import { gsap, ScrollTrigger } from "../../../utils/gsap";
@@ -73,7 +73,7 @@ const projects = [
     category: "Innenausbau",
     desc: "Trockenbauarbeiten im Bad – Duschbereich mit eingebauten Nischen und Regalturm",
     location: "Regensburg",
-    img: "/images/Beispiel-Projekte/20191210_151717.jpg",
+    img: "/images/Beispiel-Projekte/Screenshot%202026-05-15%20142842.png",
     detail: "Für ein Badezimmer in Regensburg realisierte K.M. Trockenbau einen modernen Duschbereich mit eingelassenen Wandnischen sowie einen freistehenden Regalturm aus Rigips. Die Konstruktion wurde wasserfest verspachtelt und ist bereit für die Fliesenarbeiten.",
     imgAspect: "2/5",
   },
@@ -83,7 +83,7 @@ const projects = [
     category: "Trockenbaudecke",
     desc: "Professionelle Deckenverkleidung mit Trockenbau nach Maß",
     location: "Regensburg",
-    img: "/images/Beispiel-Projekte/Decken.jpg",
+    img: "/images/Beispiel-Projekte/Screenshot%202026-05-15%20142857.png",
     detail: "Für dieses Projekt in Regensburg realisierte K.M. Trockenbau eine maßgefertigte Deckenverkleidung. Die sorgfältige Ausführung in Rigips ermöglicht eine optimale Grundlage für Anstrich oder weitere Gestaltung. Präzise Verarbeitung auf den letzten Millimeter.",
   },
   {
@@ -92,7 +92,7 @@ const projects = [
     category: "Innenausbau",
     desc: "Individuelle Raumgestaltung mit Trockenbau-Elementen",
     location: "Regensburg",
-    img: "/images/Beispiel-Projekte/20191210_151726.jpg",
+    img: "/images/Beispiel-Projekte/Screenshot%202026-05-15%20142834.png",
     detail: "In diesem Projekt gestaltete K.M. Trockenbau einen Innenraum mit individuellen Trockenbau-Elementen. Von der Planung bis zur Fertigstellung wurde alles aus einer Hand geliefert – termintreu, sauber und mit höchster handwerklicher Qualität.",
     imgAspect: "2/5",
   },

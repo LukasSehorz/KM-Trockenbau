@@ -27,7 +27,7 @@ export function ProzessHero() {
   }, []);
 
   return (
-    <section ref={sectionRef} className="relative min-h-screen overflow-hidden flex items-start">
+    <section ref={sectionRef} className="relative min-h-screen overflow-hidden flex flex-col lg:block">
       {/* Inline keyframes for the scroll-dot */}
       <style>{`
         @keyframes prozess-hero-dot-move {
@@ -57,7 +57,7 @@ export function ProzessHero() {
       />
 
       {/* Content */}
-      <div className="relative z-10 px-[6%] pt-32 pb-24 md:pt-36 lg:pt-44 md:max-w-[55%] lg:max-w-[50%]">
+      <div className="relative z-10 flex flex-col flex-1 px-[6%] pt-24 pb-28 lg:flex-initial lg:block lg:pt-44 md:pt-36 lg:pb-0 md:max-w-[55%] lg:max-w-[50%]">
         <div className="mb-10 flex items-center gap-4">
           <span className="prozess-hero-line h-px w-10 flex-shrink-0 bg-hoser-gold" />
           <div style={{ overflow: "hidden" }}>
@@ -87,7 +87,7 @@ export function ProzessHero() {
         <button
           type="button"
           onClick={handleScrollToProzess}
-          className="prozess-hero-cta group mt-10 flex items-center gap-5 cursor-pointer focus:outline-none lg:hidden"
+          className="prozess-hero-cta group mt-auto flex items-center gap-5 cursor-pointer focus:outline-none lg:hidden"
           aria-label="Zum Prozess scrollen"
         >
           <span className="relative flex h-14 w-14 items-center justify-center rounded-full border border-white/15 transition-colors duration-500 group-hover:border-hoser-gold">

@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import React, { useEffect, useRef } from "react";
 import { gsap, ScrollTrigger } from "../../../utils/gsap";
@@ -57,6 +57,45 @@ export function Layout239() {
   const ctaWrapRef   = useRef(null);
 
   useEffect(() => {
+    // On mobile: simple slide-in from alternating sides
+    if (window.innerWidth < 768) {
+      const ctx = gsap.context(() => {
+        const cards = cardsRef.current.filter(Boolean);
+        if (!cards.length) return;
+
+        cards.forEach((card, i) => {
+          gsap.set(card, { opacity: 0, x: i % 2 === 0 ? -50 : 50 });
+          gsap.to(card, {
+            opacity: 1,
+            x: 0,
+            duration: 0.65,
+            ease: "power3.out",
+            scrollTrigger: {
+              trigger: card,
+              start: "top 88%",
+              toggleActions: "play none none none",
+            },
+          });
+        });
+
+        if (ctaWrapRef.current?.children.length) {
+          gsap.set(ctaWrapRef.current.children, { opacity: 0, y: 16 });
+          gsap.to(ctaWrapRef.current.children, {
+            opacity: 1, y: 0, duration: 0.5, ease: "power2.out", stagger: 0.1,
+            scrollTrigger: {
+              trigger: ctaWrapRef.current,
+              start: "top 90%",
+              toggleActions: "play none none none",
+            },
+          });
+        }
+      }, sectionRef);
+
+      return () => ctx.revert();
+    }
+
+    let animationStarted = false;
+
     const ctx = gsap.context(() => {
       const cards = cardsRef.current.filter(Boolean);
       const grid  = gridRef.current;
@@ -67,29 +106,51 @@ export function Layout239() {
       grid.style.perspectiveOrigin = "50% 50%";
       cards.forEach((c) => { c.style.transformStyle = "preserve-3d"; });
 
-      // ── Compute per-card offsets to VIEWPORT CENTER (resize-aware) ───────
-      // Independent of where the grid sits in the document — we always pin
-      // the stack to the literal middle of the viewport. The dy is computed
-      // so that when the section is pinned at top:0, the card lands on
-      // window.innerHeight / 2.
+      // Helper to compute absolute offsets relative to a parent container without transforms
+      const getElementOffsetTop = (element, targetParent) => {
+        let top = 0;
+        let curr = element;
+        while (curr && curr !== targetParent && curr !== document.body) {
+          top += curr.offsetTop;
+          curr = curr.offsetParent;
+        }
+        return top;
+      };
+
+      const getElementOffsetLeft = (element, targetParent) => {
+        let left = 0;
+        let curr = element;
+        while (curr && curr !== targetParent && curr !== document.body) {
+          left += curr.offsetLeft;
+          curr = curr.offsetParent;
+        }
+        return left;
+      };
+
+      // ── Compute per-card offsets to GRID CENTER (resize-aware & robust) ──
+      // By centering on the grid itself, we align the stack perfectly with the 
+      // grid's perspective origin (50% 50%), preventing perspective projection shifts.
       let offsets = [];
       const computeOffsets = () => {
-        cards.forEach((c) => gsap.set(c, { clearProps: "transform" }));
+        const targetParent = sectionRef.current;
+        if (!targetParent || !grid) return;
 
-        const sectionRect = sectionRef.current.getBoundingClientRect();
-        const vpCenterX   = window.innerWidth  / 2;
+        // Compute the natural center of the grid relative to the section
+        const gridLeftInSection = getElementOffsetLeft(grid, targetParent);
+        const gridCenterXInSection = gridLeftInSection + grid.offsetWidth / 2;
+        
         const vpCenterY   = window.innerHeight / 2;
 
         offsets = cards.map((card) => {
-          const r = card.getBoundingClientRect();
-          // Card center, X is unaffected by scroll
-          const cardCenterX = r.left + r.width / 2;
-          // Card center Y measured relative to section top — when section
-          // pins at viewport top (0), this becomes the card's viewport Y.
-          const cardCenterYInSection = (r.top + r.height / 2) - sectionRect.top;
+          // Compute natural, untransformed positions relative to the section
+          const cardLeftInSection = getElementOffsetLeft(card, targetParent);
+          const cardTopInSection  = getElementOffsetTop(card, targetParent);
+          
+          const cardCenterX = cardLeftInSection + card.offsetWidth / 2;
+          const cardCenterYInSection = cardTopInSection + card.offsetHeight / 2;
 
           return {
-            dx: vpCenterX - cardCenterX,
+            dx: gridCenterXInSection - cardCenterX,
             dy: vpCenterY - cardCenterYInSection,
           };
         });
@@ -97,18 +158,19 @@ export function Layout239() {
       };
 
       // ── Initial stack: 5 perfectly horizontal floating "edges" ───────────
-      // rotationX 89.9 → card faces collapse flat to camera, images vanish,
-      //   only the dark card edge remains as a thin horizontal stripe.
-      // rotationZ 0 → no tilt, perfectly horizontal lines.
-      // y offset = centering offset + small fixed pixel offset around index 2
-      //   (middle card stays at center, others spread ±30/±60px).
       const stackCards = () => {
         computeOffsets();
+        const isMobile = window.innerWidth < 768;
+        const spacing = isMobile ? 35 : 100;
+        // Vertically center the cards perfectly, shifting slightly up on mobile to avoid heading overlap
+        const baseOffset = isMobile ? -180 : -90;
+
         cards.forEach((card, i) => {
           const o = offsets[i];
+          if (!o) return;
           gsap.set(card, {
             x: o.dx,
-            y: o.dy + (i - 2) * 100 + 150,
+            y: o.dy + (i - 2) * spacing + baseOffset,
             z: (4 - i) * 2,
             yPercent: 0,
             rotationX: 87,
@@ -122,7 +184,24 @@ export function Layout239() {
         });
       };
 
+      // Run immediately
       stackCards();
+
+      // Also run after a short delay to guarantee layout calculations 
+      // are fully stable after initial render and styling paint
+      const timeoutId = setTimeout(() => {
+        if (!animationStarted) {
+          stackCards();
+        }
+      }, 100);
+
+      // Handle window resize dynamically to recompute stack positions
+      const handleResize = () => {
+        if (!animationStarted) {
+          stackCards();
+        }
+      };
+      window.addEventListener("resize", handleResize);
 
       // ── Inner card content (only animates after the deal lands) ──────────
       const allCardContents   = cards.map((c) => c.querySelector("[data-card-content]")).filter(Boolean);
@@ -153,8 +232,11 @@ export function Layout239() {
         defaults: { force3D: true },
         scrollTrigger: {
           trigger: sectionRef.current,
-          start: "top 30%",
+          start: "top 90%",
           once: true,
+          onStart: () => {
+            animationStarted = true;
+          }
         },
       });
 
@@ -162,11 +244,10 @@ export function Layout239() {
       tl.to({}, { duration: 0.6 })
 
         // ── PHASE 2 — CAMERA SWING (collapse to single centered stack) ────
-        // No perspective tween (perf hog). Static perspective 2500 on grid.
         .to(cards, {
           rotationX: 0,
           rotationZ: 0,
-          y: (i) => offsets[i].dy,
+          y: (i) => offsets[i]?.dy || 0,
           duration: 1.8,
           ease: "power3.inOut",
         })
@@ -177,10 +258,6 @@ export function Layout239() {
         }, "<")
 
         // ── PHASE 3 — DEAL OUT (clean wave from center) ──────────────────
-        // Cards fly straight from the centered stack to their grid positions.
-        // Wave-stagger from center outward + crisp expo.out ease for a
-        // satisfying, premium glide without any 3D tricks that could
-        // visually scramble the stack at the transition.
         .to(cards, {
           x: 0,
           y: 0,
@@ -212,6 +289,12 @@ export function Layout239() {
 
       // Refresh once layout has settled
       requestAnimationFrame(() => ScrollTrigger.refresh());
+
+      // Return cleanup function for event listeners and timeout
+      return () => {
+        clearTimeout(timeoutId);
+        window.removeEventListener("resize", handleResize);
+      };
     }, sectionRef);
 
     return () => ctx.revert();
@@ -220,7 +303,8 @@ export function Layout239() {
   return (
     <section
       ref={sectionRef}
-      className="px-[5%] pt-24 pb-16 md:pt-32 md:pb-24 lg:pt-36 lg:pb-28"
+      id="leistungen"
+      className="relative px-[5%] pt-24 pb-16 md:pt-32 md:pb-24 lg:pt-36 lg:pb-28"
       style={{ backgroundColor: "#FFFFFF" }}
     >
       <div className="container">
@@ -236,8 +320,8 @@ export function Layout239() {
           </p>
           <h2
             ref={headingRef}
-            className="font-heading font-bold leading-tight tracking-tight text-[#5AACB5] whitespace-nowrap"
-            style={{ fontSize: "clamp(2rem, 4vw, 4rem)", willChange: "transform, opacity" }}
+            className="font-heading font-bold leading-tight tracking-tight text-[#5AACB5] md:whitespace-nowrap"
+            style={{ fontSize: "clamp(1.6rem, 4vw, 4rem)", willChange: "transform, opacity" }}
           >
             Viele Leistungen. Ein Ansprechpartner.
           </h2>
@@ -258,15 +342,27 @@ export function Layout239() {
                 backgroundColor: "#060D1F",
                 willChange: "transform, opacity",
                 backfaceVisibility: "hidden",
-                transition: "transform 0.35s cubic-bezier(0.34,1.56,0.64,1), box-shadow 0.35s ease",
+                transition: "box-shadow 0.35s ease",
               }}
               onMouseEnter={e => {
-                e.currentTarget.style.transform = "translateY(-6px) scale(1.01)";
-                e.currentTarget.style.boxShadow = "0 20px 40px -12px rgba(217,69,32,0.35)";
+                gsap.to(e.currentTarget, {
+                  y: -6,
+                  scale: 1.01,
+                  boxShadow: "0 20px 40px -12px rgba(217,69,32,0.35)",
+                  duration: 0.35,
+                  ease: "power2.out",
+                  overwrite: "auto"
+                });
               }}
               onMouseLeave={e => {
-                e.currentTarget.style.transform = "";
-                e.currentTarget.style.boxShadow = "";
+                gsap.to(e.currentTarget, {
+                  y: 0,
+                  scale: 1,
+                  boxShadow: "none",
+                  duration: 0.35,
+                  ease: "power2.out",
+                  overwrite: "auto"
+                });
               }}
             >
               <div data-card-content>
@@ -345,13 +441,6 @@ export function Layout239() {
           >
             Termin vereinbaren
             <span>→</span>
-          </a>
-          <a
-            href="/kontakt"
-            className="inline-flex items-center gap-2 font-body text-sm font-semibold uppercase tracking-[0.12em] text-[#5AACB5]/70 transition-colors duration-200 hover:text-[#5AACB5]"
-          >
-            Projekt anfragen
-            <span className="text-[#5AACB5]">→</span>
           </a>
         </div>
 

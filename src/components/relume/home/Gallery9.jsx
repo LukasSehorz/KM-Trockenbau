@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import { useRef, useEffect } from "react";
 import { gsap } from "../../../utils/gsap";
@@ -218,7 +218,7 @@ export function Gallery9() {
                 </div>
 
                 {/* Number panel */}
-                <div className="g9-num-panel flex items-center justify-center">
+                <div className="g9-num-panel hidden md:flex items-center justify-center">
                   <span
                     className="font-heading font-bold leading-none tracking-tight text-[#5AACB5]/10 select-none"
                     style={{ fontSize: "clamp(8rem, 18vw, 18rem)" }}

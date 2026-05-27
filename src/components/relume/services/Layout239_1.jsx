@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import React, { useEffect, useRef } from "react";
 import { gsap, ScrollTrigger } from "../../../utils/gsap";
@@ -52,6 +52,11 @@ export function Layout239_1() {
   const marqueeWrapRef  = useRef(null);
 
   useEffect(() => {
+    const isMobile = window.innerWidth < 768;
+    const triggerStart = isMobile ? "top 75%" : "top 95%";
+    const stripDelay   = isMobile ? 0.15 : 0.5;
+    const cellInterval = isMobile ? 0.08 : 0.12;
+
     const ctx = gsap.context(() => {
       // ── Heading reveal ─────────────────────────────────────────────────
       gsap.set(eyebrowRef.current, { y: 18, opacity: 0 });
@@ -65,7 +70,7 @@ export function Layout239_1() {
       const headingTl = gsap.timeline({
         scrollTrigger: {
           trigger: sectionRef.current,
-          start: "top 78%",
+          start: triggerStart,
           toggleActions: "play none none reverse",
         },
       });
@@ -79,7 +84,6 @@ export function Layout239_1() {
         }, "-=0.35");
 
       // ── Certifications strip ───────────────────────────────────────────
-      // Strip itself: gold border draws in left→right via clip-path
       if (certStripRef.current) {
         gsap.set(certStripRef.current, {
           clipPath: "inset(0 100% 0 0)",
@@ -90,7 +94,7 @@ export function Layout239_1() {
           ease: "expo.inOut",
           scrollTrigger: {
             trigger: certStripRef.current,
-            start: "top 80%",
+            start: triggerStart,
             toggleActions: "play none none reverse",
           },
         });
@@ -110,10 +114,10 @@ export function Layout239_1() {
         const tl = gsap.timeline({
           scrollTrigger: {
             trigger: certStripRef.current,
-            start: "top 75%",
+            start: triggerStart,
             toggleActions: "play none none reverse",
           },
-          delay: 0.5 + idx * 0.12,
+          delay: stripDelay + idx * cellInterval,
         });
         tl.to(eyebrow, { y: 0, opacity: 1, duration: 0.55, ease: "power3.out" })
           .to(label,   { y: 0, opacity: 1, duration: 0.7,  ease: "expo.out" }, "-=0.35")
@@ -139,7 +143,7 @@ export function Layout239_1() {
         x: 0, opacity: 1, duration: 0.7, ease: "power3.out",
         scrollTrigger: {
           trigger: partnerLabelRef.current,
-          start: "top 88%",
+          start: triggerStart,
           toggleActions: "play none none reverse",
         },
       });
@@ -148,7 +152,7 @@ export function Layout239_1() {
         y: 0, opacity: 1, duration: 0.9, ease: "expo.out",
         scrollTrigger: {
           trigger: marqueeWrapRef.current,
-          start: "top 90%",
+          start: triggerStart,
           toggleActions: "play none none reverse",
         },
       });
@@ -162,7 +166,7 @@ export function Layout239_1() {
           stagger: 0.04,
           scrollTrigger: {
             trigger: marqueeWrapRef.current,
-            start: "top 88%",
+            start: triggerStart,
             toggleActions: "play none none reverse",
           },
         });
