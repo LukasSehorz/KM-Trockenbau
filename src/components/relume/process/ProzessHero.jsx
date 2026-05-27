@@ -57,7 +57,7 @@ export function ProzessHero() {
       />
 
       {/* Content */}
-      <div className="relative z-10 flex flex-col flex-1 px-[6%] pt-24 pb-28 lg:flex-initial lg:block lg:pt-44 md:pt-36 lg:pb-0 md:max-w-[55%] lg:max-w-[50%]">
+      <div className="relative z-10 flex flex-col flex-1 px-[6%] pt-24 pb-44 lg:flex-initial lg:block lg:pt-44 md:pt-36 lg:pb-0 md:max-w-[55%] lg:max-w-[50%]">
         <div className="mb-10 flex items-center gap-4">
           <span className="prozess-hero-line h-px w-10 flex-shrink-0 bg-hoser-gold" />
           <div style={{ overflow: "hidden" }}>
