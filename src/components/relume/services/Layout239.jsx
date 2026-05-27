@@ -163,7 +163,7 @@ export function Layout239() {
         const isMobile = window.innerWidth < 768;
         const spacing = isMobile ? 35 : 100;
         // Vertically center the cards perfectly, shifting slightly up on mobile to avoid heading overlap
-        const baseOffset = isMobile ? -180 : -90;
+        const baseOffset = isMobile ? -180 : 150;
 
         cards.forEach((card, i) => {
           const o = offsets[i];
