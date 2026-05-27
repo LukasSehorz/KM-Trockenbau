@@ -5,14 +5,10 @@ import IntroScreen from "./components/IntroScreen";
 import Layout from "./components/Layout";
 import Home from "./pages/Home";
 import AboutUs from "./pages/AboutUs";
-import Awards from "./pages/Awards";
 import Contact from "./pages/Contact";
-import Pricing from "./pages/Pricing";
 import Process from "./pages/Process";
-import Project from "./pages/Project";
 import Projects from "./pages/Projects";
 import Services from "./pages/Services";
-import Testimonials from "./pages/Testimonials";
 import Impressum from "./pages/Impressum";
 import Datenschutz from "./pages/Datenschutz";
 
@@ -44,14 +40,10 @@ export default function App() {
         <Route element={<Layout />}>
           <Route path="/" element={<Home />} />
           <Route path="/ueber-uns" element={<AboutUs />} />
-          <Route path="/auszeichnungen" element={<Awards />} />
           <Route path="/kontakt" element={<Contact />} />
-          <Route path="/preise" element={<Pricing />} />
           <Route path="/prozess" element={<Process />} />
           <Route path="/projekte" element={<Projects />} />
-          <Route path="/projekte/:id" element={<Project />} />
           <Route path="/leistungen" element={<Services />} />
-          <Route path="/referenzen" element={<Testimonials />} />
           <Route path="/impressum" element={<Impressum />} />
           <Route path="/datenschutz" element={<Datenschutz />} />
         </Route>

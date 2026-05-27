@@ -1,6 +1,7 @@
 ﻿"use client";
 
 import React, { useEffect, useRef } from "react";
+import { Link } from "react-router-dom";
 import { gsap, ScrollTrigger } from "../../../utils/gsap";
 
 export function ProzessCTA() {
@@ -157,8 +158,8 @@ export function ProzessCTA() {
         {/* Buttons */}
         <div className="flex flex-wrap items-center gap-x-10 gap-y-6 mb-16">
           {/* Primary */}
-          <a
-            href="#kontakt"
+          <Link
+            to="/kontakt"
             className="cta-btn group relative inline-flex items-center gap-4 overflow-hidden px-8 py-[18px] font-body text-[0.7rem] font-semibold uppercase tracking-[0.22em]"
             style={{ background: "#FFFFFF", color: "#5AACB5" }}
           >
@@ -178,7 +179,7 @@ export function ProzessCTA() {
               style={{ background: "rgba(7,25,74,0.30)" }}
               aria-hidden="true"
             />
-          </a>
+          </Link>
 
           {/* Secondary: phone link */}
           <a

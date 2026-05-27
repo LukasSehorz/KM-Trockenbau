@@ -1,6 +1,7 @@
 ﻿"use client";
 
 import { useState, useRef, useEffect } from "react";
+import { Link } from "react-router-dom";
 import { motion, AnimatePresence, useScroll, useTransform } from "framer-motion";
 import { gsap } from "../../../utils/gsap";
 
@@ -280,13 +281,13 @@ export function Faq14() {
           <p className="font-body text-sm text-[#5AACB5]/70">
             Noch weitere Fragen? Wir sind persönlich für Sie da.
           </p>
-          <a
-            href="/kontakt"
+          <Link
+            to="/kontakt"
             className="group inline-flex items-center gap-4 border border-[#5AACB5]/30 px-8 py-4 font-body text-sm font-semibold tracking-widest text-[#5AACB5] uppercase transition-all duration-300 hover:bg-[#5AACB5] hover:text-white"
           >
             Kontakt aufnehmen
             <span className="transition-transform duration-300 group-hover:translate-x-1">→</span>
-          </a>
+          </Link>
         </div>
 
       </div>

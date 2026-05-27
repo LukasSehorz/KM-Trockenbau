@@ -1,6 +1,7 @@
 "use client";
 
 import { useRef, useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import { AnimatePresence, motion } from "framer-motion";
 import { gsap, ScrollTrigger } from "../../../utils/gsap";
 
@@ -280,13 +281,13 @@ export function Header78() {
               Termin vereinbaren
               <span className="transition-transform duration-300 group-hover:translate-x-1">→</span>
             </button>
-            <a
-              href="/galerie"
+            <Link
+              to="/projekte"
               className="hero-cta group inline-flex items-center justify-center gap-3 border border-white/40 bg-transparent px-7 py-3.5 font-body text-sm font-semibold uppercase tracking-[0.14em] text-white/85 transition-all duration-300 hover:bg-white hover:border-white hover:text-[#5AACB5] w-full lg:w-auto"
             >
               Galerie ansehen
               <span className="transition-transform duration-300 group-hover:translate-x-1">→</span>
-            </a>
+            </Link>
           </div>
         </div>
 

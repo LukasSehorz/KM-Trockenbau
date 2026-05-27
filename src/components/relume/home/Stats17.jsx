@@ -1,6 +1,7 @@
 "use client";
 
 import { useRef, useEffect } from "react";
+import { Link } from "react-router-dom";
 import { gsap } from "../../../utils/gsap";
 
 const stats = [
@@ -226,13 +227,13 @@ export function Stats17() {
               mit persönlicher Beratung und kontinuierlicher Weiterbildung.
             </p>
             <div className="mt-8">
-              <a
-                href="/leistungen"
+              <Link
+                to="/leistungen"
                 className="s17-cta group inline-flex items-center gap-3 border border-[#5AACB5]/30 px-7 py-3 font-body text-sm font-semibold tracking-[0.14em] uppercase text-[#5AACB5] transition-all duration-200 hover:bg-[#5AACB5] hover:text-white hover:border-[#5AACB5]"
               >
                 Leistungen entdecken
                 <span className="transition-transform duration-300 group-hover:translate-x-1">→</span>
-              </a>
+              </Link>
             </div>
           </div>
 

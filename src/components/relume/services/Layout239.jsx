@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useEffect, useRef } from "react";
+import { Link } from "react-router-dom";
 import { gsap, ScrollTrigger } from "../../../utils/gsap";
 
 const services = [
@@ -436,13 +437,13 @@ export function Layout239() {
 
         {/* CTAs */}
         <div ref={ctaWrapRef} className="mt-10 flex flex-wrap items-center gap-6 md:mt-14">
-          <a
-            href="/kontakt"
+          <Link
+            to="/kontakt"
             className="inline-flex items-center gap-2 border border-[#5AACB5]/30 px-8 py-4 font-body text-sm font-semibold uppercase tracking-[0.1em] text-[#5AACB5] transition-all duration-300 hover:bg-[#5AACB5] hover:text-white hover:border-[#5AACB5]"
           >
             Termin vereinbaren
             <span>→</span>
-          </a>
+          </Link>
         </div>
 
       </div>

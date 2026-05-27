@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import { Link } from "react-router-dom";
 
 export function Header65() {
   return (
@@ -22,12 +23,12 @@ export function Header65() {
           >
             Projekte entdecken
           </a>
-          <a
-            href="/kontakt"
+          <Link
+            to="/kontakt"
             className="inline-flex items-center gap-2 border border-white/50 px-8 py-4 font-body text-sm font-semibold uppercase tracking-[0.1em] text-white transition-colors duration-200 hover:border-hoser-gold hover:text-hoser-gold"
           >
             Beratung anfragen
-          </a>
+          </Link>
         </div>
       </div>
     </section>

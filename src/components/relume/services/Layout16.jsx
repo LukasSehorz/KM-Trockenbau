@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useEffect, useRef } from "react";
+import { Link } from "react-router-dom";
 import { gsap, ScrollTrigger } from "../../../utils/gsap";
 
 const points = [
@@ -205,14 +206,14 @@ export function Layout16() {
                 </li>
               ))}
             </ul>
-            <a
+            <Link
               ref={ctaRef}
-              href="/kontakt"
+              to="/kontakt"
               className="inline-flex items-center gap-2 border border-white/60 px-7 py-3 font-body text-sm font-semibold tracking-wide text-white transition-colors duration-200 hover:border-hoser-gold hover:text-hoser-gold"
             >
               Projekt besprechen
               <span className="text-hoser-gold">→</span>
-            </a>
+            </Link>
           </div>
         </div>
       </div>

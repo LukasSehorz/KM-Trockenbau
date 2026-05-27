@@ -20,7 +20,7 @@ const navCols = [
     heading: "Unternehmen",
     links: [
       { label: "Über uns", to: "/ueber-uns" },
-      { label: "Galerie", to: "/galerie" },
+      { label: "Galerie", to: "/projekte" },
       { label: "Kontakt", to: "/kontakt" },
     ],
   },
