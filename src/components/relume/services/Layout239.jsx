@@ -175,7 +175,7 @@ export function Layout239() {
             yPercent: 0,
             rotationX: 87,
             rotationZ: 0,
-            opacity: 1,
+            opacity: 0,
             transformOrigin: "center center",
             force3D: true,
             willChange: "transform",
@@ -247,6 +247,7 @@ export function Layout239() {
         .to(cards, {
           rotationX: 0,
           rotationZ: 0,
+          opacity: 1,
           y: (i) => offsets[i]?.dy || 0,
           duration: 1.8,
           ease: "power3.inOut",
