@@ -34,7 +34,7 @@ export function Team5() {
               <h6 className="md:text-md">Projektleiter</h6>
             </div>
             <p>
-              Über 20 Jahre Erfahrung in Neubau und Sanierung im Großraum
+              Über 16 Jahre Erfahrung in Neubau und Sanierung im Großraum
               München
             </p>
             <div className="mt-6 grid grid-flow-col grid-cols-[max-content] gap-[0.875rem] self-center">

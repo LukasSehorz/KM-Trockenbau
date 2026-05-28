@@ -7,7 +7,7 @@ const stats = [
   { value: 200, suffix: "+", label: "Abgeschlossene\nProjekte" },
   { value: 98,  suffix: "%", label: "Pünktliche\nFertigstellung" },
   { value: 96,  suffix: "%", label: "Im\nBudgetrahmen" },
-  { value: 15,  suffix: "+", label: "Jahre\nin der Region" },
+  { value: 16,  suffix: "+", label: "Jahre\nin der Region" },
 ];
 
 const splitWords = (el, text) => {
@@ -125,7 +125,7 @@ export function Stats20() {
           Ergebnisse, die für sich sprechen
         </h2>
         <p ref={subRef} className="mt-4 max-w-xl font-body text-base text-white/60">
-          Seit 2016 in Regensburg. Über 10 Jahre Erfahrung im Innenausbau — ein Name, dem man vertraut.
+          Seit 2016 in Regensburg. Über 16 Jahre Erfahrung im Innenausbau — ein Name, dem man vertraut.
         </p>
       </div>
 

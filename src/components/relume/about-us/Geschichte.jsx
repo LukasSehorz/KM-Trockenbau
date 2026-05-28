@@ -30,8 +30,8 @@ const milestones = [
   },
   {
     year: "Heute",
-    title: "Über 10 Jahre Erfahrung",
-    desc: "K.M. Trockenbau steht für über 10 Jahre Erfahrung im Innenausbau – mit einem eingespielten Team und einem Leistungsspektrum, das keine Wünsche offenlässt.",
+    title: "Über 16 Jahre Erfahrung",
+    desc: "K.M. Trockenbau steht für über 16 Jahre Erfahrung im Innenausbau – mit einem eingespielten Team und einem Leistungsspektrum, das keine Wünsche offenlässt.",
     detail: "Von Trockenbau und Abhangdecken über Bodenbeläge bis zur Badsanierung – präzise, termintreu und persönlich für Bauherren in der Region.",
     img: "/images/timeline/heute.jpg",
   },
@@ -201,7 +201,7 @@ export function Geschichte() {
               Unsere Geschichte
             </h2>
             <p ref={subRef} className="font-body text-base leading-relaxed text-[#0D2020]/55">
-              Gegründet 2016 in Regensburg.<br />Über 10 Jahre Erfahrung im Innenausbau.
+              Gegründet 2016 in Regensburg.<br />Über 16 Jahre Erfahrung im Innenausbau.
             </p>
           </div>
         </div>

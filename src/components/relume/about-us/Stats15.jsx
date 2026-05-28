@@ -3,8 +3,8 @@
 import React from "react";
 
 const stats = [
-  { value: "2020", label: "Gründungsjahr" },
-  { value: "5+", label: "Jahre in der Region" },
+  { value: "2016", label: "Gründungsjahr" },
+  { value: "16+", label: "Jahre in der Region" },
   { value: "10", label: "Leistungen aus einer Hand" },
   { value: "10", label: "Mitarbeiter im Team" },
 ];
