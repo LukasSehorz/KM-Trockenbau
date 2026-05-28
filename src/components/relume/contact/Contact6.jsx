@@ -1,7 +1,8 @@
 ﻿"use client";
 
-import React from "react";
+import React, { useState } from "react";
 import { BiEnvelope, BiMap, BiPhone } from "react-icons/bi";
+import { sendContactForm } from "../../../utils/sendContactForm";
 
 const inputCls = [
   "w-full border border-[rgba(217,69,32,0.20)] bg-white px-4 py-3",
@@ -13,6 +14,29 @@ const inputCls = [
 const labelCls = "block mb-2 font-body text-xs font-semibold uppercase tracking-[0.15em] text-[#0D2020]/60";
 
 export function Contact6() {
+  const [formStatus, setFormStatus] = useState("idle"); // idle | sending | success | error
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    const form = e.target;
+    const d = Object.fromEntries(new FormData(form));
+    setFormStatus("sending");
+    try {
+      await sendContactForm({
+        Vorname: d.firstName || "",
+        Nachname: d.lastName || "",
+        "E-Mail": d.email || "",
+        Telefon: d.phone || "",
+        Projektart: d.project || "-",
+        Beschreibung: d.message || "-",
+      });
+      setFormStatus("success");
+      form.reset();
+    } catch (err) {
+      setFormStatus("error");
+    }
+  };
+
   return (
     <section style={{ backgroundColor: "#FFFFFF" }} className="px-[5%] py-16 md:py-24 lg:py-28">
       <div className="container grid grid-cols-1 items-start gap-y-12 md:grid-cols-2 md:gap-x-12 lg:gap-x-20">
@@ -47,26 +71,26 @@ export function Contact6() {
         </div>
 
         {/* Right: form */}
-        <form className="grid gap-5">
+        <form className="grid gap-5" onSubmit={handleSubmit}>
           <div className="grid grid-cols-2 gap-5">
             <div>
               <label htmlFor="firstName" className={labelCls}>Vorname</label>
-              <input type="text" id="firstName" className={inputCls} />
+              <input type="text" id="firstName" name="firstName" required className={inputCls} />
             </div>
             <div>
               <label htmlFor="lastName" className={labelCls}>Nachname</label>
-              <input type="text" id="lastName" className={inputCls} />
+              <input type="text" id="lastName" name="lastName" required className={inputCls} />
             </div>
           </div>
 
           <div className="grid grid-cols-1 gap-5 md:grid-cols-2">
             <div>
               <label htmlFor="email" className={labelCls}>E-Mail</label>
-              <input type="email" id="email" className={inputCls} />
+              <input type="email" id="email" name="email" className={inputCls} />
             </div>
             <div>
               <label htmlFor="phone" className={labelCls}>Telefon</label>
-              <input type="tel" id="phone" className={inputCls} />
+              <input type="tel" id="phone" name="phone" required className={inputCls} />
             </div>
           </div>
 
@@ -74,6 +98,7 @@ export function Contact6() {
             <label htmlFor="project" className={labelCls}>Art des Projekts</label>
             <select
               id="project"
+              name="project"
               className={inputCls + " appearance-none cursor-pointer"}
               defaultValue=""
             >
@@ -107,6 +132,7 @@ export function Contact6() {
             <label htmlFor="message" className={labelCls}>Nachricht</label>
             <textarea
               id="message"
+              name="message"
               rows={6}
               placeholder="Erzählen Sie uns von Ihrem Projekt"
               className={inputCls + " resize-none"}
@@ -117,6 +143,8 @@ export function Contact6() {
             <input
               type="checkbox"
               id="terms"
+              name="terms"
+              required
               className="mt-0.5 size-4 appearance-none border-2 border-[rgba(217,69,32,0.30)] checked:border-[#5AACB5] checked:bg-[#5AACB5] transition-colors duration-200 cursor-pointer flex-none"
             />
             <label htmlFor="terms" className="font-body text-sm text-[#0D2020]/60 cursor-pointer leading-snug">
@@ -124,14 +152,25 @@ export function Contact6() {
             </label>
           </div>
 
-          <div>
+          <div className="flex flex-wrap items-center gap-4">
             <button
               type="submit"
-              className="inline-flex items-center gap-2 border border-[#5AACB5] bg-[#5AACB5] px-8 py-4 font-body text-sm font-semibold uppercase tracking-[0.1em] text-white transition-all duration-300 hover:bg-transparent hover:text-[#5AACB5]"
+              disabled={formStatus === "sending"}
+              className="inline-flex items-center gap-2 border border-[#5AACB5] bg-[#5AACB5] px-8 py-4 font-body text-sm font-semibold uppercase tracking-[0.1em] text-white transition-all duration-300 hover:bg-transparent hover:text-[#5AACB5] disabled:opacity-60 disabled:cursor-not-allowed"
             >
-              Senden
-              <span>→</span>
+              {formStatus === "sending" ? "Wird gesendet…" : "Senden"}
+              {formStatus !== "sending" && <span>→</span>}
             </button>
+            {formStatus === "success" && (
+              <p className="font-body text-sm text-[#5AACB5]">
+                Vielen Dank! Ihre Anfrage wurde gesendet.
+              </p>
+            )}
+            {formStatus === "error" && (
+              <p className="font-body text-sm text-red-500">
+                Fehler beim Senden. Bitte erneut versuchen.
+              </p>
+            )}
           </div>
         </form>
       </div>

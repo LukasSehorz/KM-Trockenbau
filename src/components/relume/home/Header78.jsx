@@ -4,13 +4,41 @@ import { useRef, useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { AnimatePresence, motion } from "framer-motion";
 import { gsap, ScrollTrigger } from "../../../utils/gsap";
+import { sendContactForm } from "../../../utils/sendContactForm";
 
 export function Header78() {
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [formStatus, setFormStatus] = useState("idle"); // idle | sending | success | error
   const sectionRef = useRef(null);
   const imageRef = useRef(null);
   const cursorRef = useRef(null);
   const formCardRef = useRef(null);
+
+  const handleFormSubmit = async (e) => {
+    e.preventDefault();
+    const form = e.target;
+    const d = Object.fromEntries(new FormData(form));
+    setFormStatus("sending");
+    try {
+      await sendContactForm({
+        Vorname: d.vorname || "",
+        Nachname: d.nachname || "",
+        Telefon: d.telefon || "",
+        "E-Mail": d.email || "",
+        Projektart: d.projektart || "-",
+        Beschreibung: d.nachricht || "-",
+      });
+      setFormStatus("success");
+      form.reset();
+    } catch (err) {
+      setFormStatus("error");
+    }
+  };
+
+  // Reset status whenever the modal is opened
+  useEffect(() => {
+    if (isModalOpen) setFormStatus("idle");
+  }, [isModalOpen]);
 
   // Smooth cursor follow via gsap.ticker — no React state, no re-renders
   useEffect(() => {
@@ -107,6 +135,8 @@ export function Header78() {
         { y: "110%" }, { y: "0%", stagger: 0.13 * s, duration: 1.15 * s }, 0.95 * s);
       tl.fromTo(scope.querySelector(".hero-body"),
         { y: 28, opacity: 0 }, { y: 0, opacity: 1, duration: 0.85 * s }, 1.5 * s);
+      tl.fromTo(scope.querySelectorAll(".hero-bullet"),
+        { x: -20, opacity: 0 }, { x: 0, opacity: 1, stagger: 0.12 * s, duration: 0.55 * s }, 1.5 * s);
       tl.fromTo(scope.querySelectorAll(".hero-cta"),
         { y: 22, opacity: 0 }, { y: 0, opacity: 1, stagger: 0.11 * s, duration: 0.7 * s }, 1.85 * s);
     };
@@ -137,6 +167,7 @@ export function Header78() {
       gsap.set(scope.querySelector(".hero-eyebrow-inner"), { y: "120%" });
       gsap.set(scope.querySelectorAll(".hero-headline-inner"), { y: "110%" });
       gsap.set(scope.querySelector(".hero-body"), { y: 28, opacity: 0 });
+      gsap.set(scope.querySelectorAll(".hero-bullet"), { x: -20, opacity: 0 });
       gsap.set(scope.querySelectorAll(".hero-cta"), { y: 22, opacity: 0 });
 
       onIntroComplete = () => startAnimations(0.3, 1);
@@ -250,23 +281,23 @@ export function Header78() {
           </p>
           {/* Mobile bullet points list (visible below lg) */}
           <ul className="hero-body flex lg:hidden flex-col gap-3.5 max-w-[450px] font-body text-[13px] sm:text-sm leading-relaxed text-white">
-            <li className="flex items-start gap-3">
+            <li className="hero-bullet flex items-start gap-3">
               <span className="h-[2px] w-[18px] bg-[#7BBFB8] flex-shrink-0 mt-[9px] select-none" />
               <span className="font-medium">Langjährige Erfahrung im Innenausbau</span>
             </li>
-            <li className="flex items-start gap-3">
+            <li className="hero-bullet flex items-start gap-3">
               <span className="h-[2px] w-[18px] bg-[#7BBFB8] flex-shrink-0 mt-[9px] select-none" />
               <span className="font-medium">Systeme für Wand, Decke und Boden</span>
             </li>
-            <li className="flex items-start gap-3">
+            <li className="hero-bullet flex items-start gap-3">
               <span className="h-[2px] w-[18px] bg-[#7BBFB8] flex-shrink-0 mt-[9px] select-none" />
               <span className="font-medium">Normgerecht nach aktuellen DIN-Normen</span>
             </li>
-            <li className="flex items-start gap-3">
+            <li className="hero-bullet flex items-start gap-3">
               <span className="h-[2px] w-[18px] bg-[#7BBFB8] flex-shrink-0 mt-[9px] select-none" />
               <span className="font-medium">Erstberatung bis zur Fertigstellung</span>
             </li>
-            <li className="flex items-start gap-3">
+            <li className="hero-bullet flex items-start gap-3">
               <span className="h-[2px] w-[18px] bg-[#7BBFB8] flex-shrink-0 mt-[9px] select-none" />
               <span className="font-medium">Ihr Partner in Regensburg & Umgebung</span>
             </li>
@@ -325,11 +356,7 @@ export function Header78() {
             <div style={{ height: 1, background: "linear-gradient(to right, rgba(90,172,181,0.25), transparent)", marginBottom: "1.75rem" }} />
 
             <form
-              onSubmit={(e) => {
-                e.preventDefault();
-                const d = Object.fromEntries(new FormData(e.target));
-                window.location.href = `mailto:info-kalac-trockenbau@web.de?subject=Anfrage von ${d.vorname} ${d.nachname}&body=Name: ${d.vorname} ${d.nachname}%0ATelefon: ${d.telefon}%0AE-Mail: ${d.email}%0AProjektart: ${d.projektart || "-"}%0ANachricht: ${d.nachricht}`;
-              }}
+              onSubmit={handleFormSubmit}
               className="flex flex-col gap-5"
             >
               {/* Name row */}
@@ -401,16 +428,31 @@ export function Header78() {
               {/* Submit */}
               <button
                 type="submit"
-                className="group relative mt-1 w-full overflow-hidden py-4 font-body text-base font-semibold uppercase tracking-[0.2em] text-white transition-all duration-300"
+                disabled={formStatus === "sending"}
+                className="group relative mt-1 w-full overflow-hidden py-4 font-body text-base font-semibold uppercase tracking-[0.2em] text-white transition-all duration-300 disabled:opacity-60 disabled:cursor-not-allowed"
                 style={{ background: "linear-gradient(90deg, #3D9AA3 0%, #5AACB5 50%, #3D9AA3 100%)", backgroundSize: "200% 100%" }}
                 onMouseEnter={e => e.currentTarget.style.backgroundPosition = "100% 0"}
                 onMouseLeave={e => e.currentTarget.style.backgroundPosition = "0% 0"}
               >
                 <span className="relative z-10 flex items-center justify-center gap-2">
-                  Anfrage senden
-                  <span className="transition-transform duration-300 group-hover:translate-x-1">→</span>
+                  {formStatus === "sending" ? "Wird gesendet…" : "Anfrage senden"}
+                  {formStatus !== "sending" && (
+                    <span className="transition-transform duration-300 group-hover:translate-x-1">→</span>
+                  )}
                 </span>
               </button>
+
+              {/* Status feedback */}
+              {formStatus === "success" && (
+                <p className="text-center font-body text-sm text-[#5AACB5]">
+                  Vielen Dank! Ihre Anfrage wurde gesendet – wir melden uns innerhalb eines Werktages.
+                </p>
+              )}
+              {formStatus === "error" && (
+                <p className="text-center font-body text-sm text-red-400">
+                  Leider ist ein Fehler aufgetreten. Bitte rufen Sie uns an oder versuchen Sie es erneut.
+                </p>
+              )}
             </form>
 
             {/* Footer */}
@@ -477,12 +519,7 @@ export function Header78() {
               <div style={{ height: 1, background: "linear-gradient(to right, rgba(90,172,181,0.25), transparent)", marginBottom: "1.25rem" }} />
 
               <form
-                onSubmit={(e) => {
-                  e.preventDefault();
-                  const d = Object.fromEntries(new FormData(e.target));
-                  window.location.href = `mailto:info-kalac-trockenbau@web.de?subject=Anfrage von ${d.vorname} ${d.nachname}&body=Name: ${d.vorname} ${d.nachname}%0ATelefon: ${d.telefon}%0AE-Mail: ${d.email}%0AProjektart: ${d.projektart || "-"}%0ANachricht: ${d.nachricht}`;
-                  setIsModalOpen(false);
-                }}
+                onSubmit={handleFormSubmit}
                 className="flex flex-col gap-4 text-left"
               >
                 {/* Name row */}
@@ -554,16 +591,31 @@ export function Header78() {
                 {/* Submit */}
                 <button
                   type="submit"
-                  className="group relative mt-2 w-full overflow-hidden py-3 font-body text-sm font-semibold uppercase tracking-[0.15em] text-white transition-all duration-300"
+                  disabled={formStatus === "sending"}
+                  className="group relative mt-2 w-full overflow-hidden py-3 font-body text-sm font-semibold uppercase tracking-[0.15em] text-white transition-all duration-300 disabled:opacity-60 disabled:cursor-not-allowed"
                   style={{ background: "linear-gradient(90deg, #3D9AA3 0%, #5AACB5 50%, #3D9AA3 100%)", backgroundSize: "200% 100%" }}
                   onMouseEnter={e => e.currentTarget.style.backgroundPosition = "100% 0"}
                   onMouseLeave={e => e.currentTarget.style.backgroundPosition = "0% 0"}
                 >
                   <span className="relative z-10 flex items-center justify-center gap-2">
-                    Anfrage senden
-                    <span className="transition-transform duration-300 group-hover:translate-x-1">→</span>
+                    {formStatus === "sending" ? "Wird gesendet…" : "Anfrage senden"}
+                    {formStatus !== "sending" && (
+                      <span className="transition-transform duration-300 group-hover:translate-x-1">→</span>
+                    )}
                   </span>
                 </button>
+
+                {/* Status feedback */}
+                {formStatus === "success" && (
+                  <p className="text-center font-body text-xs text-[#5AACB5]">
+                    Vielen Dank! Ihre Anfrage wurde gesendet – wir melden uns innerhalb eines Werktages.
+                  </p>
+                )}
+                {formStatus === "error" && (
+                  <p className="text-center font-body text-xs text-red-400">
+                    Leider ist ein Fehler aufgetreten. Bitte rufen Sie uns an oder versuchen Sie es erneut.
+                  </p>
+                )}
               </form>
             </motion.div>
           </motion.div>
