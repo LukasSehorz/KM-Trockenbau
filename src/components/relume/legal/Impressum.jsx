@@ -185,6 +185,16 @@ export function Impressum() {
             </p>
           </div>
 
+          <div className="legal-block">
+            <h2 className="mb-4 font-heading text-lg font-bold uppercase tracking-[0.15em] text-[#7BBFB8]">
+              Hinweis zu KI-generierten Inhalten
+            </h2>
+            <p className="font-body text-base leading-relaxed text-white/75">
+              Teile der Inhalte dieser Website (Texte und Bilder) wurden mit Unterstützung von
+              künstlicher Intelligenz erstellt und redaktionell geprüft.
+            </p>
+          </div>
+
         </div>
       </div>
     </section>
