@@ -160,6 +160,14 @@ export function Datenschutz() {
       ],
     },
     {
+      id: "kontaktformular",
+      title: "Kontaktformular",
+      body: [
+        "Wenn Sie uns über das Formular auf dieser Website eine Anfrage schicken, verarbeiten wir die von Ihnen eingegebenen Angaben (Name, Telefonnummer, E-Mail-Adresse, Art des Projekts und Ihre Nachricht), um Ihre Anfrage zu beantworten. Die Angaben werden über eine Serverfunktion unseres Hosters Netlify Inc. (USA) an den E-Mail-Versanddienst Resend (Resend Inc., USA) übergeben und von dort als E-Mail an unser Postfach geschickt. Beide Anbieter verarbeiten die Daten in unserem Auftrag. Für Übermittlungen in die USA stützen sich die Anbieter auf das EU-US Data Privacy Framework bzw. auf Standardvertragsklauseln der EU-Kommission.",
+        "Rechtsgrundlage ist Art. 6 Abs. 1 lit. b DSGVO, soweit Ihre Anfrage auf einen Vertrag oder dessen Vorbereitung zielt, im Übrigen unser berechtigtes Interesse an der Beantwortung von Anfragen (Art. 6 Abs. 1 lit. f DSGVO). Wir löschen Ihre Anfrage, sobald sie erledigt ist und keine gesetzlichen Aufbewahrungsfristen entgegenstehen.",
+      ],
+    },
+    {
       id: "rechte",
       title: "Rechte laut Datenschutzgrundverordnung",
       body: [

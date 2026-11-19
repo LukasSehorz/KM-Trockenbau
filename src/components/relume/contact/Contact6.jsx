@@ -29,6 +29,7 @@ export function Contact6() {
         Telefon: d.phone || "",
         Projektart: d.project || "-",
         Beschreibung: d.message || "-",
+        website: d.website || "",
       });
       setFormStatus("success");
       form.reset();
@@ -72,6 +73,7 @@ export function Contact6() {
 
         {/* Right: form */}
         <form className="grid gap-5" onSubmit={handleSubmit}>
+          <input type="text" name="website" tabIndex={-1} autoComplete="off" aria-hidden="true" style={{ position: "absolute", left: "-9999px", width: 1, height: 1, opacity: 0 }} />
           <div className="grid grid-cols-2 gap-5">
             <div>
               <label htmlFor="firstName" className={labelCls}>Vorname</label>

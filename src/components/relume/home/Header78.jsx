@@ -27,6 +27,7 @@ export function Header78() {
         "E-Mail": d.email || "",
         Projektart: d.projektart || "-",
         Beschreibung: d.nachricht || "-",
+        website: d.website || "",
       });
       setFormStatus("success");
       form.reset();
@@ -359,6 +360,7 @@ export function Header78() {
               onSubmit={handleFormSubmit}
               className="flex flex-col gap-5"
             >
+              <input type="text" name="website" tabIndex={-1} autoComplete="off" aria-hidden="true" style={{ position: "absolute", left: "-9999px", width: 1, height: 1, opacity: 0 }} />
               {/* Name row */}
               <div className="grid grid-cols-2 gap-4">
                 <div className="flex flex-col gap-1.5">
@@ -522,6 +524,7 @@ export function Header78() {
                 onSubmit={handleFormSubmit}
                 className="flex flex-col gap-4 text-left"
               >
+                <input type="text" name="website" tabIndex={-1} autoComplete="off" aria-hidden="true" style={{ position: "absolute", left: "-9999px", width: 1, height: 1, opacity: 0 }} />
                 {/* Name row */}
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div className="flex flex-col gap-1">
