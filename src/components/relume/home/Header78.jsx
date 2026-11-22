@@ -195,8 +195,10 @@ export function Header78() {
       <img
         src="/images/Hero%20section%20Vorher.png"
         alt="Gebäude im Rohbau"
-        className="hero-bg-img absolute inset-0 h-full w-full object-cover object-center"
-        style={{ willChange: "transform", filter: "saturate(0.92) brightness(1.04)" }}
+        className="hero-bg-img absolute inset-x-0 top-0 w-full object-cover object-center"
+        // 116 % hoch: Der Mitscroll-Effekt (yPercent -12) schiebt das Bild nach oben.
+        // Bei 100 % würde unten der dunkle Hintergrund sichtbar (116 × 0,88 ≈ 102 %).
+        style={{ height: "116%", willChange: "transform", filter: "saturate(0.92) brightness(1.04)" }}
       />
 
       {/* Dunkler Verlauf — links dicht, rechts ausblendend */}
