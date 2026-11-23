@@ -8,7 +8,7 @@ const kalac = {
   name: "Kalac Mujo & XXX",
   title: "Inhaber",
   role: "Trockenbau & Innenausbau",
-  image: "/images/geschaeftsfuehrer.png",
+  image: "/images/geschaeftsfuehrer.jpg",
   email: "info-kalac-trockenbau@web.de",
   bio: "Kalac Mujo führt K.M. Trockenbau mit Leidenschaft für Qualität und handwerklicher Präzision. Langjährige Erfahrung im Innenausbau und kontinuierliche Weiterbildung machen ihn zu Ihrem zuverlässigen Ansprechpartner in Regensburg.",
   facts: [
