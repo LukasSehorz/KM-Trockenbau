@@ -5,7 +5,7 @@ import { gsap, ScrollTrigger } from "../../../utils/gsap";
 
 const kalac = {
   num: "01",
-  name: "Kalac Mujo & XXX",
+  name: "Kalac Mujo",
   title: "Inhaber",
   role: "Trockenbau & Innenausbau",
   image: "/images/geschaeftsfuehrer.jpg",
